@@ -1,0 +1,69 @@
+name: weekly-review
+
+# 北京时间 周五 15:35 / 16:10 / 17:30 各跑一次（UTC = 北京时间 - 8h）
+on:
+  schedule:
+    - cron: '35 7 * * 5'
+    - cron: '10 8 * * 5'
+    - cron: '30 9 * * 5'
+  workflow_dispatch: {}          # GitHub 页面上手动重跑的按钮
+
+permissions:
+  contents: write                # 用于把每周 JSON 归档回仓库
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.gate.outputs.status }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 抓数最多重试 3 次，直到数据校验通过为止
+      - name: 抓数（不完整则自动重试）
+        run: |
+          for i in 1 2 3; do
+            npm run fetch || true
+            S=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).status")
+            echo "第 $i 次结果: $S"
+            if [ "$S" = "ok" ]; then break; fi
+            sleep 300
+          done
+
+      - name: 构建 + 渲染自检
+        run: |
+          node scripts/build.mjs
+          node scripts/check-render.mjs
+
+      - name: 数据完整性闸门
+        id: gate
+        run: |
+          OK=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).status")
+          echo "status=$OK" >> $GITHUB_OUTPUT
+          if [ "$OK" != "ok" ]; then
+            echo "::warning::数据未完整，本次不发布，保留上一期页面"
+            node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
+          fi
+
+      - name: 归档本周 JSON
+        if: steps.gate.outputs.status == 'ok'
+        run: |
+          git config user.name "weekly-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git diff --quiet --cached || git commit -m "weekly data $(date +%Y-%m-%d)"
+          git push
+
+      - name: 部署到 CloudBase 静态托管 /weeklyreport
+        if: steps.gate.outputs.status == 'ok'
+        env:
+          TCB_SECRET_ID: ${{ secrets.TCB_SECRET_ID }}
+          TCB_SECRET_KEY: ${{ secrets.TCB_SECRET_KEY }}
+          TCB_ENV_ID: ${{ secrets.TCB_ENV_ID }}
+        run: |
+          npm i -g @cloudbase/cli
+          tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
+          tcb hosting deploy ./dist weeklyreport -e "$TCB_ENV_ID"
