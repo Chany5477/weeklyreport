@@ -98,7 +98,7 @@ https://<你的环境ID>.tcloudbaseapp.com/weeklyreport/
 会，但一个文件只有十几 KB，攒十年也没什么，而且它就是你自己的历史数据库。
 
 **Q：能绑我自己的域名吗？**
-可以。CloudBase 静态托管 → 基础配置 → 自定义域名，绑完就是 `https://你的域名/weeklyreport/`。
+可以。CloudBase 静态托管 → 基础配置 → 自定义域名，绑完就是 `https://你的域名/weeklyreport/`。注意境内访问的域名要先 ICP 备案；默认域名有访问频率限制，自己一个人看的话够用，长期用建议绑域名。
 
 **Q：想换掉那个子目录名？**
 改 `.github/workflows/weekly.yml` 最后一行的 `weeklyreport` 即可。

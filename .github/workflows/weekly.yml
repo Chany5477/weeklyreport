@@ -63,7 +63,8 @@ jobs:
           TCB_SECRET_ID: ${{ secrets.TCB_SECRET_ID }}
           TCB_SECRET_KEY: ${{ secrets.TCB_SECRET_KEY }}
           TCB_ENV_ID: ${{ secrets.TCB_ENV_ID }}
+          COS_SDK_KEEPALIVE: 'false'
         run: |
           npm i -g @cloudbase/cli
           tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
-          tcb hosting deploy ./dist weeklyreport -e "$TCB_ENV_ID"
+          tcb hosting deploy ./dist /weeklyreport -e "$TCB_ENV_ID"
