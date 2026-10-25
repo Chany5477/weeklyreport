@@ -352,7 +352,8 @@ footer b{color:var(--ink2);font-weight:600}
           (e.tag?'<span class="evt">'+e.tag+'</span>':'')+(e.text||'')+
           (e.src?'<div class="evs">'+e.src+'</div>':'')+'</div></div>';
       }).join('')
-    : '<div class="empty">本期未填写。在 <b>data/manual.json</b> 里按下面的格式补上核对过的当日原因，重跑一次就会出现在这里：'+
+    : '<div class="empty">'+(D.manual&&D.manual.stored?'本期未填写（manual.json 里有 '+D.manual.stored+' 条，但日期都不在 '+D.week.start+' ~ '+D.week.end+' 区间）。':'本期未填写。')+
+      '在 <b>data/manual.json</b> 里按下面的格式补上核对过的当日原因，重跑一次就会出现在这里：'+
       '<pre style="margin:8px 0 0;white-space:pre-wrap;font-size:11.5px;color:#6b6b6b">'+
       '{ "events": [ { "date": "2026-10-20", "tag": "政策", "text": "…（一句话事实+影响）" } ] }</pre>'+
       '不自动生成，是为了不把猜测写成事实。</div>';

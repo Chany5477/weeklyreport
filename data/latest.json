@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T09:16:26.165Z",
+  "generatedAt": "2026-10-25T09:20:42.220Z",
   "status": "ok",
   "checks": [],
   "week": {
@@ -15,7 +15,8 @@
     "breadthText": "周五全市场4239涨913跌，涨停82家、跌停6家"
   },
   "manual": {
-    "events": []
+    "events": [],
+    "stored": 0
   },
   "outlook": [
     {

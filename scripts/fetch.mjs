@@ -401,8 +401,16 @@ async function main() {
     summary: { volumeText: narr.volumeText, breadthText: narr.breadthText },
     manual: (() => {
       const p = resolve(ROOT, 'data/manual.json');
-      if (!existsSync(p)) return { events: [] };
-      try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return { events: [] }; }
+      if (!existsSync(p)) return { events: [], stored: 0 };
+      try {
+        const m = JSON.parse(readFileSync(p, 'utf8'));
+        const all = Array.isArray(m.events) ? m.events : [];
+        // 只保留落在本周区间内的事件，避免上周的旧条目挂到本期
+        const ev = all
+          .filter(e => e && e.date && e.date >= weekStart && e.date <= weekEnd)
+          .sort((a, b) => String(a.date).localeCompare(String(b.date)));
+        return { ...m, events: ev, stored: all.length };
+      } catch { return { events: [], stored: 0 }; }
     })(),
     outlook: narr.outlook,
     indices: idxList.map(i => ({
