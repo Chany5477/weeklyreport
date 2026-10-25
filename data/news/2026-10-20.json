@@ -12,6 +12,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203901289631.html",
+  "raw": 10,
   "score": 12
  },
  {
@@ -27,7 +28,24 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203901301570.html",
+  "raw": 10,
   "score": 12
+ },
+ {
+  "time": "05:21",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "今年我国人形机器人整机产品产量预计将突破10万台！工信部：将深挖民生等领域重点场景需求 形成一批标杆应用",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900239920.html",
+  "raw": 8,
+  "score": 10
  },
  {
   "time": "07:35",
@@ -45,6 +63,39 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900356762.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "15:12",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：前三季度规模以上高技术制造业增加值同比增长14.3% 国产算力与大模型适配能力不断增强",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901283874.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "15:27",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：9月底我国智能算力规模达2592EFLOPS 同比增长146%",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901291085.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -63,6 +114,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900316730.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -81,6 +133,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900322556.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -95,6 +148,80 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900343257.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:20",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英伟达在欧洲超算Jupiter上完成104量子比特容错量子计算模拟",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900368284.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:58",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英特尔向FCC申请豁免外国机器人禁令 以确保美国芯片工厂设备正常运行",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900544517.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:17",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "高速光模块组件订单排到2027年底 光通信行业景气度持续向好",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900569150.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:38",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "智元机器人、华为哈勃入股具身智能数据公司乙太具身",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900595017.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -110,6 +237,23 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900597175.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:57",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "累计披露数百亿采购计划后 协创数据自去年来首次单独披露算力服务订单｜速读公告",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900611853.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -125,6 +269,42 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203900985912.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:07",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "英伟达柏林GTC大会&特斯拉“量产就绪”引爆！人形机器人概念再度活跃",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901004039.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:15",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "管住该管的 放开该放的——我国无人机出口管制政策优化调整",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901127683.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -140,6 +320,69 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203901237797.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:43",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "美国拟让受制裁油轮重返合法市场 运费高涨之际或响应寥寥",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901296861.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:57",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：持续完善光伏新型储能等产能监测预警机制",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901307843.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "20:40",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "路透调查：所有100名经济学家均预计美联储将于2026年12月加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901530114.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "22:03",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "商务部新闻发言人就美以窃取商业秘密为由制裁中国企业答问",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901621531.html",
+  "raw": 6,
   "score": 8
  },
  {
@@ -158,6 +401,23 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203901240952.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "19:07",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "商务部公示2026年羊毛、毛条进口关税配额再分配拟分配企业名单",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901460231.html",
+  "raw": 6,
   "score": 6
  },
  {
@@ -173,6 +433,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610203901487951.html",
+  "raw": 6,
   "score": 6
  }
 ]

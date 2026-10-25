@@ -14,6 +14,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193900116137.html",
+  "raw": 13,
   "score": 13
  },
  {
@@ -29,6 +30,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899742580.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -44,6 +46,23 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899858815.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "15:04",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "两部门：优化调整挖泥船相关物项出口管制措施 对盾构机等物项实施出口管制",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899859689.html",
+  "raw": 8,
   "score": 10
  },
  {
@@ -59,6 +78,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899953498.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -74,7 +94,23 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193900012294.html",
+  "raw": 10,
   "score": 10
+ },
+ {
+  "time": "05:56",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储10月维持利率不变的概率为83.9%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899229274.html",
+  "raw": 8,
+  "score": 8
  },
  {
   "time": "06:17",
@@ -89,6 +125,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899217062.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -107,6 +144,138 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899268291.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:22",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "商务部等9部门：培育健康规范的机器人、虚拟数字人陪伴等智能服务新业态",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899635122.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "14:13",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "关税仍不见踪影 投资者对铜牛市心生警惕",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899826837.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:27",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "巴基斯坦对涉华布洛芬作出反倾销初裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899876525.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:34",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "商务部新闻发言人就优化调整无人机相关物项出口管制措施答记者问",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899879671.html",
+  "raw": 6,
+  "score": 8
+ },
+ {
+  "time": "17:31",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：我国人形机器人整机产品预计全年将突破10万台",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899971474.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "18:17",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "英国警告：参与以约旦河西岸定居点建设的企业和个人可能面临制裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900003594.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "20:19",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "文旅部：部署开展“人工智能+文化和旅游”应用试点",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900078688.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "23:16",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "高速光模块组件订单排到2027年底 一片玻璃价值提升超60倍",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900273883.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -122,6 +291,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899217774.html",
+  "raw": 6,
   "score": 6
  },
  {
@@ -138,6 +308,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899260861.html",
+  "raw": 6,
   "score": 6
  }
 ]

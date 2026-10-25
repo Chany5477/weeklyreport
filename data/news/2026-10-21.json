@@ -15,6 +15,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902597557.html",
+  "raw": 13,
   "score": 15
  },
  {
@@ -26,6 +27,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213901741271.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -41,6 +43,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902596245.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -59,6 +62,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902766877.html",
+  "raw": 8,
   "score": 10
  },
  {
@@ -74,6 +78,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902774883.html",
+  "raw": 8,
   "score": 10
  },
  {
@@ -88,6 +93,188 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213901773194.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:24",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储到10月维持利率不变的概率为83.9%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901791158.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:46",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "多家上市公司斩获算力服务订单",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901744024.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:58",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "中信建投：半导体设备订单持续景气",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901967265.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:55",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "浙江一家上市公司6.3亿元美国关税退税已到账！第三季度净利大增超130%",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901723085.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:20",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "“AI+器官芯片”加速创新药研发",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902208739.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:45",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "瑞为技术成立机器人公司，含AI相关业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902426175.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:14",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "美对华瓦楞纸披萨盒发起反倾销调查",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902446723.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:35",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "德商银行分析师：市场已计价12月美联储加息 但分析师认为12月之后不会再有进一步紧缩",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902615760.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "15:57",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "美国食品进口商提诉讼 寻求推翻政府对加拿大关税",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902630176.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "16:14",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "美国对涉华瓦楞纸披萨盒发起反倾销调查",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902647620.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "18:07",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "英伟达扩展开放模型产品线 覆盖企业数据、机器人、生物医药及量子计算",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902755195.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -103,6 +290,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902433837.html",
+  "raw": 6,
   "score": 6
  },
  {
@@ -118,6 +306,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902636320.html",
+  "raw": 6,
   "score": 6
  },
  {
@@ -133,6 +322,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902770074.html",
+  "raw": 6,
   "score": 6
  }
 ]

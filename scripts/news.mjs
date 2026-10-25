@@ -169,75 +169,133 @@ for (const it of raw) {
     align,
     src: '东方财富',
     url: it.code ? `https://finance.eastmoney.com/a/${it.code}.html` : '',
+    raw: score,
     score: score + (align ? 4 : 0) + (it.hot || 0),
   });
 }
 
 // 同日去重（标题前 14 字相同视为同一条）
-const out = {};
-mkdirSync(resolve(ROOT, 'data/news'), { recursive: true });
-for (const day of tradingDays) {
-  const list = (byDay[day] || []).sort((a, b) => b.score - a.score || a.time.localeCompare(b.time));
+const dedupe = (list, maxPerTag) => {
   const seen = new Set();
   const picked = [];
   for (const e of list) {
     const key = e.text.replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g, '').slice(0, 14);
     if (seen.has(key)) continue;
-    // 同一类话题最多 2 条，避免一天三条都是同一个部委的表态
-    if (picked.filter(p => p.tag === e.tag).length >= 2) continue;
-    // 同一条消息的不同表述（前 8 字相同）只留一条
+    if (picked.filter(p => p.tag === e.tag).length >= maxPerTag) continue;
     if (picked.some(p => p.text.slice(0, 8) === e.text.slice(0, 8))) continue;
     seen.add(key);
     picked.push(e);
   }
-  out[day] = picked;
-  writeFileSync(resolve(ROOT, 'data/news', `${day}.json`), JSON.stringify(picked, null, 1));
-  console.log(day, '候选', picked.length, '条 →', picked.slice(0, 3).map(e => `${e.time}(${e.score}) ${e.text.slice(0, 30)}`).join(' | '));
+  return picked;
+};
+
+const out = {};
+mkdirSync(resolve(ROOT, 'data/news'), { recursive: true });
+for (const day of tradingDays) {
+  const list = (byDay[day] || []).sort((a, b) => b.score - a.score || a.time.localeCompare(b.time));
+  // 候选池：给模型看的范围（放宽），严格的三条只作为没配模型时的兜底
+  const pool = dedupe(list.filter(e => e.raw >= 3), 8).slice(0, 40);
+  const strict = dedupe(list.filter(e => e.raw >= 6), 2).slice(0, 3);
+  out[day] = { events: strict, pool, attribution: ruleAttribution(day, strict), by: '规则' };
+  writeFileSync(resolve(ROOT, 'data/news', `${day}.json`), JSON.stringify(pool, null, 1));
+  console.log(day, '候选池', pool.length, '条 / 兜底', strict.length, '条');
 }
 
-/* ---------------- 可选：DeepSeek 归纳 ---------------- */
-const KEY = process.env.DEEPSEEK_API_KEY;
-let usedLLM = false;
+/* ---------------- 规则版归因（每天必写，标注"市场普遍归因"） ---------------- */
+function ruleAttribution(day, events) {
+  const d = latest.days.find(x => x.date === day);
+  const s = (d && d.sectors) || {};
+  const chg = d ? d.chg : null;
+  const top = (s.top || [])[0], bot = (s.bot || [])[0];
+  const extreme = s.extreme || 0;
+  const ev = (events || []).find(e => e.align) || (events || [])[0];
+  const move = chg == null ? '' : (Math.abs(chg) < 0.3 ? '指数基本走平'
+    : chg > 0 ? `上证收涨 ${chg.toFixed(2)}%` : `上证收跌 ${Math.abs(chg).toFixed(2)}%`);
+  if (extreme >= 2) {
+    const lead = Math.abs(top.chg) >= Math.abs(bot.chg) ? top : bot;
+    return `${move}，${lead.name} ${lead.chg > 0 ? '领涨' : '领跌'} ${Math.abs(lead.chg).toFixed(2)}%${ev
+      ? `；公开消息里与之最相关的是${ev.phase}的“${ev.text.slice(0, 24)}…”，但这一条不足以确认因果`
+      : '；当日未见明确公开消息，更像是资金与情绪层面的自然波动'}`;
+  }
+  if (ev) return `${move}，板块波动有限（最大 ${extreme.toFixed(2)}%）；当天少数有分量的消息是${ev.phase}的“${ev.text.slice(0, 24)}…”`;
+  return `${move}，板块波动有限（最大 ${extreme.toFixed(2)}%），当天没有单一消息主导，属于窄幅整理`;
+}
+
+/* ---------------- DeepSeek 归纳（可选） ---------------- */
+const keyFile = resolve(ROOT, 'secrets/deepseek.key');
+const KEY = (process.env.DEEPSEEK_API_KEY || (existsSync(keyFile) ? readFileSync(keyFile, 'utf8').trim() : '')).trim();
+let usedLLM = 0;
+
+async function askDeepSeek(prompt) {
+  const body = JSON.stringify({
+    model: 'deepseek-chat',
+    messages: [{ role: 'user', content: prompt }],
+    temperature: 0.2,
+    response_format: { type: 'json_object' },
+  });
+  const { stdout } = await pexec('curl', ['-sS', '-m', '90', 'https://api.deepseek.com/chat/completions',
+    '-H', 'Content-Type: application/json', '-H', `Authorization: Bearer ${KEY}`, '-d', body], { maxBuffer: 8 * 1024 * 1024 });
+  const j = JSON.parse(stdout);
+  if (j.error) throw new Error(j.error.message || 'api error');
+  const txt = j?.choices?.[0]?.message?.content || '';
+  const clean = txt.replace(/^```(?:json)?/i, '').replace(/```$/, '').trim();
+  return JSON.parse(clean);
+}
+
 if (KEY) {
   for (const day of tradingDays) {
-    const cands = (out[day] || []).slice(0, 12);
+    const cands = (out[day].pool || out[day].events || []).slice(0, 40);
     if (cands.length < 2) continue;
-    const dayRow = latest.days.find(d => d.date === day);
+    const d = latest.days.find(x => x.date === day) || {};
+    const s = d.sectors || {};
+    const listTxt = (arr) => (arr || []).map(x => `${x.name} ${x.chg > 0 ? '+' : ''}${x.chg}%`).join('、') || '无';
     const prompt = [
-      `今天是 ${day}，上证指数当日 ${dayRow ? dayRow.chg : '?'}%。`,
-      '下面是当天抓到的财经快讯候选，编号从 0 开始：',
+      `你是 A 股复盘助手。下面是 ${day}（${['周一', '周二', '周三', '周四', '周五'][tradingDays.indexOf(day)] || ''}）的盘后数据和当天抓到的财经快讯候选（编号从 0 开始）。`,
+      '',
+      `盘面：上证指数当日 ${d.chg > 0 ? '+' : ''}${d.chg}%，振幅 ${d.amp}%，量能 ${d.vr ? d.vr.toFixed(2) + ' 倍（相对 20 日均量）' : '未知'}；`,
+      `领涨板块：${listTxt(s.top)}；领跌板块：${listTxt(s.bot)}。`,
+      '',
+      '候选快讯：',
       ...cands.map((c, i) => `${i}. [${c.time} ${c.phase}] ${c.text}`),
       '',
-      '请挑出最多 3 条真正能解释当天 A 股涨跌的消息（政策/流动性/海外冲击/产业价格优先，公司经营类靠后）。',
-      '要求：1) 只能使用候选里的信息，不得补充任何候选之外的数字或事实；2) 每条压成 20~40 字，写"发生了什么+对市场的影响"；',
-      '3) 输出 JSON 数组，元素形如 {"i": 候选编号, "tag": "政策/海外/科技/周期/资金", "text": "..."}；4) 没有合格的就输出 []。',
-      '只输出 JSON，不要解释。',
+      '任务：',
+      '1) 从候选里挑出最多 3 条最能解释当天市场表现的消息（政策/流动性/海外冲击/产业价格优先，公司经营类靠后）；',
+      '2) 写一句"市场普遍归因"，40~70 字，说明当天涨跌的原因。',
+      '',
+      '硬性要求：',
+      '- 只能使用上面候选快讯里的信息，禁止补充任何候选之外的数字、事实或推测；',
+      '- 每条事件压成 20~40 字，写"发生了什么 + 对市场的影响"；',
+      '- 如果候选里确实没有能解释当天涨跌的消息，归因就写"当天没有明确的公开消息驱动，更像是技术面与资金面的自然波动"（意思相近即可），不要编造；',
+      '- 输出 JSON：{"events":[{"i":候选编号,"tag":"政策/海外/科技/周期/资金/数据","text":"..."}],"attribution":"..."}；',
+      '- 只输出 JSON，不要解释。',
     ].join('\n');
     try {
-      const body = JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [{ role: 'user', content: prompt }],
-        temperature: 0.2,
-        response_format: { type: 'json_object' },
-      });
-      const { stdout } = await pexec('curl', ['-sS', '-m', '60', 'https://api.deepseek.com/chat/completions',
-        '-H', 'Content-Type: application/json', '-H', `Authorization: Bearer ${KEY}`, '-d', body], { maxBuffer: 8 * 1024 * 1024 });
-      const j = JSON.parse(stdout);
-      const txt = j?.choices?.[0]?.message?.content || '';
-      const parsed = JSON.parse(txt);
-      const arr = Array.isArray(parsed) ? parsed : (parsed.events || []);
+      const r = await askDeepSeek(prompt);
+      const arr = Array.isArray(r.events) ? r.events : [];
       const mapped = arr
         .filter(x => Number.isInteger(x.i) && cands[x.i])
-        .map(x => ({ ...cands[x.i], tag: x.tag || cands[x.i].tag, text: String(x.text || cands[x.i].text).slice(0, 60), llm: true }));
-      if (mapped.length) { out[day] = mapped; usedLLM = true; }
+        .slice(0, 3)
+        .map(x => ({
+          ...cands[x.i],
+          tag: String(x.tag || cands[x.i].tag).slice(0, 6),
+          text: String(x.text || cands[x.i].text).replace(/^["“]|["”]$/g, '').slice(0, 60),
+          llm: true,
+        }));
+      const atr = String(r.attribution || '').replace(/^["“]|["”]$/g, '').slice(0, 120);
+      if (mapped.length) out[day].events = mapped;
+      if (atr.length >= 8) out[day].attribution = atr;
+      out[day].by = 'DeepSeek';
+      usedLLM++;
+      console.log(day, 'DeepSeek →', out[day].attribution.slice(0, 46));
     } catch (e) {
-      console.log(day, 'DeepSeek 归纳失败，用规则结果：', e.message.slice(0, 80));
+      console.log(day, 'DeepSeek 失败，保留规则结果：', String(e.message).slice(0, 90));
     }
+    await sleep(400);
   }
 }
 
 // 最终每天保留 3 条
-for (const day of tradingDays) out[day] = (out[day] || []).slice(0, 3);
+for (const day of tradingDays) out[day].events = (out[day].events || []).slice(0, 3);
 writeFileSync(resolve(ROOT, 'data/news.json'), JSON.stringify(out, null, 2));
-console.log('事件汇总完成', usedLLM ? '(DeepSeek 归纳)' : '(规则筛选)',
-  Object.entries(out).map(([k, v]) => `${k.slice(5)}:${v.length}`).join(' '));
+console.log('事件汇总完成', usedLLM ? `（DeepSeek 归纳 ${usedLLM}/${tradingDays.length} 天）` : '（规则筛选，未配置 DeepSeek）',
+  Object.entries(out).map(([k, v]) => `${k.slice(5)}:${v.events.length}`).join(' '));

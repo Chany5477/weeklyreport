@@ -102,6 +102,8 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .ev .x{flex:1}
 .ev a{color:var(--red);text-decoration:none;font-size:10.5px;margin-left:4px;opacity:.75;white-space:nowrap}
 .ev .al{font-size:10.5px;color:var(--muted)}
+.atr{margin-top:8px;padding:8px 10px;background:var(--bg2);border-left:2px solid #DAD4C9;border-radius:0 6px 6px 0;font-size:12.5px;line-height:1.7;color:var(--ink2)}
+.atr .l{display:inline-block;font-size:10px;color:#9a9184;background:#EFEDE8;border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px}
 
 /* ---------- 归因 ---------- */
 .cause{border-left:2px solid var(--red);padding:2px 0 2px 12px;margin:14px 0 0;font-size:13.5px;line-height:1.75;color:var(--ink2)}
@@ -269,12 +271,13 @@ footer b{color:var(--ink2);font-weight:600}
     var head = '<b>本周振幅最大的一天是 '+wd+' '+md(w.date)+'（'+pct(w.chg)+'，振幅 '+w.amp.toFixed(1)+'%）</b>';
     var body = bot ? '，当天领跌的是 '+bot+(top?'，逆势走强的是 '+top:'')+'。' : '。';
     var ev = A.mainEvent;
-    var isManual = ev && ev.src === '人工核对';
-    var quote = ev ? (isManual ? '当天对应的消息是："' : '当天盘前/盘中值得留意的消息是："')+ev.text+'"' +
-                     (ev.url?'（<a href="'+ev.url+'" target="_blank" rel="noopener">原文</a>）':'')
-                   : '当天没有抓到能与之对应的公开消息，本期不对这一天做归因（宁可留白，不猜原因）。';
-    $('cause').innerHTML = '<div class="cause">'+head+body+'<br>'+quote+
-      '<span class="src">归因只引用当日公开快讯原文，不做二次推断；可用 data/manual.json 覆盖。</span></div>';
+    var atr = A.worstAttribution || '';
+    var quote = atr ? '市场普遍归因：'+atr
+      : (ev ? '当天盘前/盘中值得留意的消息是："'+ev.text+'"'+(ev.url?'（<a href="'+ev.url+'" target="_blank" rel="noopener">原文</a>）':'')
+            : '当天没有抓到可对应的公开消息，不做归因。');
+    $('cause').innerHTML = '<div class="cause">'+head+body+'<br><b>'+quote+'</b>'+
+      '<span class="src">口径：市场普遍归因'+(A.worstAttributionBy&&A.worstAttributionBy!=='规则'?'由 '+A.worstAttributionBy+' 依据当日公开快讯生成':'由关键词规则依据当日公开快讯生成')+
+      '，属市场观点而非已确认事实，请点原文链接核对；确认后可写入 data/manual.json 覆盖。</span></div>';
   })();
 
   /* 每日回顾 */
@@ -295,6 +298,7 @@ footer b{color:var(--ink2);font-weight:600}
       '<span class="dcm num">振幅'+d.amp.toFixed(1)+'%'+(d.vr?(' · '+(d.vr>1.12?'放量':d.vr<0.95?'缩量':'平量')+d.vr.toFixed(2)+'x'):'')+'</span></div>'+
       (chips?'<div class="dcs">异动：'+chips+'</div>':'')+
       (evs?'<div class="dce">'+evs+'</div>':'<div class="dcs" style="color:#b5b0a8">当日无足够分量的消息</div>')+
+      (d.attribution?'<div class="atr"><span class="l">市场普遍归因</span>'+d.attribution+'</div>':'')+
       '</div>';
   }).join('');
 
@@ -418,7 +422,9 @@ footer b{color:var(--ink2);font-weight:600}
   /* 页脚 */
   var bad = (D.checks||[]).filter(function(c){return !c.ok;});
   var ft = '<div><b>数据源</b>：'+(D.sources||[]).join('、')+'</div>';
-  ft += '<div><b>事件来源</b>：东方财富 7x24 快讯（公开接口，按关键词筛选，每条附原文链接）；可用 data/manual.json 覆盖人工版本</div>';
+  ft += '<div><b>事件来源</b>：东方财富 7x24 快讯（公开接口）→ 关键词筛出候选池 → '+
+        ((D.attribution&&D.attribution.worstAttributionBy&&D.attribution.worstAttributionBy!=='规则')?'DeepSeek 归纳':'关键词规则筛选')+
+        '，每条均附原文链接；归因为市场观点，可用 data/manual.json 覆盖</div>';
   ft += '<div><b>生成时间</b>：'+D.week.end+' '+hm+'（收盘后）　<b>下次更新</b>：周五 15:35</div>';
   if(bad.length){
     ft += '<div style="margin-top:6px;color:#92560A"><b>缺失项</b>：'+bad.map(function(c){return c.key+'（'+c.msg+'）';}).join('；')+'</div>';

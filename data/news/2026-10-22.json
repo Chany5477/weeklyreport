@@ -15,6 +15,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903311593.html",
+  "raw": 8,
   "score": 10
  },
  {
@@ -30,6 +31,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223904065910.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -45,6 +47,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223904407365.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -63,6 +66,26 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903051991.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "05:25",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "特斯拉转向AI与机器人赛道 三季度支出大幅低于市场预期",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903075155.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -77,6 +100,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903085135.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -90,6 +114,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903049841.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -105,6 +130,77 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903102129.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:42",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英伟达掏钱帮供应商扩产 联手六家厂商提前锁定AI产能",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213903291098.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:06",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "王坚：AI与机器人正迎来进一步结合的机会",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903833379.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:14",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "宇树科技王兴兴：AI模型的输入输出和真实机器人的对齐是具身智能迈过ChatGPT时刻最核心挑战",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903840494.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "17:07",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "海光信息沙超群：公司在手订单充足 行业算力基础设施加速扩容",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904161981.html",
+  "raw": 8,
   "score": 8
  },
  {
@@ -119,6 +215,7 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610223903842862.html",
+  "raw": 6,
   "score": 6
  }
 ]

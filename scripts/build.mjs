@@ -12,13 +12,18 @@ const tpl = readFileSync(resolve(ROOT, 'templates/report.html'), 'utf8');
 const newsPath = resolve(ROOT, 'data/news.json');
 const news = existsSync(newsPath) ? JSON.parse(readFileSync(newsPath, 'utf8')) : {};
 
-data.days = data.days.map(d => ({
-  ...d,
-  events: (news[d.date] || []).slice(0, 3).map(e => ({
-    time: e.time, phase: e.phase, tag: e.tag, text: e.text,
-    url: e.url, src: e.src, align: e.align || null,
-  })),
-}));
+data.days = data.days.map(d => {
+  const n = news[d.date] || { events: [], attribution: '' };
+  return {
+    ...d,
+    attribution: n.attribution || '',
+    attributionBy: n.by || '规则',
+    events: (n.events || []).slice(0, 3).map(e => ({
+      time: e.time, phase: e.phase, tag: e.tag, text: e.text,
+      url: e.url, src: e.src, align: e.align || null,
+    })),
+  };
+});
 
 /* ---------- 人工核对过的事件优先显示（manual.json 覆盖同日自动结果） ---------- */
 const manualEvents = (data.manual && data.manual.events) || [];
@@ -52,6 +57,8 @@ data.attribution = {
     top: worstDay.sectors?.top || [], bot: worstDay.sectors?.bot || [] } : null,
   best: bestDay ? { date: bestDay.date, chg: bestDay.chg } : null,
   mainEvent: mainEvent ? { date: mainEvent.date, time: mainEvent.time, text: mainEvent.text, url: mainEvent.url, tag: mainEvent.tag, align: mainEvent.align, src: mainEvent.src } : null,
+  worstAttribution: worstDay ? (worstDay.attribution || '') : '',
+  worstAttributionBy: worstDay ? (worstDay.attributionBy || '规则') : '',
   eventCount: allEvents.length,
 };
 
