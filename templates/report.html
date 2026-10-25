@@ -272,7 +272,7 @@ footer b{color:var(--ink2);font-weight:600}
     var body = bot ? '，当天领跌的是 '+bot+(top?'，逆势走强的是 '+top:'')+'。' : '。';
     var ev = A.mainEvent;
     var atr = A.worstAttribution || '';
-    var quote = atr ? '市场普遍归因：'+atr
+    var quote = atr ? (atr.indexOf('归因') >= 0 ? atr : '市场普遍归因：'+atr)
       : (ev ? '当天盘前/盘中值得留意的消息是："'+ev.text+'"'+(ev.url?'（<a href="'+ev.url+'" target="_blank" rel="noopener">原文</a>）':'')
             : '当天没有抓到可对应的公开消息，不做归因。');
     $('cause').innerHTML = '<div class="cause">'+head+body+'<br><b>'+quote+'</b>'+

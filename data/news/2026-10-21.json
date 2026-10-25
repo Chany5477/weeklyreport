@@ -1,22 +1,54 @@
 [
  {
-  "time": "15:17",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "日本关键稀土元素储备即将耗尽 外交部：中方依法依规对日实施出口管制",
+  "time": "10-20 15:32",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部：正在研究起草新一代智能制造的有关政策措施 加快推动人工智能与制造业深度融合",
   "secs": [
    "电子",
-   "机械设备",
-   "电力设备",
-   "有色金属",
-   "石油石化",
-   "交通运输"
+   "计算机",
+   "通信"
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902597557.html",
-  "raw": 13,
-  "score": 15
+  "url": "https://finance.eastmoney.com/a/202610203901289631.html",
+  "raw": 10,
+  "score": 12
+ },
+ {
+  "time": "10-20 15:52",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部：下一步将加快算力设施扩容提质 为先进制造业发展夯实网络和算力底座",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901301570.html",
+  "raw": 10,
+  "score": 12
+ },
+ {
+  "time": "10-20 15:57",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部：持续完善光伏新型储能等产能监测预警机制",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": -3.67,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901307843.html",
+  "raw": 8,
+  "score": 12
  },
  {
   "time": "02:04",
@@ -31,10 +63,10 @@
   "score": 10
  },
  {
-  "time": "15:11",
-  "phase": "盘后",
+  "time": "10-20 15:12",
+  "phase": "盘前",
   "tag": "政策",
-  "text": "工信部：2030年建设500个左右国家级零碳工厂和零碳算力设施",
+  "text": "工信部：前三季度规模以上高技术制造业增加值同比增长14.3% 国产算力与大模型适配能力不断增强",
   "secs": [
    "电子",
    "计算机",
@@ -42,34 +74,15 @@
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902596245.html",
+  "url": "https://finance.eastmoney.com/a/202610203901283874.html",
   "raw": 10,
   "score": 10
  },
  {
-  "time": "18:27",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "英伟达升级Isaac机器人平台 推出人形机器人参考框架与仿真工具",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信",
-   "机械设备",
-   "国防军工",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902766877.html",
-  "raw": 8,
-  "score": 10
- },
- {
-  "time": "18:38",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "英伟达携供应链伙伴扩产 加速AI基础设施建设",
+  "time": "10-20 15:27",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部：9月底我国智能算力规模达2592EFLOPS 同比增长146%",
   "secs": [
    "电子",
    "计算机",
@@ -77,8 +90,8 @@
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902774883.html",
-  "raw": 8,
+  "url": "https://finance.eastmoney.com/a/202610203901291085.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -177,6 +190,91 @@
   "score": 8
  },
  {
+  "time": "10-20 15:25",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英伟达完成创纪录104量子比特容错量子计算模拟",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901288293.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-20 15:43",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国拟让受制裁油轮重返合法市场 运费高涨之际或响应寥寥",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901296861.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-20 17:28",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "4连板吉大正元：在人工智能安全、抗量子密码、低空经济及卫星互联网安全等领域均处于技术投入和初步参与阶段",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901386963.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-20 20:40",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "路透调查：所有100名经济学家均预计美联储将于2026年12月加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901530114.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-20 22:03",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部新闻发言人就美以窃取商业秘密为由制裁中国企业答问",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901621531.html",
+  "raw": 6,
+  "score": 8
+ },
+ {
   "time": "10:45",
   "phase": "盘中",
   "tag": "科技",
@@ -212,25 +310,10 @@
   "score": 8
  },
  {
-  "time": "15:35",
-  "phase": "盘后",
+  "time": "10-20 19:07",
+  "phase": "盘前",
   "tag": "海外",
-  "text": "德商银行分析师：市场已计价12月美联储加息 但分析师认为12月之后不会再有进一步紧缩",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902615760.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "15:57",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "美国食品进口商提诉讼 寻求推翻政府对加拿大关税",
+  "text": "商务部公示2026年羊毛、毛条进口关税配额再分配拟分配企业名单",
   "secs": [
    "电子",
    "机械设备",
@@ -238,44 +321,25 @@
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902630176.html",
-  "raw": 8,
-  "score": 8
+  "url": "https://finance.eastmoney.com/a/202610203901460231.html",
+  "raw": 6,
+  "score": 6
  },
  {
-  "time": "16:14",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "美国对涉华瓦楞纸披萨盒发起反倾销调查",
+  "time": "10-20 19:48",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "兆丰股份：控股子公司预中标机器人创新服务平台项目",
   "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902647620.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "18:07",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "英伟达扩展开放模型产品线 覆盖企业数据、机器人、生物医药及量子计算",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信",
    "机械设备",
    "国防军工",
    "电力设备"
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902755195.html",
-  "raw": 8,
-  "score": 8
+  "url": "https://finance.eastmoney.com/a/202610203901487951.html",
+  "raw": 6,
+  "score": 6
  },
  {
   "time": "10:59",
@@ -290,38 +354,6 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610213902433837.html",
-  "raw": 6,
-  "score": 6
- },
- {
-  "time": "16:01",
-  "phase": "盘后",
-  "tag": "货币",
-  "text": "印尼央行副行长：预计此次降准将释放约190万亿印尼盾流动性",
-  "secs": [
-   "银行",
-   "非银金融",
-   "房地产"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902636320.html",
-  "raw": 6,
-  "score": 6
- },
- {
-  "time": "18:27",
-  "phase": "盘后",
-  "tag": "产业",
-  "text": "长盈精密：1月至8月累计交付人形机器人精密零组件超过110万件 第三、四季度订单增速较上半年进一步加快",
-  "secs": [
-   "机械设备",
-   "国防军工",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610213902770074.html",
   "raw": 6,
   "score": 6
  }

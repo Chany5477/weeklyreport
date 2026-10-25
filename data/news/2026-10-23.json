@@ -1,57 +1,5 @@
 [
  {
-  "time": "15:09",
-  "phase": "盘后",
-  "tag": "制度",
-  "text": "财政部：前三季度证券交易印花税2391亿元 同比增长65.1%",
-  "secs": [
-   "非银金融"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906216082.html",
-  "raw": 13,
-  "score": 15
- },
- {
-  "time": "19:26",
-  "phase": "盘后",
-  "tag": "产业",
-  "text": "武汉天源：联合体中标36.4亿元储能设备+安装一体化项目",
-  "secs": [
-   "电力设备",
-   "汽车"
-  ],
-  "align": {
-   "name": "电力设备",
-   "chg": 3.67,
-   "side": "top"
-  },
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906474987.html",
-  "raw": 6,
-  "score": 12
- },
- {
-  "time": "21:50",
-  "phase": "盘后",
-  "tag": "政策",
-  "text": "国家能源局：加快核电设计标准化进程 实现核电工程质量管理的提档升级",
-  "secs": [
-   "电力设备",
-   "汽车"
-  ],
-  "align": {
-   "name": "电力设备",
-   "chg": 3.67,
-   "side": "top"
-  },
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906653044.html",
-  "raw": 8,
-  "score": 12
- },
- {
   "time": "08:02",
   "phase": "盘前",
   "tag": "产业",
@@ -68,6 +16,38 @@
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610233904869711.html",
   "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "10-22 15:22",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "商务部：将与世界各国一道 共建AI国际经贸规则",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904065910.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "10-22 21:09",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "美国商务部将拨款3.89亿美元用于芯片研发",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904407365.html",
+  "raw": 10,
   "score": 10
  },
  {
@@ -98,34 +78,6 @@
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610233905905389.html",
   "raw": 8,
-  "score": 10
- },
- {
-  "time": "19:13",
-  "phase": "盘后",
-  "tag": "政策",
-  "text": "国常会：优化面向家庭的财税、社保、住房等支持举措 努力稳定新出生人口规模",
-  "secs": [],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906441021.html",
-  "raw": 8,
-  "score": 10
- },
- {
-  "time": "20:42",
-  "phase": "盘后",
-  "tag": "政策",
-  "text": "工信部：加快推进“人工智能+软件”专项行动 支持智能体软件发展",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906544596.html",
-  "raw": 10,
   "score": 10
  },
  {
@@ -175,6 +127,22 @@
   "score": 8
  },
  {
+  "time": "10-22 17:07",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "海光信息沙超群：公司在手订单充足 行业算力基础设施加速扩容",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904161981.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
   "time": "14:34",
   "phase": "盘中",
   "tag": "海外",
@@ -204,134 +172,6 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610233906204451.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "15:25",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "印度对华天然云母珠光工业颜料作出第一次反倾销日落复审终裁",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906225544.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "15:27",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "印度对华拖车车轴作出第二次反倾销日落复审终裁",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906225689.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "16:57",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "沙特阿拉伯对原产于中国的易拉罐铝盖作出反倾销终裁",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906335850.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "17:01",
-  "phase": "盘后",
-  "tag": "海外",
-  "text": "欧亚经济联盟发布对华履带式推土机反倾销日落复审终裁披露",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906337188.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "18:12",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "《国家信息化“十五五”规划》印发：推进人工智能等基础性立法 强化无人驾驶、低空经济等新兴领域立法研究",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信",
-   "机械设备",
-   "国防军工",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906396019.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "18:27",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "生益电子：AI服务器、800G/1.6T交换机等数据中心相关产品订单稳步增长",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906401410.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "19:29",
-  "phase": "盘后",
-  "tag": "政策",
-  "text": "国常会：要更加突出人的全面发展 提高人口科学文化、职业技能、身心健康等水平",
-  "secs": [],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906475982.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "19:59",
-  "phase": "盘后",
-  "tag": "科技",
-  "text": "大华股份：下属子公司拟参与中国移动AI超节点设备集采项目投标",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信",
-   "医药生物"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610233906514025.html",
   "raw": 8,
   "score": 8
  }

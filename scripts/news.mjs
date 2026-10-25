@@ -142,9 +142,19 @@ function phaseOf(t) {
   if (hm <= '15:00') return '盘中';
   return '盘后';
 }
+// 收盘（15:00）之后的消息影响的是下一个交易日，归到次日"盘前"；
+// 休市日、当日前夜的消息同样归到下一个交易日的盘前。
 function dayOf(time) {
-  const key = time.slice(0, 10);
-  return tradingDays.includes(key) ? key : null;
+  const date = time.slice(0, 10), hm = time.slice(11, 16);
+  for (let i = 0; i < tradingDays.length; i++) {
+    const d = tradingDays[i];
+    if (date === d) {
+      if (hm <= '15:00') return { day: d, phase: hm < '09:30' ? '盘前' : '盘中' };
+      return { day: tradingDays[i + 1] || null, phase: '盘前' };
+    }
+    if (date < d) return { day: d, phase: '盘前' };  // 休市日 / 前夜
+  }
+  return null;  // 最后一个交易日收盘后 → 属下周，本期不用
 }
 
 /* ---------------- 主流程 ---------------- */
@@ -153,16 +163,18 @@ console.log('快讯抓到', raw.length, '条，最早', raw[raw.length - 1]?.tim
 
 const byDay = {};
 for (const it of raw) {
-  const day = dayOf(it.time);
-  if (!day) continue;
+  const map = dayOf(it.time);
+  if (!map || !map.day) continue;
+  const day = map.day;
   const text = it.title || it.summary.slice(0, 80);
   if (!text) continue;
   const { score, tag, secs } = scoreOf(text);
   if (score < 6) continue;
   const align = alignOf(secs, day);
   (byDay[day] ||= []).push({
-    time: it.time.slice(11, 16),
-    phase: phaseOf(it.time),
+    // 跨日的消息带上来源日期，避免"20:40 盘前"这种看不懂的时间
+    time: (map.day === it.time.slice(0, 10) ? '' : it.time.slice(5, 10) + ' ') + it.time.slice(11, 16),
+    phase: map.phase,
     tag: tag || '快讯',
     text,
     secs,
@@ -255,7 +267,7 @@ if (KEY) {
       `盘面：上证指数当日 ${d.chg > 0 ? '+' : ''}${d.chg}%，振幅 ${d.amp}%，量能 ${d.vr ? d.vr.toFixed(2) + ' 倍（相对 20 日均量）' : '未知'}；`,
       `领涨板块：${listTxt(s.top)}；领跌板块：${listTxt(s.bot)}。`,
       '',
-      '候选快讯：',
+      '候选快讯（均为当日盘前，含前一晚，以及盘中时段；收盘后的消息已计入次日，不在这里）：',
       ...cands.map((c, i) => `${i}. [${c.time} ${c.phase}] ${c.text}`),
       '',
       '任务：',
@@ -281,7 +293,9 @@ if (KEY) {
           text: String(x.text || cands[x.i].text).replace(/^["“]|["”]$/g, '').slice(0, 60),
           llm: true,
         }));
-      const atr = String(r.attribution || '').replace(/^["“]|["”]$/g, '').slice(0, 120);
+      // 模型有时会自己加上"市场普遍归因："前缀，去掉，页面统一加标签
+      const atr = String(r.attribution || '').replace(/^["“]|["”]$/g, '')
+        .replace(/^市场普遍归因[：:]?\s*/, '').replace(/市场普遍归因于/g, '普遍归因于').slice(0, 120);
       if (mapped.length) out[day].events = mapped;
       if (atr.length >= 8) out[day].attribution = atr;
       out[day].by = 'DeepSeek';
