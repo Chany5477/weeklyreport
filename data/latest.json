@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T15:08:04.092Z",
+  "generatedAt": "2026-10-25T09:16:26.165Z",
   "status": "ok",
   "checks": [],
   "week": {
@@ -321,7 +321,7 @@
     "vsMa60": -4.68,
     "drawdown": -13.01,
     "vol20d": 12.59,
-    "streak": 1,
+    "streak": -5,
     "weekHigh": 3743.8,
     "weekLow": 3574.27,
     "weekAmp": 4.56

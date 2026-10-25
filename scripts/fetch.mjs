@@ -151,6 +151,27 @@ function weekOf(rows, anchorIdx) {
   return rows.slice(Math.max(0, start), anchorIdx + 1);
 }
 
+// 连涨/连跌周：按自然周的最后一个收盘价比较，而不是日线
+function weeklyStreak(rows) {
+  const weekClose = [];
+  let key = null;
+  for (const r of rows) {
+    const d = new Date(r.date + 'T00:00:00');
+    d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); // 回退到本周一
+    const k = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+    if (k !== key) { key = k; weekClose.push(r.close); }
+    else weekClose[weekClose.length - 1] = r.close;
+  }
+  let s = 0;
+  for (let i = weekClose.length - 1; i > 0; i--) {
+    const up = weekClose[i] > weekClose[i - 1];
+    if (s === 0) s = up ? 1 : -1;
+    else if ((s > 0 && up) || (s < 0 && !up)) s += up ? 1 : -1;
+    else break;
+  }
+  return s;
+}
+
 function analyzeIndex(rows) {
   const last = rows[rows.length - 1];
   const week = weekOf(rows, rows.length - 1);
@@ -182,14 +203,8 @@ function analyzeIndex(rows) {
   // 当日相对 20 日均量
   const vol20 = ma(vols.slice(0, -1), 20);
 
-  // 连涨/连跌周
-  let streak = 0;
-  for (let i = rows.length - 1; i > 0; i--) {
-    const up = rows[i].close > rows[i - 1].close;
-    if (streak === 0) streak = up ? 1 : -1;
-    else if ((streak > 0 && up) || (streak < 0 && !up)) streak += Math.sign(streak);
-    else break;
-  }
+  // 连涨/连跌周（周线口径）
+  const streak = weeklyStreak(rows);
 
   // 20 日年化波动率
   const rets = [];
