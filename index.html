@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>市场回顾 · 10.19–10.23</title>
+<style>
+:root{
+  --red:#C8102E; --red2:#E24B3F; --green:#0E9F6E; --green2:#12B886;
+  --ink:#191919; --ink2:#3d3d3d; --muted:#8a8a8a; --line:#e8e6e2;
+  --bg:#ffffff; --bg2:#FAF9F7; --warn:#F59E0B;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg2)}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color:var(--ink); font-size:15px; line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:780px;margin:0 auto;background:var(--bg);min-height:100vh;padding-bottom:56px}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+
+/* ---------- header ---------- */
+header{padding:30px 24px 22px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.brand b{color:var(--red);letter-spacing:.1em;font-weight:700}
+h1{font-size:29px;line-height:1.35;margin:14px 0 10px;font-weight:800;letter-spacing:-.4px}
+h1 em{font-style:normal;color:var(--red)}
+.lead{font-size:15px;color:var(--ink2);margin:0;line-height:1.75}
+.badge{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;padding:5px 11px;border-radius:100px;background:#F0FBF6;color:#0B7A55;border:1px solid #C9EEDF}
+.badge.bad{background:#FFF8EB;color:#92560A;border-color:#F6E0B8}
+.badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* ---------- day strip ---------- */
+.days{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line)}
+.day{padding:16px 4px 15px;text-align:center;border-right:1px solid var(--line)}
+.day:last-child{border-right:0}
+.day .w{font-size:11px;color:var(--muted);letter-spacing:.06em}
+.day .c{font-size:19px;font-weight:700;margin-top:5px;letter-spacing:-.5px}
+.day .m{font-size:10.5px;color:var(--muted);margin-top:3px;line-height:1.45}
+.up{color:var(--red)} .down{color:var(--green)}
+
+/* ---------- section ---------- */
+section{padding:26px 24px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-size:16px;margin:0 0 4px;font-weight:800;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+h2::before{content:"";width:3px;height:15px;background:var(--red);border-radius:2px}
+.sub{font-size:12px;color:var(--muted);margin:0 0 16px}
+p{margin:0 0 12px}
+p:last-child{margin-bottom:0}
+.kw{font-weight:700}
+.hl{background:linear-gradient(transparent 62%,rgba(200,16,46,.14) 62%);font-weight:700}
+
+/* ---------- table ---------- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:11px;color:var(--muted);font-weight:500;text-align:right;padding:0 0 8px;letter-spacing:.04em}
+th:first-child,td:first-child{text-align:left}
+td{padding:9px 0;border-top:1px solid var(--line);text-align:right}
+td:first-child{color:var(--ink2)}
+tr.tot td{font-weight:700;border-top:1px solid var(--ink)}
+
+/* ---------- charts ---------- */
+.chart-wrap{margin-top:8px}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.hbar{display:flex;flex-direction:column;gap:0}
+.hrow{display:grid;grid-template-columns:66px 1fr 54px;align-items:center;gap:8px;height:23px}
+.hrow .n{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hrow .track{position:relative;height:13px;background:#F6F5F3;border-radius:2px;overflow:hidden}
+.hrow .zero{position:absolute;top:0;bottom:0;left:50%;width:1px;background:#DEDBD5}
+.hrow .bar{position:absolute;top:1.5px;height:10px;border-radius:1px}
+.hrow .v{font-size:12px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.hrow.mid .n{font-weight:700}
+
+/* ---------- tech ---------- */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.tcard{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 12px 11px}
+.tcard .k{font-size:11px;color:var(--muted);letter-spacing:.03em}
+.tcard .v{font-size:17px;font-weight:700;margin-top:3px;letter-spacing:-.3px}
+.tcard .d{font-size:10.5px;color:var(--muted);margin-top:2px}
+.alert{display:flex;gap:10px;padding:13px 15px;border-radius:10px;background:#FFF7F5;border:1px solid #F5D6CF;font-size:13.5px;line-height:1.65;margin-top:4px}
+.alert .ic{color:var(--red);font-weight:800;flex:none}
+
+/* ---------- outlook ---------- */
+.ol{display:flex;flex-direction:column;gap:0}
+.oi{display:grid;grid-template-columns:26px 1fr;gap:2px;padding:13px 0;border-top:1px dashed var(--line)}
+.oi:first-child{border-top:0;padding-top:0}
+.oi .no{font-size:12px;font-weight:800;color:var(--red);padding-top:2px;font-variant-numeric:tabular-nums}
+.oi .t{font-size:14px;font-weight:700;margin-bottom:3px}
+.oi .d{font-size:13.5px;color:var(--ink2);line-height:1.7}
+.tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px;font-weight:600}
+.tag.pos{background:#FDECEA;color:#A50D24}
+.tag.neg{background:#E9F7F0;color:#0B7A55}
+.tag.neu{background:#F1F0EE;color:#6b6b6b}
+
+/* ---------- footer ---------- */
+footer{padding:22px 24px 0;font-size:11.5px;color:var(--muted);line-height:1.85}
+footer b{color:var(--ink2);font-weight:600}
+.empty{padding:14px;border:1px dashed var(--line);border-radius:10px;font-size:12.5px;color:var(--muted);background:var(--bg2)}
+@media (max-width:420px){
+  h1{font-size:25px}
+  header,section{padding-left:18px;padding-right:18px}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .day .c{font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><b>WEEKLY REVIEW</b><span>10.19–10.23</span></div>
+    <h1>10.19–10.23 急跌后深V反包</h1>
+    <p class="lead">上证指数本周跌0.69%，7个主要指数中2个上涨；行业层面计算机领涨（+5.21%），综合领跌（-4.12%）</p>
+    <div id="status"></div>
+  </header>
+
+  <div class="days" id="days"></div>
+
+  <section>
+    <h2>本周结论</h2>
+    <p class="sub">一句话讲清：涨跌幅度、主因、量能</p>
+    <div id="conclusion"></div>
+  </section>
+
+  <section>
+    <h2>指数表现</h2>
+    <p class="sub">周涨跌幅，红色上涨 / 绿色下跌</p>
+    <div class="chart-wrap" id="idxChart"></div>
+    <table id="idxTable" style="margin-top:18px"></table>
+  </section>
+
+  <section>
+    <h2>行业分化</h2>
+    <p class="sub">申万31个一级行业本周涨跌幅</p>
+    <div class="hbar" id="indBars"></div>
+  </section>
+
+  <section>
+    <h2>技术面</h2>
+    <p class="sub">只保留真正需要关注的那一两个</p>
+    <div id="techAlert"></div>
+    <div class="tech-grid" id="techGrid"></div>
+  </section>
+
+  <section>
+    <h2>下周展望</h2>
+    <p class="sub">全部由本周数据推导，不做事件预测</p>
+    <div class="ol" id="outlook"></div>
+  </section>
+
+  <section id="eventsSec">
+    <h2>事件面</h2>
+    <p class="sub">归因必须可核对，因此不自动编造，只展示人工确认过的事实</p>
+    <div id="events"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script id="DATA" type="application/json">{"generatedAt":"2026-10-23T15:08:04.092Z","status":"ok","checks":[],"week":{"start":"2026-10-19","end":"2026-10-23","days":5},"title":"10.19–10.23 急跌后深V反包","weekLabel":"10.19–10.23","oneLiner":"上证指数本周跌0.69%，7个主要指数中2个上涨；行业层面计算机领涨（+5.21%），综合领跌（-4.12%）","summary":{"volumeText":"沪市成交量是上周的 0.92 倍，整体量能持平","breadthText":"周五全市场4239涨913跌，涨停82家、跌停6家"},"manual":{"events":[]},"outlook":[{"tone":"neg","t":"中期趋势承压","d":"上证收于 3690 点，位于 60 日均线（3872）下方 4.68%，中期均线转为压力位，反弹到该区域需要放量才能突破。"},{"tone":"neu","t":"量能中性","d":"本周沪市成交量是上周的 0.92 倍。量能基本持平，市场处于存量博弈状态，方向选择仍需要新的增量信息。"},{"tone":"neu","t":"主线是否成立","d":"计算机本周 +5.21%，相对上证超额 5.90 个百分点；综合 -4.12%。行业分化极大，说明资金在少数方向抱团，这类结构性行情延续性取决于成交量能否维持。"}],"indices":[{"name":"上证指数","sym":"sh000001","close":3690.48,"chg":-0.69,"amp":4.56,"volRatio":0.92,"vsMa20":-2.98,"vsMa60":-4.68},{"name":"上证50","sym":"sh000016","close":2757.68,"chg":-0.39,"amp":4.01,"volRatio":1.04,"vsMa20":-1.74,"vsMa60":-4.13},{"name":"沪深300","sym":"sh000300","close":4105.33,"chg":-1.57,"amp":5.61,"volRatio":0.94,"vsMa20":-4.44,"vsMa60":-8.72},{"name":"中证500","sym":"sh000905","close":6814.44,"chg":0.62,"amp":7.4,"volRatio":0.94,"vsMa20":-5.57,"vsMa60":-10.12},{"name":"中证1000","sym":"sh000852","close":6734.55,"chg":0.79,"amp":8.66,"volRatio":0.96,"vsMa20":-5.55,"vsMa60":-8.89},{"name":"科创50","sym":"sh000688","close":1345.51,"chg":-0.97,"amp":8.24,"volRatio":1.13,"vsMa20":-8.61,"vsMa60":-15.61},{"name":"创业板指","sym":"sz399006","close":2684.1,"chg":-3.18,"amp":10.67,"volRatio":1.01,"vsMa20":-10.71,"vsMa60":-18.48}],"days":[{"date":"2026-10-19","close":3730.92,"chg":0.39,"amp":1.39,"vol":417791248,"vr":0.88},{"date":"2026-10-20","close":3735.37,"chg":0.12,"amp":1.01,"vol":408693062,"vr":0.88},{"date":"2026-10-21","close":3713.03,"chg":-0.6,"amp":1.07,"vol":378286389,"vr":0.82},{"date":"2026-10-22","close":3658.03,"chg":-1.48,"amp":1.74,"vol":437691963,"vr":0.95},{"date":"2026-10-23","close":3690.48,"chg":0.89,"amp":3.2,"vol":552842912,"vr":1.21}],"industries":[{"name":"计算机","chg":5.21,"code":"801750"},{"name":"机械设备","chg":3.01,"code":"801890"},{"name":"汽车","chg":1.51,"code":"801880"},{"name":"医药生物","chg":0.75,"code":"801150"},{"name":"家用电器","chg":0.44,"code":"801110"},{"name":"国防军工","chg":0.32,"code":"801740"},{"name":"电子","chg":0.15,"code":"801080"},{"name":"农林牧渔","chg":-0.4,"code":"801010"},{"name":"美容护理","chg":-0.47,"code":"801980"},{"name":"传媒","chg":-0.53,"code":"801760"},{"name":"食品饮料","chg":-0.56,"code":"801120"},{"name":"商贸零售","chg":-0.94,"code":"801200"},{"name":"非银金融","chg":-1.32,"code":"801790"},{"name":"石油石化","chg":-1.54,"code":"801960"},{"name":"银行","chg":-1.58,"code":"801780"},{"name":"纺织服饰","chg":-1.66,"code":"801130"},{"name":"基础化工","chg":-1.74,"code":"801030"},{"name":"环保","chg":-1.76,"code":"801970"},{"name":"社会服务","chg":-1.87,"code":"801210"},{"name":"公用事业","chg":-1.99,"code":"801160"},{"name":"建筑材料","chg":-2.21,"code":"801710"},{"name":"有色金属","chg":-2.25,"code":"801050"},{"name":"轻工制造","chg":-2.43,"code":"801140"},{"name":"建筑装饰","chg":-2.5,"code":"801720"},{"name":"钢铁","chg":-2.56,"code":"801040"},{"name":"交通运输","chg":-2.9,"code":"801170"},{"name":"电力设备","chg":-3.54,"code":"801730"},{"name":"通信","chg":-3.6,"code":"801770"},{"name":"房地产","chg":-3.61,"code":"801180"},{"name":"煤炭","chg":-4.12,"code":"801950"},{"name":"综合","chg":-4.12,"code":"801230"}],"breadth":{"up":4239,"down":913,"flat":144},"limit":{"up":82,"down":6},"tech":{"ma20":3803.88,"ma60":3871.57,"vsMa20":-2.98,"vsMa60":-4.68,"drawdown":-13.01,"vol20d":12.59,"streak":1,"weekHigh":3743.8,"weekLow":3574.27,"weekAmp":4.56},"signals":[{"k":"60日均线","v":"跌破 4.68%","raw":4.68},{"k":"距年内高点","v":"回撤 13.0%","raw":13.01},{"k":"20日年化波动","v":"12.6%","raw":0.2518}],"sources":["指数日线/腾讯行情","申万行业/申万宏源官网","涨跌家数/东方财富","涨停池/东方财富"]}</script>
+<script>
+(function(){
+  var D = JSON.parse(document.getElementById('DATA').textContent);
+  var RED='#C8102E', GREEN='#0E9F6E', GRAY='#B9B4AC';
+  var $ = function(id){ return document.getElementById(id); };
+  var pct = function(v){ return (v>0?'+':'') + (v==null?'--':v.toFixed(2)) + '%'; };
+  var cls = function(v){ return v>0?'up':(v<0?'down':''); };
+
+  /* 状态徽章 */
+  var okAll = D.status === 'ok';
+  var t = new Date(D.generatedAt);
+  var hm = ('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
+  $('status').innerHTML = '<span class="badge'+(okAll?'':' bad')+'"><span class="dot"></span>'+
+    (okAll ? '数据校验通过 · 截至 '+D.week.end+' 收盘 · 抓取 '+hm
+           : '数据未就绪 · 见页尾缺失项')+'</span>';
+
+  /* 五个交易日 */
+  var WD=['周一','周二','周三','周四','周五'];
+  $('days').innerHTML = D.days.map(function(d,i){
+    var v = d.vr;
+    var mtxt = '振幅'+d.amp.toFixed(1)+'%'+(v?(' · '+(v>1.12?'放量':v<0.95?'缩量':'平量')+v.toFixed(2)+'x'):'');
+    return '<div class="day"><div class="w">'+WD[i]+' '+d.date.slice(5).replace('-','/')+'</div>'+
+      '<div class="c num '+cls(d.chg)+'">'+pct(d.chg)+'</div>'+
+      '<div class="m num">'+mtxt+'</div></div>';
+  }).join('');
+
+  /* 结论 */
+  var I = {}; D.indices.forEach(function(x){ I[x.name]=x; });
+  var up = D.indices.filter(function(x){return x.chg>0;}).length;
+  var best = D.indices.slice().sort(function(a,b){return b.chg-a.chg;})[0];
+  var worst = D.indices.slice().sort(function(a,b){return a.chg-b.chg;})[0];
+  var lead = D.industries[0], lag = D.industries[D.industries.length-1];
+  var spread = (lead.chg - lag.chg).toFixed(2);
+
+  var shc = D.indices[0].chg;
+  $('conclusion').innerHTML =
+    '<p><span class="kw">指数：</span>上证指数本周收于 <span class="num">'+D.indices[0].close.toFixed(2)+'</span> 点，'+
+      '<span class="hl">收'+(shc>=0?'涨':'跌')+Math.abs(shc).toFixed(2)+'%</span>；'+D.indices.length+' 个主要指数中 '+up+' 个上涨，'+
+      best.name+' 最强（'+pct(best.chg)+'），'+worst.name+' 最弱（'+pct(worst.chg)+'）。</p>'+
+    '<p><span class="kw">量能：</span>'+D.summary.volumeText+'。</p>'+
+    '<p><span class="kw">结构：</span>'+lead.name+' 领涨 '+pct(lead.chg)+'，'+lag.name+' 领跌 '+pct(lag.chg)+
+      '，首尾相差 <span class="num">'+spread+'</span> 个百分点。'+(D.summary.breadthText?D.summary.breadthText+'。':'')+'</p>';
+
+  /* 指数柱状图 */
+  (function(){
+    var data = D.indices;
+    var W=740, H=340, padL=8, padR=8, padT=36, padB=62;
+    var max = Math.max.apply(null, data.map(function(d){return Math.abs(d.chg);}).concat([1]));
+    var unit = (H-padT-padB)/2/max;
+    var zero = padT + (H-padT-padB)/2;
+    var bw = (W-padL-padR)/data.length;
+    var s = '<svg viewBox="0 0 '+W+' '+H+'" role="img">';
+    s += '<line x1="0" y1="'+zero+'" x2="'+W+'" y2="'+zero+'" stroke="#E0DDD7" stroke-width="1"/>';
+    data.forEach(function(d,i){
+      var h = Math.abs(d.chg)*unit;
+      var x = padL + i*bw + bw*0.26, w = bw*0.48;
+      var y = d.chg>=0 ? zero-h : zero;
+      var color = d.chg>=0?RED:GREEN;
+      s += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+Math.max(h,1)+'" rx="1.5" fill="'+color+'"/>';
+      var ty = d.chg>=0 ? y-8 : y+Math.max(h,1)+16;
+      s += '<text x="'+(x+w/2)+'" y="'+ty+'" font-size="13" font-weight="700" fill="'+color+'" text-anchor="middle" font-family="-apple-system,sans-serif">'+pct(d.chg)+'</text>';
+      s += '<text x="'+(x+w/2)+'" y="'+(H-22)+'" font-size="11.5" fill="#8a8a8a" text-anchor="middle" font-family="-apple-system,sans-serif">'+
+           d.name+'</text>';
+    });
+    s += '</svg>';
+    $('idxChart').innerHTML = s;
+  })();
+
+  /* 指数表 */
+  $('idxTable').innerHTML = '<thead><tr><th>指数</th><th>收盘</th><th>周涨跌</th><th>周振幅</th><th>量能</th></tr></thead><tbody>'+
+    D.indices.map(function(d){
+      return '<tr><td>'+d.name+'</td><td class="num">'+d.close.toFixed(2)+'</td>'+
+        '<td class="num '+cls(d.chg)+'">'+pct(d.chg)+'</td>'+
+        '<td class="num">'+d.amp.toFixed(1)+'%</td>'+
+        '<td class="num" style="color:#8a8a8a">'+(d.volRatio?d.volRatio.toFixed(2)+'x':'--')+'</td></tr>';
+    }).join('')+'</tbody>';
+
+  /* 行业横条 */
+  (function(){
+    var arr = D.industries;
+    var max = Math.max.apply(null, arr.map(function(d){return Math.abs(d.chg);}).concat([1]));
+    $('indBars').innerHTML = arr.map(function(d){
+      var w = Math.abs(d.chg)/max*50;
+      var color = d.chg>=0?RED:GREEN;
+      var style = d.chg>=0
+        ? 'left:50%;width:'+w+'%;background:'+color
+        : 'right:50%;width:'+w+'%;background:'+color;
+      return '<div class="hrow'+(Math.abs(d.chg)===max?' mid':'')+'">'+
+        '<div class="n">'+d.name+'</div>'+
+        '<div class="track"><div class="zero"></div><div class="bar" style="'+style+'"></div></div>'+
+        '<div class="v '+cls(d.chg)+'">'+pct(d.chg)+'</div></div>';
+    }).join('');
+  })();
+
+  /* 技术面 */
+  (function(){
+    var T = D.tech;
+    var sig = (D.signals||[]).slice().sort(function(a,b){return (b.raw||0)-(a.raw||0);})[0];
+    if(sig){
+      var why = '';
+      if(sig.k.indexOf('60日')===0) why = T.vsMa60<0
+        ? '指数仍在 60 日均线下方运行，中期修复要先收复这条线。'
+        : '指数站在 60 日均线上方，中期结构没有被破坏。';
+      else if(sig.k.indexOf('距年内')===0) why = (T.drawdown<-15)
+        ? '回撤已经超过 15%，属于深度回撤区间，修复需要更长时间和更明确的增量资金。'
+        : (T.drawdown<-8
+          ? '回撤接近一成，说明今年的浮盈已经回吐大半，反弹到这个区间会先遇到解套盘的压力。'
+          : '回撤幅度可控，中期趋势尚未被破坏，更多是情绪与结构问题。');
+      else why = (T.vol20d>22)
+        ? '波动率明显高于常态，单日 2% 级别的涨跌属于正常范围，仓位不宜按低波动环境计算。'
+        : '波动率处于正常区间，短期没有出现极端情绪。';
+      $('techAlert').innerHTML = '<div class="alert"><span class="ic">!</span><div>本周真正需要盯住的是 '+
+        '<b>'+sig.k+'</b>：'+sig.v+'。'+why+'</div></div>';
+    }
+    var cards = [
+      ['20日均线', T.ma20?T.ma20.toFixed(0):'--', T.vsMa20!=null?('偏离 '+T.vsMa20.toFixed(2)+'%'):'', null, T.vsMa20],
+      ['60日均线', T.ma60?T.ma60.toFixed(0):'--', T.vsMa60!=null?('偏离 '+T.vsMa60.toFixed(2)+'%'):'', null, T.vsMa60],
+      ['本周振幅', T.weekAmp!=null?T.weekAmp.toFixed(2)+'%':'--', '高'+T.weekHigh.toFixed(0)+' 低'+T.weekLow.toFixed(0), null, null],
+      ['距年内高点', T.drawdown!=null?Math.abs(T.drawdown).toFixed(2)+'%':'--', '回撤幅度', T.drawdown, null],
+      ['20日年化波动', T.vol20d!=null?T.vol20d.toFixed(1)+'%':'--', T.vol20d>22?'偏高':'正常', null, null],
+      ['连续周线', (T.streak>0?'连涨 ':'连跌 ')+Math.abs(T.streak)+' 周', '方向强度', null, null]
+    ];
+    $('techGrid').innerHTML = cards.map(function(c){
+      return '<div class="tcard"><div class="k">'+c[0]+'</div>'+
+        '<div class="v num '+(c[3]==null?'':cls(c[3]))+'">'+c[1]+'</div>'+
+        '<div class="d '+(c[4]==null?'':cls(c[4]))+'">'+c[2]+'</div></div>';
+    }).join('');
+  })();
+
+  /* 展望 */
+  $('outlook').innerHTML = D.outlook.map(function(o,i){
+    return '<div class="oi"><div class="no">0'+(i+1)+'</div><div>'+
+      '<div class="t">'+o.t+'<span class="tag '+o.tone+'">'+(o.tone==='pos'?'偏正面':o.tone==='neg'?'偏谨慎':'中性')+'</span></div>'+
+      '<div class="d">'+o.d+'</div></div></div>';
+  }).join('');
+
+  /* 人工事件 */
+  var ev = (D.manual && D.manual.events) || [];
+  $('events').innerHTML = ev.length
+    ? ev.map(function(e){ return '<p><span class="kw">'+e.date+'</span> · '+e.text+'</p>'; }).join('')
+    : '<div class="empty">本期未填写。每个交易日的涨跌原因需要人工核对一次（1 分钟），写进 <b>data/manual.json</b> 后重跑即可显示；不自动生成，是为了避免把错误的原因写进周报。</div>';
+
+  /* 页脚 */
+  var bad = (D.checks||[]).filter(function(c){return !c.ok;});
+  var ft = '<div><b>数据源</b>：'+(D.sources||[]).join('、')+'</div>';
+  ft += '<div><b>生成时间</b>：'+D.week.end+' '+hm+'（收盘后）　<b>下次更新</b>：周五 15:35</div>';
+  if(bad.length){
+    ft += '<div style="margin-top:6px;color:#92560A"><b>缺失项</b>：'+bad.map(function(c){return c.key+'（'+c.msg+'）';}).join('；')+'</div>';
+    ft += '<div style="margin-top:4px">可稍后重新抓取一次，本页为静态快照，重跑后自动更新。</div>';
+  } else {
+    ft += '<div><b>校验</b>：指数/行业/家数/涨跌停 全部对齐 '+D.week.end+' 收盘数据，31 个申万一级行业无缺失。</div>';
+  }
+  ft += '<div style="margin-top:8px;opacity:.8">本文由数据自动生成，仅作信息记录，不构成投资建议。</div>';
+  $('foot').innerHTML = ft;
+})();
+</script>
+</body>
+</html>

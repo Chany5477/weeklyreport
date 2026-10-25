@@ -1,15 +1,17 @@
 # 部署说明：每周五自动更新的 A 股周报
 
-最终网址（部署完成后）：
+最终网址：
 
 ```
-https://<你的环境ID>.tcloudbaseapp.com/weeklyreport/
+https://chany5477.github.io/weeklyreport/          ← 主入口（GitHub Pages，免费，无需备案）
+https://<环境ID>.tcloudbaseapp.com/weeklyreport/   ← 备用（CloudBase，域名恢复后自动生效）
 ```
 
 分工：
 
-- **GitHub**：放源码 + 每周五 15:35 定时跑一次（抓数据、校验、生成页面）
-- **腾讯云 CloudBase 静态托管**：放网页本身，国内访问快，路径挂在 `/weeklyreport`
+- **GitHub Pages**：放网页本身，路径带 `/weeklyreport`，无需备案、无流量费用
+- **GitHub Actions**：每周五 15:35 定时跑一次（抓数据、校验、生成页面、提交）
+- **腾讯云 CloudBase**：同一条流水线顺带部署一份，失败不影响主站
 - **不需要数据库**：每周一期就是一个 JSON 文件，历史存在 `data/history/`
 
 ---
@@ -88,6 +90,16 @@ https://<你的环境ID>.tcloudbaseapp.com/weeklyreport/
 - **数据没取齐时**：不发布、保留上一期；同一天还会自动补跑两次。如果当晚还没更新，去 Actions 点一次 Run workflow 手动补。
 
 ---
+
+## 打开 CloudBase 域名显示 HTTP ERROR 418
+
+这是**域名级别**的问题，不是页面代码错。判断方法：访问 `https://<环境ID>.tcloudbaseapp.com/`（根路径）也报 418，就说明整个默认域名被拦了。常见三种原因，按顺序查：
+
+1. **默认域名过期**：云开发控制台 → 静态网站托管 → 基础配置，看默认域名那行有没有「续期」按钮
+2. **环境欠费/停服**：https://console.cloud.tencent.com/expense/overview 看账单状态
+3. **默认域名被风控关停**：默认域名只建议测试用，长期用要绑自定义域名（需 ICP 备案）
+
+这三种都不影响 GitHub Pages 那条线。
 
 ## 常见问题
 
