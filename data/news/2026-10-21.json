@@ -1,0 +1,138 @@
+[
+ {
+  "time": "15:17",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "日本关键稀土元素储备即将耗尽 外交部：中方依法依规对日实施出口管制",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备",
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902597557.html",
+  "score": 15
+ },
+ {
+  "time": "02:04",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "英国央行货币政策委员格林表示：3%的工资增长与2%的通胀率相符 需进一步降低工资涨幅才能实现CPI目标",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901741271.html",
+  "score": 10
+ },
+ {
+  "time": "15:11",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：2030年建设500个左右国家级零碳工厂和零碳算力设施",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902596245.html",
+  "score": 10
+ },
+ {
+  "time": "18:27",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "英伟达升级Isaac机器人平台 推出人形机器人参考框架与仿真工具",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902766877.html",
+  "score": 10
+ },
+ {
+  "time": "18:38",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "英伟达携供应链伙伴扩产 加速AI基础设施建设",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902774883.html",
+  "score": 10
+ },
+ {
+  "time": "06:04",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储10月维持利率不变的概率为83.9%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213901773194.html",
+  "score": 8
+ },
+ {
+  "time": "10:59",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "智元全尺寸人形机器人智慧零售仓落地武汉 单日订单破百",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902433837.html",
+  "score": 6
+ },
+ {
+  "time": "16:01",
+  "phase": "盘后",
+  "tag": "货币",
+  "text": "印尼央行副行长：预计此次降准将释放约190万亿印尼盾流动性",
+  "secs": [
+   "银行",
+   "非银金融",
+   "房地产"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902636320.html",
+  "score": 6
+ },
+ {
+  "time": "18:27",
+  "phase": "盘后",
+  "tag": "产业",
+  "text": "长盈精密：1月至8月累计交付人形机器人精密零组件超过110万件 第三、四季度订单增速较上半年进一步加快",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610213902770074.html",
+  "score": 6
+ }
+]

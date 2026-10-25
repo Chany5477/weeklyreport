@@ -1,0 +1,143 @@
+[
+ {
+  "time": "21:08",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "五角大楼考虑对人工智能实验室实施出口管制",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900116137.html",
+  "score": 13
+ },
+ {
+  "time": "12:08",
+  "phase": "盘中",
+  "tag": "数据",
+  "text": "前三季度深圳集成电路等人工智能相关零部件进出口规模居全国首位",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899742580.html",
+  "score": 10
+ },
+ {
+  "time": "15:02",
+  "phase": "盘后",
+  "tag": "海外",
+  "text": "两部门：进一步优化两用物项出口管制质疑和鉴别工作有关事项",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899858815.html",
+  "score": 10
+ },
+ {
+  "time": "16:54",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "央行：做好金融支持人工智能产业发展工作",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899953498.html",
+  "score": 10
+ },
+ {
+  "time": "18:26",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "央行等11部门：指导金融机构为从事软件服务、算力服务等的优质企业提供更高效便捷的跨境资金结算服务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193900012294.html",
+  "score": 10
+ },
+ {
+  "time": "06:17",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI与涨价双轮驱动 逾130家A股公司三季报预喜",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899217062.html",
+  "score": 8
+ },
+ {
+  "time": "08:42",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI上天，卫星数据“地算”变“天算”",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899268291.html",
+  "score": 8
+ },
+ {
+  "time": "07:22",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "多个赛道订单迸发 广交会机器人展馆火热出圈",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899217774.html",
+  "score": 6
+ },
+ {
+  "time": "08:18",
+  "phase": "盘前",
+  "tag": "主题",
+  "text": "外骨骼康复训练项目纳入多地医保 机器人应用场景不断突破",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610193899260861.html",
+  "score": 6
+ }
+]

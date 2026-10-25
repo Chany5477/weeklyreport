@@ -95,26 +95,26 @@ const SW = [
   ['801960', '石油石化'], ['801970', '环保'], ['801980', '美容护理'],
 ];
 
+// 取日线，周涨跌/每日异动都由日线推导，口径一致
 async function getSW() {
   const out = [];
   for (const [code, name] of SW) {
-    const url = `https://www.swsresearch.com/institute-sw/api/index_publish/trend/?swindexcode=${code}&period=WEEK`;
+    const url = `https://www.swsresearch.com/institute-sw/api/index_publish/trend/?swindexcode=${code}&period=DAY`;
     try {
       const arr = JSON.parse(await get(url, 'https://www.swsresearch.com/'))?.data || [];
-      const last = arr[arr.length - 1];
-      const prev = arr[arr.length - 2];
-      if (!last || !prev) throw new Error('empty');
-      out.push({
-        code, name,
-        date: String(last.bargaindate).slice(0, 10),
-        chg: +(last.closeindex / prev.closeindex - 1) * 100,
-        close: last.closeindex,
-        amt: last.bargainsum,
-      });
+      const rows = arr.slice(-40).map(r => ({
+        date: String(r.bargaindate).slice(0, 10),
+        close: +r.closeindex,
+        chg: +r.markup,          // 申万自带的当日涨跌幅
+        amt: +r.bargainsum,
+      })).filter(r => r.date && isFinite(r.close));
+      if (rows.length < 12) throw new Error('empty');
+      const last = rows[rows.length - 1];
+      out.push({ code, name, date: last.date, close: last.close, amt: last.amt, rows });
     } catch {
-      out.push({ code, name, chg: null, date: null });
+      out.push({ code, name, chg: null, date: null, rows: [] });
     }
-    await sleep(220);
+    await sleep(200);
   }
   return out;
 }
@@ -367,6 +367,30 @@ async function main() {
   const weekRows = weekOf(shRows, shRows.length - 1);
   const weekStart = weekRows[0].date, weekEnd = weekRows[weekRows.length - 1].date;
 
+  /* -------- 行业：周涨跌 + 每日异动（统一由日线推导） -------- */
+  for (const ind of industries) {
+    const rows = ind.rows || [];
+    const prev = [...rows].reverse().find(r => r.date < weekStart);
+    const last = rows[rows.length - 1];
+    ind.chg = (prev && last) ? r2(pct(last.close, prev.close)) : null;
+    ind.date = last ? last.date : null;
+  }
+  const tradingDates = weekRows.map(r => r.date);
+  const dailySectors = {};
+  for (const d of tradingDates) {
+    const list = industries
+      .map(i => ({ name: i.name, chg: (i.rows || []).find(r => r.date === d)?.chg }))
+      .filter(x => x.chg != null && isFinite(x.chg) && x.chg !== 0)
+      .sort((a, b) => b.chg - a.chg);
+    if (list.length < 20) continue;
+    dailySectors[d] = {
+      top: list.slice(0, 3).map(x => ({ name: x.name, chg: r2(x.chg) })),
+      bot: list.slice(-3).reverse().map(x => ({ name: x.name, chg: r2(x.chg) })),
+      extreme: r2(Math.max(Math.abs(list[0].chg), Math.abs(list[list.length - 1].chg))),
+      breadthUp: list.filter(x => x.chg > 0).length,
+    };
+  }
+
   // 1. 是否已经收盘（15:00 之后）
   const now = new Date();
   const closeTime = new Date(weekEnd + 'T15:00:00');
@@ -384,6 +408,10 @@ async function main() {
 
   // 4. 宽度
   if (breadth && (breadth.up + breadth.down + breadth.flat) < 3000) checks.push({ key: '涨跌家数', ok: false, msg: '涨跌家数合计偏少，可能未完整覆盖全市场' });
+
+  // 5. 行业日线覆盖（每日异动板块依赖它）
+  const missDay = tradingDates.filter(d => !dailySectors[d]);
+  if (missDay.length) checks.push({ key: '行业日线', ok: false, msg: `${missDay.join('、')} 的行业日线不完整` });
 
   const ok = checks.filter(c => !c.ok).length === 0;
 
@@ -417,7 +445,7 @@ async function main() {
       name: i.name, sym: i.sym, close: i.close, chg: i.weekChg,
       amp: i.weekAmp, volRatio: i.volRatio, vsMa20: i.vsMa20, vsMa60: i.vsMa60,
     })),
-    days: sh.daily,
+    days: sh.daily.map(d => ({ ...d, sectors: dailySectors[d.date] || null })),
     industries: okInd.sort((a, b) => b.chg - a.chg).map(i => ({ name: i.name, chg: r2(i.chg), code: i.code })),
     breadth, limit: { up: zt, down: dt },
     tech: {

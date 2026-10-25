@@ -33,6 +33,13 @@ jobs:
             sleep 300
           done
 
+      # 抓当日快讯并筛出每天的 3 条事件；配置 DEEPSEEK_API_KEY 时用大模型归纳，否则走关键词规则
+      - name: 抓快讯 + 生成事件
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          node scripts/news.mjs
+
       - name: 构建 + 渲染自检
         run: |
           node scripts/build.mjs

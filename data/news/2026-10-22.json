@@ -1,0 +1,124 @@
+[
+ {
+  "time": "08:17",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "特斯拉Q3财报出炉：加码AI和机器人 汽车主业承压 资本支出远逊预期！",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903311593.html",
+  "score": 10
+ },
+ {
+  "time": "15:22",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "商务部：将与世界各国一道 共建AI国际经贸规则",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904065910.html",
+  "score": 10
+ },
+ {
+  "time": "21:09",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "美国商务部将拨款3.89亿美元用于芯片研发",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223904407365.html",
+  "score": 10
+ },
+ {
+  "time": "02:24",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "ABB机器人：助力工业级物理AI走进真实场景",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903051991.html",
+  "score": 8
+ },
+ {
+  "time": "06:13",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储10月维持利率不变的概率为83.9%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903085135.html",
+  "score": 8
+ },
+ {
+  "time": "07:09",
+  "phase": "盘前",
+  "tag": "制度",
+  "text": "“国家队”入场 全国一体化数据市场建设有望提速",
+  "secs": [
+   "非银金融"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903049841.html",
+  "score": 8
+ },
+ {
+  "time": "07:23",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "加拿大宣布战略产业援助计划应对美国关税冲击",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903102129.html",
+  "score": 8
+ },
+ {
+  "time": "11:18",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "马斯克：储能业务需求十分火爆 正以最快速度扩产",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610223903842862.html",
+  "score": 6
+ }
+]

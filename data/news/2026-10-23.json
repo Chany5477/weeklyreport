@@ -1,0 +1,158 @@
+[
+ {
+  "time": "15:09",
+  "phase": "盘后",
+  "tag": "制度",
+  "text": "财政部：前三季度证券交易印花税2391亿元 同比增长65.1%",
+  "secs": [
+   "非银金融"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233906216082.html",
+  "score": 15
+ },
+ {
+  "time": "19:26",
+  "phase": "盘后",
+  "tag": "产业",
+  "text": "武汉天源：联合体中标36.4亿元储能设备+安装一体化项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.67,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233906474987.html",
+  "score": 12
+ },
+ {
+  "time": "21:50",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "国家能源局：加快核电设计标准化进程 实现核电工程质量管理的提档升级",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.67,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233906653044.html",
+  "score": 12
+ },
+ {
+  "time": "08:02",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "特斯拉2027年Megapack储能系统订单接近售罄，马斯克：将尽可能提高产能",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.67,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233904869711.html",
+  "score": 10
+ },
+ {
+  "time": "10:40",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "商务部：电商平台成为我国人工智能发展的一支重要生力军",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233905571371.html",
+  "score": 10
+ },
+ {
+  "time": "13:09",
+  "phase": "盘中",
+  "tag": "制度",
+  "text": "大金融板块持续反弹 汇金科技触及20cm涨停",
+  "secs": [
+   "非银金融"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233905905389.html",
+  "score": 10
+ },
+ {
+  "time": "01:02",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "交易员不再完全押注美联储将在年底前加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233904637048.html",
+  "score": 8
+ },
+ {
+  "time": "06:03",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储10月维持利率不变的概率为92.8%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233904671810.html",
+  "score": 8
+ },
+ {
+  "time": "14:51",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "日本9月芯片制造设备订单额同比增长48.2%",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233906204451.html",
+  "score": 8
+ },
+ {
+  "time": "18:12",
+  "phase": "盘后",
+  "tag": "科技",
+  "text": "《国家信息化“十五五”规划》印发：推进人工智能等基础性立法 强化无人驾驶、低空经济等新兴领域立法研究",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610233906396019.html",
+  "score": 8
+ }
+]

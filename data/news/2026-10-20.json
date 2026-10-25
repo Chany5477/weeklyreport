@@ -1,0 +1,178 @@
+[
+ {
+  "time": "15:32",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：正在研究起草新一代智能制造的有关政策措施 加快推动人工智能与制造业深度融合",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901289631.html",
+  "score": 12
+ },
+ {
+  "time": "15:52",
+  "phase": "盘后",
+  "tag": "政策",
+  "text": "工信部：下一步将加快算力设施扩容提质 为先进制造业发展夯实网络和算力底座",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901301570.html",
+  "score": 12
+ },
+ {
+  "time": "07:35",
+  "phase": "盘前",
+  "tag": "周期",
+  "text": "攻坚先进封装 深科技抢抓AI存储发展“黄金期”",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输",
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900356762.html",
+  "score": 10
+ },
+ {
+  "time": "02:03",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英伟达在于利希超级计算中心完成容错量子计算创纪录模拟",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900316730.html",
+  "score": 8
+ },
+ {
+  "time": "02:33",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "德国卫星公司Reflex Aerospace称：在英伟达计划投资的支撑下扩大欧洲卫星生产",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900322556.html",
+  "score": 8
+ },
+ {
+  "time": "06:04",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储10月维持利率不变的概率为82.8%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900343257.html",
+  "score": 8
+ },
+ {
+  "time": "08:44",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "欧盟：俄乌冲突结束前不会解除任何对俄制裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900597175.html",
+  "score": 8
+ },
+ {
+  "time": "09:56",
+  "phase": "盘中",
+  "tag": "货币",
+  "text": "东方金诚：LPR报价短期内下调可能性不大",
+  "secs": [
+   "银行",
+   "非银金融",
+   "房地产"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203900985912.html",
+  "score": 8
+ },
+ {
+  "time": "14:01",
+  "phase": "盘中",
+  "tag": "数据",
+  "text": "山东：到2030年全域旅游及相关产业增加值占GDP比重达到6%左右",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901237797.html",
+  "score": 8
+ },
+ {
+  "time": "14:03",
+  "phase": "盘中",
+  "tag": "主题",
+  "text": "山东：探索“具身智能+旅游”落地应用 支持山岳型景区投放登山助力机器人",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备",
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901240952.html",
+  "score": 6
+ },
+ {
+  "time": "19:48",
+  "phase": "盘后",
+  "tag": "产业",
+  "text": "兆丰股份：控股子公司预中标机器人创新服务平台项目",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610203901487951.html",
+  "score": 6
+ }
+]

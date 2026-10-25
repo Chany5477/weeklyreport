@@ -20,7 +20,7 @@ const ctx = { document, console, Date, Math, JSON, parseInt, parseFloat, isNaN }
 vm.createContext(ctx);
 vm.runInContext(codeMatch[1], ctx);
 
-const ids = ['status', 'days', 'conclusion', 'idxChart', 'idxTable', 'indHeat', 'indBars', 'techAlert', 'techGrid', 'outlook', 'events', 'foot'];
+const ids = ['status', 'days', 'conclusion', 'cause', 'dayCards', 'idxChart', 'idxTable', 'indHeat', 'indBars', 'techAlert', 'techGrid', 'outlook', 'foot'];
 let bad = 0;
 for (const id of ids) {
   const v = store[id]?.innerHTML ?? '';
