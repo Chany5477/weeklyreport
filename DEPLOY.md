@@ -60,6 +60,15 @@ git push -u origin main
 | `TCB_SECRET_ID` | 第 2 步的 SecretId |
 | `TCB_SECRET_KEY` | 第 2 步的 SecretKey |
 | `TCB_ENV_ID` | 第 3 步的环境 ID |
+| `DEEPSEEK_API_KEY` | 第 4.5 步的 DeepSeek key（可选，建议加） |
+
+### 第 4.5 步（可选，强烈建议）：配 DeepSeek key
+
+事件是抓东方财富 7x24 快讯 + 关键词筛出候选池，然后交给 DeepSeek 挑出真正解释涨跌的 1~3 条，并写出每天的"市场普遍归因"。不配也能跑（降级为关键词规则版，页面会标出来），配了质量差很多。每周 5 次调用，约几分钱。
+
+- 申请：https://platform.deepseek.com/ → API Keys → 创建（复制 `sk-` 开头那串）
+- 本地跑：把 key 写进 `secrets/deepseek.key`（这个文件已 gitignore，不会上传）
+- 线上跑：按第 4 步同样的方式加一个名为 `DEEPSEEK_API_KEY` 的 secret
 
 ### 第 5 步：打开 Actions 的写权限
 
