@@ -534,7 +534,7 @@ footer b{color:var(--ink2);font-weight:600}
         '<div class="pctscale"><span>0%（股最贵）</span><span>50%</span><span>100%（股最便宜）</span></div>'+
         '<div class="spark">'+spark(E.hist)+'</div>'+
         (C.erp?'<div class="note">'+C.erp+'</div>':'')+
-        '<span class="note"><span class="src">口径：沪深300 PE（TTM）取'+A.src.valuation+'，10 年国债收益率取'+A.src.bond+'；分位区间为近十年周度样本。</span></span>'+
+        '<span class="note"><span class="src">口径：沪深300 PE（TTM）取'+A.src.valuation+'；10 年国债收益率 '+(E.approx==='etf'?'由十年国债ETF(511260) 价格与久期反推（基准值人工校准，非官方序列）':'取'+A.src.bond)+'；分位为近十年日频样本。</span></span>'+
         '</div>';
     } else {
       $('erp').innerHTML = '<div class="empty">本期未取到沪深300 PE 与 10 年国债收益率，无法计算。接入 iFinD 后自动补齐（把 refresh_token 写进 secrets/ifind.token）；未接入时这一块保持空白，不猜数。</div>';
@@ -565,7 +565,7 @@ footer b{color:var(--ink2);font-weight:600}
         card('10年国债', B.y10.v, '%', B.y10.chgW, B.y10.pct)+
         (B.y1?card('1年国债', B.y1.v, '%', B.y1.chgW, B.y1.pct):'')+
         (B.term!=null?'<div class="c"><div class="k">期限利差</div><div class="v">'+B.term+'%</div><div class="d">10Y − 1Y</div></div>':'')+
-        (B.dr007?card('DR007', B.dr007.v, '%', B.dr007.chgW, B.dr007.pct):'')+
+        (B.dr007?card(B.drLabel||'DR007', B.dr007.v, '%', B.dr007.chgW, B.dr007.pct):'')+
         (B.spread!=null?'<div class="c"><div class="k">信用利差</div><div class="v">'+B.spread+'%</div><div class="d">信用债 − 国债</div></div>':'')+
         '</div>';
       $('bond').innerHTML = '<div class="box">'+g+

@@ -331,7 +331,7 @@ if (bond?.y10 && hs?.pe) {
     y10: yNow,
     value: Math.round(curV * 100) / 100,
     pct: pctRank(pairs.map(p => p[1]), curV),
-    hist: pairs.slice(-260),
+    hist: pairs.slice(-520),
     approx,
   };
 }
@@ -356,8 +356,9 @@ const manualBond = existsSync(resolve(ROOT, 'data/bond-manual.json'))
 if (!bond && manualBond) {
   const one = (v) => (v == null ? null : { v, chgW: null, pct: null, hist: null });
   bond = {};
-  if (manualBond.y10 != null) bond.y10 = one(manualBond.y10);
+  if (manualBond.y10 != null) bond.y10 = { ...one(manualBond.y10), manual: true };
   if (manualBond.y1 != null) bond.y1 = one(manualBond.y1);
+  if (manualBond.dr001 != null) bond.dr001 = one(manualBond.dr001);
   if (manualBond.dr007 != null) bond.dr007 = one(manualBond.dr007);
   if (manualBond.credit != null) bond.credit = one(manualBond.credit);
   if (Object.keys(bond).length) console.log('债市：用 data/bond-manual.json 的人工数据');
@@ -369,16 +370,17 @@ if (bond) {
     // 人工填的是 {v, chgW, pct}，接口取的是 [[日期, 值]]，两种都兼容
     if (bond[k] && !Array.isArray(bond[k])) {
       const b = bond[k];
-      return { v: b.v, chgW: b.chgW ?? null, pct: b.pct ?? null, hist: b.hist ?? null };
+      return { v: b.v, chgW: b.chgW ?? null, pct: b.pct ?? null, hist: b.hist ?? null, manual: !!b.manual };
     }
     const s = cut(bond[k]);
     if (!s || !s.length) return null;
     const c = last(s)[1], p = prev(s)?.[1];
     return { v: c, chgW: p != null ? Math.round((c - p) * 100) / 100 : null, pct: pctRank(s.map(x => x[1]), c), hist: s.slice(-260) };
   };
-  const y10 = pick('y10'), y1 = pick('y1'), dr = pick('dr007'), cr = pick('credit');
+  const y10 = pick('y10'), y1 = pick('y1'), dr = pick('dr007') || pick('dr001'), cr = pick('credit');
   bondOut = {
     y10, y1, dr007: dr, credit: cr,
+    drLabel: manualBond?.dr007 != null ? 'DR007' : (manualBond?.dr001 != null ? 'DR001' : 'DR007'),
     term: (y10 && y1) ? Math.round((y10.v - y1.v) * 100) / 100 : null,
     spread: (cr && y10) ? Math.round((cr.v - y10.v) * 100) / 100 : null,
   };
@@ -415,17 +417,54 @@ if (proxy10) {
   bondDelta = { w: compute(1), m: compute(4), y: compute(52), dur: proxy10.dur, name: proxy10.name };
 }
 
-/* 3.7、人工给过基准收益率后，用 ETF 涨跌滚动推算当前值（只需校准一次，别忘了每季度重新校准） */
+/* 3.7、人工基准值：先对齐到周报截止日（用户看到的往往是当天值），填一次即可 */
 const baseY = manualBond?.y10, baseD = manualBond?.y10AsOf;
-if (baseY != null && baseD && proxy10 && !bondOut?.y10) {
-  const w = cut(await weeklySeries('', proxy10.ifd, 10));
-  const base = w.filter(x => x[0] <= baseD).pop()?.[1];
-  const now = last(w)?.[1];
-  if (base && now) {
-    const dy = ((now / base - 1) * -100 / proxy10.dur) * 100;   // bp
-    const v = Math.round((baseY + dy / 100) * 100) / 100;
-    bondOut = { ...(bondOut || {}), y10: { v, chgW: bondDelta?.w ?? null, pct: null, hist: null, est: true } };
-    console.log(`债市：由 ${baseD} 的 ${baseY}% 与十年国债ETF 涨跌推算出 10Y ≈ ${v}%`);
+if (baseY != null && proxy10 && (!bondOut?.y10 || bondOut.y10.manual)) {
+  let v = baseY, note = '';
+  const d0 = baseD || TODAY;
+  if (d0 !== AS_OF) {
+    const rows = await ifind.historyQuotes(proxy10.ifd, d0 < AS_OF ? d0 : AS_OF, d0 > AS_OF ? d0 : AS_OF,
+      'close', at).catch(() => []);
+    const px = new Map(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r.close)]));
+    const pB = px.get(d0), pA = px.get(AS_OF);
+    if (Number.isFinite(pB) && Number.isFinite(pA)) {
+      // 价格从 asOf 到 base 变动 → 收益率同向反向变动
+      const dyPct = -((pB / pA) - 1) * 100 / proxy10.dur;
+      v = baseY + dyPct;
+      note = `（基准 ${d0} 为 ${baseY}%，按十年国债ETF 涨跌回推到 ${AS_OF}）`;
+    }
+  }
+  v = Math.round(v * 1000) / 1000;
+  bondOut = { ...(bondOut || {}), y10: { v, chgW: bondDelta?.w ?? null, pct: null, hist: null, est: true, base: baseY, baseD: d0 } };
+  console.log(`债市：10Y ≈ ${v}% ${note || `（人工基准 ${d0}）`}`);
+}
+
+/* 3.8、有了收益率基准，就用 ETF 价格反推十年收益率轨迹，再算真正的 ERP 历史与分位 */
+if (bondOut?.y10 && hs?.pe && (!erp || erp.partial || erp.approx)) {
+  const yAsOf = bondOut.y10.v;
+  const rows = await ifind.historyQuotes(proxy10.ifd, '2016-10-01', TODAY, 'close', at).catch(() => []);
+  const px = rows.map(r => [String(r.time).slice(0, 10), ifind.num(r.close)])
+    .filter(r => r[0] && Number.isFinite(r[1])).sort((a, b) => a[0].localeCompare(b[0]));
+  const anchorP = (px.find(r => r[0] === AS_OF) || px[px.length - 1])?.[1];
+  if (anchorP) {
+    // y10(t) = y10(asOf) + Δy(asOf→t)，Δy ≈ −Δ价格% ÷ 久期
+    let i = 0;
+    const yAt = (d) => {
+      while (i + 1 < px.length && px[i + 1][0] <= d) i++;
+      const p = (px[i] && px[i][0] <= d) ? px[i][1] : anchorP;
+      return yAsOf - (p / anchorP - 1) * 100 / proxy10.dur;
+    };
+    const pairs = hsPe.map(([d, pe]) => [d, Math.round(((100 / pe) - yAt(d)) * 100) / 100])
+      .filter(p => Number.isFinite(p[1]));
+    const curV = Math.round(((100 / hs.pe) - yAsOf) * 100) / 100;
+    erp = {
+      pe: Math.round(hs.pe * 100) / 100,
+      y10: yAsOf,
+      value: curV,
+      pct: pctRank(pairs.map(p => p[1]), curV),
+      hist: toWeekly(pairs).slice(-520),
+      approx: 'etf',   // 历史收益率由 ETF 价格反推
+    };
   }
 }
 
