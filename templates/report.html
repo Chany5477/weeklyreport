@@ -519,6 +519,7 @@ footer b{color:var(--ink2);font-weight:600}
         '<div class="pctbar"><span class="m" style="left:calc('+(E.pePct==null?50:E.pePct)+'% - 1.5px)"></span>'+
           '<span class="lbl" style="left:calc('+Math.min((E.pePct==null?50:E.pePct),88)+'%)">PE 分位 '+(E.pePct==null?'--':E.pePct+'%')+'</span></div>'+
         '<div class="pctscale"><span>0%（估值最贵）</span><span>50%</span><span>100%（估值最便宜）</span></div>'+
+        (E.hist?'<div class="spark">'+spark(E.hist)+'</div>':'')+
         '<div class="note">完整的股债性价比 = 盈利收益率 − 10 年国债收益率。本期<b>未取到 10 年国债收益率</b>（'+A.src.bond+'），先摆出盈利收益率这一半；'+
         '沪深300 盈利收益率 '+E.ey.toFixed(2)+'%，PE 处于 '+(E.pePct==null?'--':E.pePct+'%')+' 分位'+
         ((E.pePct==null||E.pePct<=35)?'，股票这一侧偏便宜':(E.pePct>=70?'，股票这一侧已经不便宜':'，股票这一侧处在中性区间')+'')+'。</div>'+
@@ -572,13 +573,15 @@ footer b{color:var(--ink2);font-weight:600}
         '<td class="num '+cls(i.chgW)+'">'+pct(i.chgW)+'</td>'+
         '<td class="num">'+(i.pe==null?'--':i.pe.toFixed(2))+'</td>'+
         '<td class="num">'+(i.pb==null?'--':i.pb.toFixed(2))+'</td>'+
-        '<td class="num">'+bar(p==null?0:p)+' '+(p==null?'--':p+'%'+(usePrice?'价':''))+'</td></tr>';
+        '<td class="num">'+bar(p==null?0:p)+' '+(p==null?'--':p+'%'+(usePrice?'价':(i.peLen&&i.peLen<1800?'*':'')))+'</td></tr>';
     }).join('');
     $('val').innerHTML = '<div class="box"><table><thead><tr><th>指数</th><th>收盘</th><th>本周</th><th>PE</th><th>PB</th><th>'+
       (hasVal ? 'PE 十年分位' : '价格分位（估值未接入）')+'</th></tr></thead><tbody>'+rows+'</tbody></table>'+
       (C.valuation?'<div class="note">'+C.valuation+'</div>':'')+
       '<span class="note"><span class="src">估值来源：'+A.src.valuation+'；价格来源：'+A.src.price+'。'+
-      (hasVal ? '带"价"字的行表示该指数暂未取到估值，用价格分位代替（口径不同，仅供参考）。' : '当前未接入估值数据，分位列用价格分位代替（口径不同，仅作参考）。')+'</span></span></div>';
+      (hasVal ? 'PE 分位为近十年日频样本自算（来源 '+A.src.valuation+'）；带 * 的指数发布时间不足十年，分位按可得历史计算；'+
+               '带"价"字的行表示暂未取到 PE，用价格分位代替（口径不同，仅供参考）。' : '当前未接入估值数据，分位列用价格分位代替（口径不同，仅作参考）。')+
+      ' PB 分位来自蛋卷（iFinD 未开放市净率历史序列）。</span></span></div>';
 
     /* 4、基金风格适配 */
     var fit = {};

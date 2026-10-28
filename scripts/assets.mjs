@@ -18,16 +18,16 @@ const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 /* ---------------- 指数清单 ---------------- */
 // tx: 腾讯行情代码（免费源兜底）；ifd: iFinD 代码；dj: 蛋卷估值代码
 export const INDICES = [
-  { key: 'sh',   name: '上证综指', tx: 'sh000001', ifd: '000001.SH', dj: 'SH000001' },
-  { key: 'hs300', name: '沪深300', tx: 'sh000300', ifd: '000300.SH', dj: 'SH000300' },
-  { key: 'zz500', name: '中证500', tx: 'sh000905', ifd: '000905.SH', dj: 'SH000905' },
-  { key: 'zz800', name: '中证800', tx: 'sh000906', ifd: '000906.SH', dj: 'SH000906' },
-  { key: 'zz1000', name: '中证1000', tx: 'sh000852', ifd: '000852.SH', dj: 'SH000852' },
-  { key: 'kc50',  name: '科创50',  tx: 'sh000688', ifd: '000688.SH', dj: 'SH000688' },
-  { key: 'kcz',   name: '科创综指', tx: 'sh000680', ifd: '000680.SH', dj: 'SH000680' },
-  { key: 'cyb',   name: '创业板指', tx: 'sz399006', ifd: '399006.SZ', dj: 'SZ399006' },
-  { key: 'sz50',  name: '上证50',  tx: 'sh000016', ifd: '000016.SH', dj: 'SH000016' },
-  { key: 'hl',   name: '中证红利', tx: 'sh000922', ifd: '000922.CSI', dj: 'SH000922' },
+  { key: 'sh',   name: '上证综指', tx: 'sh000001', ifd: '000001.SH', dj: 'SH000001', ask: '000001.SH' },
+  { key: 'hs300', name: '沪深300', tx: 'sh000300', ifd: '000300.SH', dj: 'SH000300', ask: '000300.SH' },
+  { key: 'zz500', name: '中证500', tx: 'sh000905', ifd: '000905.SH', dj: 'SH000905', ask: '000905.SH' },
+  { key: 'zz800', name: '中证800', tx: 'sh000906', ifd: '000906.SH', dj: 'SH000906', ask: '000906.SH' },
+  { key: 'zz1000', name: '中证1000', tx: 'sh000852', ifd: '000852.SH', dj: 'SH000852', ask: '000852.SH' },
+  { key: 'kc50',  name: '科创50',  tx: 'sh000688', ifd: '000688.SH', dj: 'SH000688', ask: '科创50' },
+  { key: 'kcz',   name: '科创综指', tx: 'sh000680', ifd: '000680.SH', dj: 'SH000680', ask: '科创综指' },
+  { key: 'cyb',   name: '创业板指', tx: 'sz399006', ifd: '399006.SZ', dj: 'SZ399006', ask: '399006.SZ' },
+  { key: 'sz50',  name: '上证50',  tx: 'sh000016', ifd: '000016.SH', dj: 'SH000016', ask: '000016.SH' },
+  { key: 'hl',   name: '中证红利', tx: 'sh000922', ifd: '000922.CSI', dj: 'SH000922', ask: '' },
 ];
 
 // 基金风格代表指数（用户指定走中证指数系列）
@@ -130,22 +130,75 @@ const chg = (a, b) => (Number.isFinite(a) && Number.isFinite(b) && b) ? Math.rou
 const last = (s) => (s.length ? s[s.length - 1] : null);
 const prev = (s, n = 1) => (s.length > n ? s[s.length - 1 - n] : null);
 
-/* ---------------- iFinD 估值 / 利率 ---------------- */
-async function ifindValuation(code, at, years = 10) {
-  if (!at) return null;
-  const start = new Date(Date.now() - years * 365 * 86400e3).toISOString().slice(0, 10);
-  const out = {};
-  for (const [k, ind] of [['pe', IND_ID.pe], ['pb', IND_ID.pb]]) {
-    if (!ind) continue;
-    try {
-      const rows = await ifind.dateSerial(code, [{ indicator: ind, indiparams: [''] }], start, TODAY, at);
-      const w = toWeekly(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r[ind])])
-        .filter(r => r[0] && Number.isFinite(r[1])).sort((a, b) => a[0].localeCompare(b[0])));
-      if (w.length) out[k] = w;
-    } catch { /* 指标 ID 不对就跳过，页面标注无数据 */ }
-    await sleep(150);
+/* ---------------- iFinD 估值（问财接口） ----------------
+ * 说明：账号没有「指数估值」数据包，date_sequence 的 ths_pe_ttm_index 一律返回 null；
+ * 但问财（smart_stock_picking）可以回答「沪深300 2017年1月3日至2017年12月29日 市盈率」，
+ * 一次返回该区间全部交易日的 PE（约 248 个），所以按年分段就能自己拼出十年 PE 序列并算分位。
+ */
+const cnDate = (d) => `${+d.slice(0, 4)}年${+d.slice(5, 7)}月${+d.slice(8, 10)}日`;
+
+async function askIndex(at, query) {
+  const r = await ifind.call('smart_stock_picking', { searchstring: query, searchtype: 'index' }, at);
+  const t = (r.tables || [])[0]?.table || {};
+  return t;
+}
+
+/** 取一个指数某区间的日频 PE；expect 用来校验问财有没有认错指数 */
+async function askPeRange(ask, expect, start, end, at) {
+  const t = await askIndex(at, `${ask} ${cnDate(start)}至${cnDate(end)} 市盈率`);
+  const codes = t['指数代码'] || [];
+  if (expect && codes.length && !String(codes[0]).startsWith(expect)) return [];  // 认错指数就当没数据
+  const out = [];
+  for (const [k, v] of Object.entries(t)) {
+    const m = k.match(/市盈率[^\[]*\[(\d{8})\]/);
+    if (!m) continue;
+    const val = Array.isArray(v) ? v.find(x => Number.isFinite(Number(x))) : v;
+    if (val == null || !Number.isFinite(Number(val))) continue;
+    out.push([`${m[1].slice(0, 4)}-${m[1].slice(4, 6)}-${m[1].slice(6, 8)}`, Number(val)]);
   }
-  return Object.keys(out).length ? out : null;
+  return out.sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+/** 取当前 PB（问财只给最新值，不给历史序列） */
+async function askPbNow(name, at) {
+  const t = await askIndex(at, `${name} 市净率`);
+  for (const [k, v] of Object.entries(t)) {
+    if (!k.includes('市净率')) continue;
+    const val = Array.isArray(v) ? v.find(x => Number.isFinite(Number(x))) : v;
+    if (val != null && Number(val) > 0) return Math.round(Number(val) * 1000) / 1000;
+  }
+  return null;
+}
+
+/** 十年日频 PE（带缓存，每周增量） */
+async function peSeries(key, ask, expect, at, years = 10) {
+  if (!at || !ask) return null;
+  const dir = resolve(ROOT, 'data/hist');
+  mkdirSync(dir, { recursive: true });
+  const f = resolve(dir, `pe-${key}.json`);
+  let cached = [];
+  if (existsSync(f)) { try { cached = JSON.parse(readFileSync(f, 'utf8')); } catch { cached = []; } }
+  const lastDate = cached.length ? cached[cached.length - 1][0] : '';
+  if (cached.length && lastDate >= AS_OF) return cached;
+
+  let fresh = [];
+  if (cached.length) {
+    fresh = await askPeRange(ask, expect, new Date(Date.now() - 120 * 86400e3).toISOString().slice(0, 10), TODAY, at).catch(() => []);
+  }
+  if (cached.length < 200) {
+    // 首次构建：按年分段取十年
+    const y1 = new Date().getFullYear();
+    for (let y = y1 - years + 1; y <= y1; y++) {
+      const part = await askPeRange(ask, expect, `${y}-01-01`, `${y}-12-31`, at).catch(() => []);
+      fresh = fresh.concat(part);
+      await sleep(200);
+    }
+  }
+  const merged = new Map(cached.map(r => [r[0], r[1]]));
+  for (const [d, v] of fresh) merged.set(d, v);
+  const all = [...merged.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  if (all.length) writeFileSync(f, JSON.stringify(all));
+  return all.length ? all : cached;
 }
 
 /** 蛋卷估值兜底：iFinD 指数估值无权限时用它，给当前 PE / PB 与分位 */
@@ -217,15 +270,19 @@ const indices = [];
 for (const it of INDICES) {
   const w = cut(await weeklySeries(it.tx, it.ifd, 10));
   const cur = last(w), pw = prev(w), pm = prev(w, 4), py = prev(w, 52);
-  let val = await ifindValuation(it.ifd, at, 10);
-  let pe = val?.pe ? last(val.pe)[1] : null;
-  let pb = val?.pb ? last(val.pb)[1] : null;
-  let pePct = val?.pe ? pctRank(val.pe.map(x => x[1]), pe) : null;
-  let pbPct = val?.pb ? pctRank(val.pb.map(x => x[1]), pb) : null;
-  let valSrc = pePct != null ? 'iFinD' : null;
-  if (pePct == null) {
-    const dj = await djValuation(it.dj);
-    if (dj) { pe = dj.pe; pb = dj.pb; pePct = dj.pePct; pbPct = dj.pbPct; valSrc = '蛋卷估值'; }
+  // 估值：iFinD 问财取十年日频 PE（自己算分位）+ 当前 PB；蛋卷补 PB 分位与兜底
+  const peAll = cut((await peSeries(it.key, it.ask, it.ifd.split('.')[0], at, 10)) || []);
+  let pe = peAll.length ? Math.round(peAll[peAll.length - 1][1] * 100) / 100 : null;
+  let pePct = pe != null ? pctRank(peAll.map(x => x[1]), pe) : null;
+  let peHist = peAll.length ? toWeekly(peAll).slice(-260) : null;
+  let valSrc = pePct != null ? 'iFinD 问财' : null;
+  let pb = await askPbNow(it.name, at).catch(() => null);
+  let pbPct = null;
+  const dj = await djValuation(it.dj);
+  if (dj) {
+    if (pePct == null) { pe = dj.pe; pePct = dj.pePct; valSrc = '蛋卷估值'; }
+    if (pb == null) pb = dj.pb;
+    pbPct = dj.pbPct;
   }
   indices.push({
     ...it,
@@ -234,47 +291,77 @@ for (const it of INDICES) {
     chgM: chg(cur?.[1], pm?.[1]),
     chgY: chg(cur?.[1], py?.[1]),
     pe, pb, pePct, pbPct, valSrc,
+    peLen: peAll.length,
     div: null, roe: null,
     // 没有估值数据时用价格分位兜底（口径不同，页面会标注）
     pricePct: pctRank(w.map(x => x[1]), cur ? cur[1] : null),
-    peHist: val?.pe ? val.pe.slice(-260) : null,
+    peHist,
     priceHist: w.slice(-260),
   });
   await sleep(120);
 }
 
 /* 2、股债性价比：ERP = 1/PE(沪深300) − 10Y 国债收益率 */
-const bond = await ifindBond(at, 10);
+let bond = await ifindBond(at, 10);
 const hs = indices.find(i => i.key === 'hs300');
 let erp = null;
+const hsPe = cut((await peSeries('hs300', '000300.SH', '000300', at, 10)) || []);
 if (bond?.y10 && hs?.pe) {
-  const y = cut(bond.y10); const peSeries = cut((await ifindValuation('000300.SH', at, 10))?.pe);
-  if (peSeries) {
-    const yMap = new Map(y);
-    const pairs = peSeries.map(([d, pe]) => [d, (1 / pe) * 100 - (yMap.get(d) ?? last(y)[1])])
-      .filter(p => Number.isFinite(p[1]));
-    const curV = (1 / hs.pe) * 100 - last(y)[1];
-    erp = {
-      pe: Math.round(hs.pe * 100) / 100,
-      y10: last(y)[1],
-      value: Math.round(curV * 100) / 100,
-      pct: pctRank(pairs.map(p => p[1]), curV),
-      hist: pairs.slice(-260),
-    };
-  }
+  // 国债收益率：有历史就用历史（严格口径）；只有当前值（人工填）就用它代入整段历史，页面上标为近似
+  const yArr = Array.isArray(bond.y10) ? cut(bond.y10) : [];
+  const yNow = yArr.length ? yArr[yArr.length - 1][1] : bond.y10.v;
+  const yMap = new Map(yArr);
+  const approx = !yArr.length;
+  const pairs = hsPe.map(([d, pe]) => [d, (1 / pe) * 100 - (yMap.get(d) ?? yNow)])
+    .filter(p => Number.isFinite(p[1]));
+  const curV = (1 / hs.pe) * 100 - yNow;
+  erp = {
+    pe: Math.round(hs.pe * 100) / 100,
+    y10: yNow,
+    value: Math.round(curV * 100) / 100,
+    pct: pctRank(pairs.map(p => p[1]), curV),
+    hist: pairs.slice(-260),
+    approx,
+  };
 }
 
-/* 2.5、没有国债收益率时，至少把盈利收益率摆出来 */
+/* 2.5、没有国债收益率时，先摆"盈利收益率"这一半（十年曲线照画，分位基于 PE） */
 if (!erp && hs && hs.pe) {
-  erp = { partial: true, pe: hs.pe, ey: Math.round((100 / hs.pe) * 100) / 100, pePct: hs.pePct, peSrc: hs.valSrc };
+  const eyHist = toWeekly(hsPe).map(([d, pe]) => [d, Math.round((100 / pe) * 100) / 100]);
+  erp = {
+    partial: true,
+    pe: hs.pe,
+    ey: Math.round((100 / hs.pe) * 100) / 100,
+    pePct: hs.pePct,
+    peSrc: hs.valSrc,
+    eyPct: pctRank(eyHist.map(x => x[1]), Math.round((100 / hs.pe) * 100) / 100),
+    hist: eyHist.slice(-260),
+  };
 }
 
-/* 3、债市 */
+/* 3、债市：iFinD 无 EDB 权限时的兜底 —— data/bond-manual.json 人工填（从 iFinD 终端抄） */
+const manualBond = existsSync(resolve(ROOT, 'data/bond-manual.json'))
+  ? JSON.parse(readFileSync(resolve(ROOT, 'data/bond-manual.json'), 'utf8')) : null;
+if (!bond && manualBond) {
+  const one = (v) => (v == null ? null : { v, chgW: null, pct: null, hist: null });
+  bond = {};
+  if (manualBond.y10 != null) bond.y10 = one(manualBond.y10);
+  if (manualBond.y1 != null) bond.y1 = one(manualBond.y1);
+  if (manualBond.dr007 != null) bond.dr007 = one(manualBond.dr007);
+  if (manualBond.credit != null) bond.credit = one(manualBond.credit);
+  if (Object.keys(bond).length) console.log('债市：用 data/bond-manual.json 的人工数据');
+}
+
 let bondOut = null;
 if (bond) {
   const pick = (k) => {
+    // 人工填的是 {v, chgW, pct}，接口取的是 [[日期, 值]]，两种都兼容
+    if (bond[k] && !Array.isArray(bond[k])) {
+      const b = bond[k];
+      return { v: b.v, chgW: b.chgW ?? null, pct: b.pct ?? null, hist: b.hist ?? null };
+    }
     const s = cut(bond[k]);
-    if (!s) return null;
+    if (!s || !s.length) return null;
     const c = last(s)[1], p = prev(s)?.[1];
     return { v: c, chgW: p != null ? Math.round((c - p) * 100) / 100 : null, pct: pctRank(s.map(x => x[1]), c), hist: s.slice(-260) };
   };
@@ -344,7 +431,7 @@ const out = {
   src: {
     price: 'iFinD 行情' + (at ? '' : '（未接入，用腾讯兜底）'),
     valuation: (indices.find(i => i.valSrc) || {}).valSrc || '未接入',
-    bond: bondOut ? 'iFinD' : '未接入（iFinD 无 EDB/债券权限或本月额度用尽）',
+    bond: (bondOut && bondOut.y10) ? (manualBond ? '人工补充（data/bond-manual.json）' : 'iFinD') : '未接入（iFinD 无 EDB/债券权限）',
   },
   erp, bond: bondOut, indices, styles, comment,
 };
