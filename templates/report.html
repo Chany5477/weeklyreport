@@ -541,7 +541,20 @@ footer b{color:var(--ink2);font-weight:600}
     }
 
     /* 2、债市 */
-    var B = A.bond;
+    var B = A.bond, P = A.bondProxy || [], BD = A.bondDelta;
+    // 利率水平取不到时，用债券 ETF / 国债指数的价格代替（价格分位越高＝债券越贵＝收益率越低）
+    var ptable = P.length ? '<table><thead><tr><th>债券标的</th><th>收盘</th><th>本周</th><th>近月</th><th>近年</th><th>价格十年分位</th></tr></thead><tbody>'+
+      P.map(function(b){
+        return '<tr><td><b>'+b.name+'</b><div style="font-size:10.5px;color:var(--muted)">'+b.desc+'</div></td>'+
+          '<td class="num">'+(b.close==null?'--':(b.close<100?b.close.toFixed(3):b.close.toFixed(2)))+'</td>'+
+          '<td class="num '+cls(b.chgW)+'">'+pct(b.chgW)+'</td>'+
+          '<td class="num '+cls(b.chgM)+'">'+pct(b.chgM)+'</td>'+
+          '<td class="num '+cls(b.chgY)+'">'+pct(b.chgY)+'</td>'+
+          '<td class="num">'+bar(b.pct==null?0:b.pct)+' '+(b.pct==null?'--':b.pct+'%')+'</td></tr>';
+      }).join('')+'</tbody></table>' : '';
+    var dline = BD ? '<div class="note">由'+BD.name+'价格推算（久期约 '+BD.dur+' 年）：10 年国债收益率本周 <b>'+(BD.w>0?'上行 ':'下行 ')+Math.abs(BD.w)+'bp</b>、近月 '+(BD.m>0?'上行':'下行')+' '+Math.abs(BD.m)+'bp、近年 '+(BD.y>0?'上行':'下行')+' '+Math.abs(BD.y)+'bp。'+
+      '<span class="src">口径：Δy ≈ −Δ价格% ÷ 久期，属近似推算，非官方收益率数据。</span></div>' : '';
+    var psrc = '<span class="note"><span class="src">利率水平（10 年国债收益率 %）因 iFinD 无 EDB 权限取不到，上表用债券 ETF / 国债指数价格代替：价格分位越高＝债券越贵＝收益率越低。要显示具体收益率，在 data/bond-manual.json 填一个基准值即可（只需一次）。</span></span>';
     if(B && B.y10){
       var card = function(k, v, unit, chgV, p){
         return '<div class="c"><div class="k">'+k+'</div><div class="v">'+v+unit+'</div>'+
@@ -557,10 +570,14 @@ footer b{color:var(--ink2);font-weight:600}
         '</div>';
       $('bond').innerHTML = '<div class="box">'+g+
         (B.y10.hist?'<div class="spark">'+spark(B.y10.hist)+'</div>':'')+
+        ptable+dline+
         (C.bond?'<div class="note">'+C.bond+'</div>':'')+
-        '<span class="note"><span class="src">10 年国债收益率近十年走势如上；分位为近十年周度样本。</span></span></div>';
+        '<span class="note"><span class="src">收益率来源：'+A.src.bond+'；债券标的涨跌幅与价格分位来自 iFinD 行情。</span></span></div>';
+    } else if(P.length) {
+      $('bond').innerHTML = '<div class="box">'+ptable+dline+
+        (C.bond?'<div class="note">'+C.bond+'</div>':'')+psrc+'</div>';
     } else {
-      $('bond').innerHTML = '<div class="empty">本期未取到利率数据。接入 iFinD 后自动补齐；未接入时不显示，不用估算值替代。</div>';
+      $('bond').innerHTML = '<div class="empty">本期未取到债市数据。</div>';
     }
 
     /* 3、估值分位 */

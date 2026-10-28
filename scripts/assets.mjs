@@ -42,6 +42,17 @@ export const STYLES = [
   { key: 'active',    name: '主动',   desc: '中证主动偏股基金', ifd: '932055.CSI', tx: '' },
 ];
 
+// 债市代理标的：iFinD 没有 EDB 权限，拿不到国债收益率本身，
+// 但债券 ETF / 国债指数的价格是行情数据（有权限），可以用价格反推债市表现与收益率变化方向。
+export const BONDP = [
+  { key: 'etf10',  name: '十年国债ETF',   desc: '511260，跟踪中债10年期国债', ifd: '511260.SH', dur: 8.5 },
+  { key: 'etf30',  name: '三十年国债ETF', desc: '511090，长端利率风向标',     ifd: '511090.SH', dur: 20 },
+  { key: 'etf5',   name: '五年国债ETF',   desc: '511010，中短端',             ifd: '511010.SH', dur: 4.5 },
+  { key: 'credit', name: '城投债ETF',     desc: '511220，信用债代表',         ifd: '511220.SH', dur: 3 },
+  { key: 'bondIdx', name: '上证国债指数', desc: '000012，交易所国债整体',     ifd: '000012.SH', dur: 0 },
+  { key: 'fundIdx', name: '债券型基金指数', desc: 'H11023，公募纯债收益',     ifd: 'H11023.CSI', dur: 0 },
+];
+
 /* iFinD 指标 ID：跑 scripts/ifind-probe.mjs 后按探测结果填 */
 const IND_ID = {
   pe: process.env.IFIND_IND_PE || 'ths_pe_ttm_index',
@@ -373,6 +384,51 @@ if (bond) {
   };
 }
 
+/* 3.5、债市代理标的：债券 ETF / 国债指数的价格（有权限，可自动更新） */
+const bondProxy = [];
+for (const b of BONDP) {
+  const w = cut(await weeklySeries('', b.ifd, 10));
+  const cur = last(w), pw = prev(w), pm = prev(w, 4), py = prev(w, 52);
+  if (!cur) continue;
+  bondProxy.push({
+    ...b,
+    close: cur[1],
+    chgW: chg(cur[1], pw?.[1]),
+    chgM: chg(cur[1], pm?.[1]),
+    chgY: chg(cur[1], py?.[1]),
+    pct: pctRank(w.map(x => x[1]), cur[1]),   // 价格十年分位：越高说明债券越贵、收益率越低
+    hist: w.slice(-260),
+  });
+  await sleep(120);
+}
+
+/* 3.6、用十年国债 ETF 的价格推算收益率变化（bp）：Δy ≈ −Δ价格% ÷ 久期 */
+let bondDelta = null;
+const proxy10 = bondProxy.find(b => b.key === 'etf10');
+if (proxy10) {
+  const w = cut(await weeklySeries('', proxy10.ifd, 10));
+  const compute = (nWeeks) => {
+    const c = last(w)?.[1], p = prev(w, nWeeks)?.[1];
+    if (!Number.isFinite(c) || !Number.isFinite(p)) return null;
+    return Math.round(((c / p - 1) * -100 / proxy10.dur) * 100 * 100) / 100; // 正=收益率上行(bp)
+  };
+  bondDelta = { w: compute(1), m: compute(4), y: compute(52), dur: proxy10.dur, name: proxy10.name };
+}
+
+/* 3.7、人工给过基准收益率后，用 ETF 涨跌滚动推算当前值（只需校准一次，别忘了每季度重新校准） */
+const baseY = manualBond?.y10, baseD = manualBond?.y10AsOf;
+if (baseY != null && baseD && proxy10 && !bondOut?.y10) {
+  const w = cut(await weeklySeries('', proxy10.ifd, 10));
+  const base = w.filter(x => x[0] <= baseD).pop()?.[1];
+  const now = last(w)?.[1];
+  if (base && now) {
+    const dy = ((now / base - 1) * -100 / proxy10.dur) * 100;   // bp
+    const v = Math.round((baseY + dy / 100) * 100) / 100;
+    bondOut = { ...(bondOut || {}), y10: { v, chgW: bondDelta?.w ?? null, pct: null, hist: null, est: true } };
+    console.log(`债市：由 ${baseD} 的 ${baseY}% 与十年国债ETF 涨跌推算出 10Y ≈ ${v}%`);
+  }
+}
+
 /* 4、基金风格 */
 const styles = [];
 for (const s of STYLES) {
@@ -387,6 +443,8 @@ const facts = JSON.stringify({
   week: latest.week, index: latest.index, tech: latest.tech,
   erp: erp ? { value: erp.value, pct: erp.pct, pe: erp.pe, y10: erp.y10 } : null,
   bond: bondOut ? { y10: bondOut.y10?.v, y10_pct: bondOut.y10?.pct, term: bondOut.term, dr007: bondOut.dr007?.v, spread: bondOut.spread } : null,
+  bondProxy: bondProxy.map(b => ({ name: b.name, chgW: b.chgW, chgM: b.chgM, chgY: b.chgY, pct: b.pct })),
+  bondDelta,
   indices: indices.map(i => ({ name: i.name, chgW: i.chgW, pe: i.pe, pePct: i.pePct, pbPct: i.pbPct })),
   styles: styles.map(s => ({ name: s.name, chgW: s.chgW, chgM: s.chgM, chgY: s.chgY })),
 });
@@ -397,6 +455,7 @@ if (DS_KEY) {
     '你是券商策略分析师。下面是 A 股当周的客观数据（JSON），请据此输出解读。',
     facts,
     '',
+    '债市没有利率水平数据（iFinD 无 EDB 权限），但有债券 ETF / 国债指数的价格涨跌与十年价格分位（分位越高=债券越贵=收益率越低），请据此解读债市，不要编造具体收益率数字。',
     '输出 JSON，字段如下：',
     '{',
     '  "erp": "股债性价比一句话结论（40~70字，必须提到当前值所处的历史分位含义）",',
@@ -431,9 +490,9 @@ const out = {
   src: {
     price: 'iFinD 行情' + (at ? '' : '（未接入，用腾讯兜底）'),
     valuation: (indices.find(i => i.valSrc) || {}).valSrc || '未接入',
-    bond: (bondOut && bondOut.y10) ? (manualBond ? '人工补充（data/bond-manual.json）' : 'iFinD') : '未接入（iFinD 无 EDB/债券权限）',
+    bond: (bondOut && bondOut.y10) ? ((bondOut.y10.est ? '基准值+ETF推算' : (manualBond ? '人工补充（data/bond-manual.json）' : 'iFinD'))) : '未接入（iFinD 无 EDB 权限，用债券 ETF 价格代理）',
   },
-  erp, bond: bondOut, indices, styles, comment,
+  erp, bond: bondOut, bondProxy, bondDelta, indices, styles, comment,
 };
 writeFileSync(resolve(ROOT, 'data/assets.json'), JSON.stringify(out, null, 1));
 console.log('assets 完成：指数', indices.length, '｜风格', styles.length,
