@@ -62,7 +62,16 @@ git push -u origin main
 | `TCB_ENV_ID` | 第 3 步的环境 ID |
 | `DEEPSEEK_API_KEY` | 第 4.5 步的 DeepSeek key（可选，建议加） |
 
-### 第 4.5 步（可选，强烈建议）：配 DeepSeek key
+### 第 4.5 步（可选）：配 iFinD 接口（股债性价比 / 债市 / 估值分位要用）
+
+「股债性价比」「债市解读」「主要指数十年分位」这三块需要 PE/PB 与国债收益率的**十年历史**，免费源拿不到，要接 iFinD。没配也能跑，这三块会显示"未接入"并保持空白（不猜数）。
+
+- 打开 https://quantapi.51ifind.com/gwstatic/static/ds_web/super-command-web/index.html ，用 iFinD 账号登录
+- 账号详情 → 复制 **refresh_token**（`eyJ` 开头的长串）
+- 本地：写进 `secrets/ifind.token`（已 gitignore）；线上：加一个名为 `IFIND_REFRESH_TOKEN` 的 secret
+- 跑一次 `npm run probe`，把输出发我，我据此校准 PE / PB / 利率的指标 ID
+
+### 第 4.6 步（可选，强烈建议）：配 DeepSeek key
 
 事件是抓东方财富 7x24 快讯 + 关键词筛出候选池，然后交给 DeepSeek 挑出真正解释涨跌的 1~3 条，并写出每天的"市场普遍归因"。不配也能跑（降级为关键词规则版，页面会标出来），配了质量差很多。每周 5 次调用，约几分钱。
 

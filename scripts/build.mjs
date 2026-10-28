@@ -11,6 +11,8 @@ const tpl = readFileSync(resolve(ROOT, 'templates/report.html'), 'utf8');
 /* ---------- 把新闻事件并进每一天 ---------- */
 const newsPath = resolve(ROOT, 'data/news.json');
 const news = existsSync(newsPath) ? JSON.parse(readFileSync(newsPath, 'utf8')) : {};
+const assetsPath = resolve(ROOT, 'data/assets.json');
+data.assets = existsSync(assetsPath) ? JSON.parse(readFileSync(assetsPath, 'utf8')) : null;
 
 data.days = data.days.map(d => {
   const n = news[d.date] || { events: [], attribution: '' };

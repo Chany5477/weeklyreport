@@ -102,6 +102,35 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .ev .x{flex:1}
 .ev a{color:var(--red);text-decoration:none;font-size:10.5px;margin-left:4px;opacity:.75;white-space:nowrap}
 .ev .al{font-size:10.5px;color:var(--muted)}
+
+/* ---------- 股债性价比 / 债市 / 分位 ---------- */
+.empty{padding:14px;border:1px dashed var(--line);border-radius:10px;font-size:12.5px;color:var(--muted);background:var(--bg2)}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px;background:#fff}
+.big{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.big .v{font-size:30px;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.big .u{font-size:12px;color:var(--muted)}
+.pctbar{position:relative;height:26px;margin:10px 0 4px;background:linear-gradient(90deg,#0E9F6E 0%,#E8E5DF 45%,#E8E5DF 55%,#C8102E 100%);border-radius:5px;opacity:.85}
+.pctbar .m{position:absolute;top:-4px;width:3px;height:34px;background:#111;border-radius:2px}
+.pctbar .lbl{position:absolute;top:32px;font-size:10.5px;color:var(--muted);white-space:nowrap}
+.pctscale{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);margin-top:26px}
+.spark{margin-top:12px}
+.note{font-size:12.5px;color:var(--ink2);line-height:1.75;margin-top:10px}
+.note .src{display:block;font-size:11px;color:var(--muted);margin-top:6px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.grid4 .c{border:1px solid var(--line);border-radius:8px;padding:9px 10px;background:#fff}
+.grid4 .k{font-size:10.5px;color:var(--muted)}
+.grid4 .v{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+.grid4 .d{font-size:11px;margin-top:2px}
+.hz{border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:9px;background:#fff}
+.hz .h{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700}
+.hz .tag{font-size:10px;font-weight:500;padding:1px 6px;border-radius:4px;background:#F2F0EC;color:#6b6b6b}
+.hz .b{font-size:13px;line-height:1.75;margin-top:6px;color:var(--ink2)}
+.hz .f{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.hz .f span{font-size:11px;background:#F6F5F2;border-radius:4px;padding:3px 7px;color:#5f5f5f}
+.stars{letter-spacing:1px;font-size:11px;color:#C8102E}
+.pb{display:inline-block;width:40px;height:6px;background:#EFEDE8;border-radius:3px;overflow:hidden;vertical-align:1px;margin-right:5px}
+.pb i{display:block;height:100%;background:#C8102E}
+@media (max-width:480px){ .grid4{grid-template-columns:repeat(2,1fr)} }
 .atr{margin-top:8px;padding:8px 10px;background:var(--bg2);border-left:2px solid #DAD4C9;border-radius:0 6px 6px 0;font-size:12.5px;line-height:1.7;color:var(--ink2)}
 .atr .l{display:inline-block;font-size:10px;color:#9a9184;background:#EFEDE8;border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px}
 
@@ -202,7 +231,37 @@ footer b{color:var(--ink2);font-weight:600}
   </section>
 
   <section>
-    <h2>下周展望</h2>
+    <h2>股债性价比</h2>
+    <p class="sub">沪深300 盈利收益率（1÷PE）− 10 年国债收益率，数值越高说明股票相对债券越划算</p>
+    <div id="erp"></div>
+  </section>
+
+  <section>
+    <h2>债市解读</h2>
+    <p class="sub">利率与资金面：周变化（bp）+ 十年分位</p>
+    <div id="bond"></div>
+  </section>
+
+  <section>
+    <h2>主要指数估值分位</h2>
+    <p class="sub">0% 为十年最低、100% 为十年最高；分位越低越便宜</p>
+    <div id="val"></div>
+  </section>
+
+  <section>
+    <h2>基金风格适配</h2>
+    <p class="sub">八类风格在短 / 中 / 长期的适配打分，1 分最低、5 分最高</p>
+    <div id="style"></div>
+  </section>
+
+  <section>
+    <h2>短中长期展望</h2>
+    <p class="sub">由本周数据与已发生的事实推导，模型观点，需人工核对</p>
+    <div id="horizon"></div>
+  </section>
+
+  <section>
+    <h2>下周关键点位</h2>
     <p class="sub">由本周数据与已发生的事件推导，不做事件预测</p>
     <div class="ol" id="outlook"></div>
   </section>
@@ -418,6 +477,126 @@ footer b{color:var(--ink2);font-weight:600}
       '<div class="t">'+o.t+'<span class="tag '+o.tone+'">'+(o.tone==='pos'?'偏正面':o.tone==='neg'?'偏谨慎':'中性')+'</span></div>'+
       '<div class="d">'+o.d+'</div></div></div>';
   }).join('');
+
+  /* ---------- 扩展板块：股债性价比 / 债市 / 估值分位 / 风格 / 展望 ---------- */
+  (function(){
+    var A = D.assets;
+    var ids = ['erp','bond','val','style','horizon'];
+    if(!A){
+      ids.forEach(function(id){ $(id).innerHTML = '<div class="empty">本期未生成扩展数据（跑一次 npm run assets 即可）。</div>'; });
+      return;
+    }
+    var C = A.comment || {};
+    var bar = function(p){
+      return '<span class="pb"><i style="width:'+Math.max(2,Math.min(100,p))+'%"></i></span>';
+    };
+    var spark = function(hist, h){
+      if(!hist || hist.length < 3) return '';
+      var H = h || 120, W = 740, pad = 8;
+      var vals = hist.map(function(p){ return p[1]; });
+      var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals);
+      if(mx === mn) mx = mn + 1;
+      var xs = function(i){ return pad + i*(W-2*pad)/(hist.length-1); };
+      var ys = function(v){ return H-pad - (v-mn)/(mx-mn)*(H-2*pad); };
+      var pts = hist.map(function(p,i){ return xs(i).toFixed(1)+','+ys(p[1]).toFixed(1); }).join(' ');
+      var area = 'M'+xs(0).toFixed(1)+','+(H-pad)+' L'+pts.split(' ').join(' L')+' L'+xs(hist.length-1).toFixed(1)+','+(H-pad)+' Z';
+      return '<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="width:100%;height:'+H+'px">'+
+        '<path d="'+area+'" fill="#C8102E" opacity=".07"/>'+
+        '<polyline points="'+pts+'" fill="none" stroke="#C8102E" stroke-width="1.6" vector-effect="non-scaling-stroke"/>'+
+        '<circle cx="'+xs(hist.length-1).toFixed(1)+'" cy="'+ys(vals[vals.length-1]).toFixed(1)+'" r="3" fill="#C8102E"/>'+
+        '<text x="2" y="12" font-size="11" fill="#8a8a8a">'+hist[0][0]+'</text>'+
+        '<text x="'+(W-2)+'" y="12" font-size="11" fill="#8a8a8a" text-anchor="end">'+hist[hist.length-1][0]+'</text>'+
+        '<text x="2" y="'+(H-2)+'" font-size="11" fill="#8a8a8a">低 '+mn.toFixed(2)+'</text>'+
+        '<text x="'+(W-2)+'" y="'+(H-2)+'" font-size="11" fill="#8a8a8a" text-anchor="end">高 '+mx.toFixed(2)+'</text></svg>';
+    };
+
+    /* 1、股债性价比 */
+    var E = A.erp;
+    if(E){
+      var ey = (100/E.pe);
+      $('erp').innerHTML = '<div class="box">'+
+        '<div class="big"><span class="v">'+E.value.toFixed(2)+'%</span>'+
+          '<span class="u">沪深300 盈利收益率 '+ey.toFixed(2)+'% − 10年国债 '+E.y10.toFixed(2)+'%</span></div>'+
+        '<div class="pctbar"><span class="m" style="left:calc('+E.pct+'% - 1.5px)"></span>'+
+          '<span class="lbl" style="left:calc('+Math.min(E.pct,88)+'%)">当前 '+E.pct+'% 分位</span></div>'+
+        '<div class="pctscale"><span>0%（股最贵）</span><span>50%</span><span>100%（股最便宜）</span></div>'+
+        '<div class="spark">'+spark(E.hist)+'</div>'+
+        (C.erp?'<div class="note">'+C.erp+'</div>':'')+
+        '<span class="note"><span class="src">口径：沪深300 PE（TTM）取'+A.src.valuation+'，10 年国债收益率取'+A.src.bond+'；分位区间为近十年周度样本。</span></span>'+
+        '</div>';
+    } else {
+      $('erp').innerHTML = '<div class="empty">本期未取到沪深300 PE 与 10 年国债收益率，无法计算。接入 iFinD 后自动补齐（把 refresh_token 写进 secrets/ifind.token）；未接入时这一块保持空白，不猜数。</div>';
+    }
+
+    /* 2、债市 */
+    var B = A.bond;
+    if(B && B.y10){
+      var card = function(k, v, unit, chgV, p){
+        return '<div class="c"><div class="k">'+k+'</div><div class="v">'+v+unit+'</div>'+
+          '<div class="d '+(chgV==null?'':cls(chgV))+'">'+(chgV==null?'':(chgV>0?'+':'')+chgV+(unit==='%'?'bp':'')+' 周变化')+
+          (p==null?'':' · 分位 '+p+'%')+'</div></div>';
+      };
+      var g = '<div class="grid4">'+
+        card('10年国债', B.y10.v, '%', B.y10.chgW, B.y10.pct)+
+        (B.y1?card('1年国债', B.y1.v, '%', B.y1.chgW, B.y1.pct):'')+
+        (B.term!=null?'<div class="c"><div class="k">期限利差</div><div class="v">'+B.term+'%</div><div class="d">10Y − 1Y</div></div>':'')+
+        (B.dr007?card('DR007', B.dr007.v, '%', B.dr007.chgW, B.dr007.pct):'')+
+        (B.spread!=null?'<div class="c"><div class="k">信用利差</div><div class="v">'+B.spread+'%</div><div class="d">信用债 − 国债</div></div>':'')+
+        '</div>';
+      $('bond').innerHTML = '<div class="box">'+g+
+        (B.y10.hist?'<div class="spark">'+spark(B.y10.hist)+'</div>':'')+
+        (C.bond?'<div class="note">'+C.bond+'</div>':'')+
+        '<span class="note"><span class="src">10 年国债收益率近十年走势如上；分位为近十年周度样本。</span></span></div>';
+    } else {
+      $('bond').innerHTML = '<div class="empty">本期未取到利率数据。接入 iFinD 后自动补齐；未接入时不显示，不用估算值替代。</div>';
+    }
+
+    /* 3、估值分位 */
+    var rows = A.indices.map(function(i){
+      var usePrice = i.pePct == null;
+      var p = usePrice ? i.pricePct : i.pePct;
+      return '<tr><td>'+i.name+'</td>'+
+        '<td class="num">'+(i.close==null?'--':i.close.toFixed(2))+'</td>'+
+        '<td class="num '+cls(i.chgW)+'">'+pct(i.chgW)+'</td>'+
+        '<td class="num">'+(i.pe==null?'--':i.pe.toFixed(2))+'</td>'+
+        '<td class="num">'+(i.pb==null?'--':i.pb.toFixed(2))+'</td>'+
+        '<td class="num">'+bar(p==null?0:p)+' '+(p==null?'--':p+'%')+'</td></tr>';
+    }).join('');
+    $('val').innerHTML = '<div class="box"><table><thead><tr><th>指数</th><th>收盘</th><th>本周</th><th>PE</th><th>PB</th><th>'+
+      (A.indices[0] && A.indices[0].pePct==null ? '价格分位（估值未接入）' : 'PE 十年分位')+'</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+      (C.valuation?'<div class="note">'+C.valuation+'</div>':'')+
+      '<span class="note"><span class="src">估值来源：'+A.src.valuation+'；价格来源：'+A.src.price+'。'+
+      (A.indices[0] && A.indices[0].pePct==null ? '当前未接入估值数据，分位列用价格分位代替（口径不同，仅作参考）。' : '')+'</span></span></div>';
+
+    /* 4、基金风格适配 */
+    var fit = {};
+    (C.styleFit||[]).forEach(function(s){ fit[s.style] = s; });
+    var srows = A.styles.map(function(s){
+      var f = fit[s.name] || {};
+      var st = function(n){ n = n||0; return '<span class="stars">'+'★'.repeat(n)+'☆'.repeat(Math.max(0,5-n))+'</span>'; };
+      return '<tr><td><b>'+s.name+'</b><div style="font-size:10.5px;color:var(--muted)">'+s.desc+'</div></td>'+
+        '<td class="num '+(s.chgW==null?'':cls(s.chgW))+'">'+(s.chgW==null?'--':pct(s.chgW))+'</td>'+
+        '<td class="num '+(s.chgM==null?'':cls(s.chgM))+'">'+(s.chgM==null?'--':pct(s.chgM))+'</td>'+
+        '<td class="num '+(s.chgY==null?'':cls(s.chgY))+'">'+(s.chgY==null?'--':pct(s.chgY))+'</td>'+
+        '<td>'+st(f.short)+'</td><td>'+st(f.mid)+'</td><td>'+st(f.long)+'</td>'+
+        '<td style="text-align:left;font-size:11.5px;color:#5f5f5f;line-height:1.6">'+((f.reason||'待生成')+'').slice(0,60)+'</td></tr>';
+    }).join('');
+    $('style').innerHTML = '<div class="box" style="overflow-x:auto"><table><thead><tr><th>风格</th><th>本周</th><th>近月</th><th>近年</th>'+
+      '<th>短期</th><th>中期</th><th>长期</th><th>理由</th></tr></thead><tbody>'+srows+'</tbody></table>'+
+      '<span class="note"><span class="src">代表指数：主动偏股 932055、红利 000922、沪深300成长/价值 000918/000919、均衡 800、量化以中证1000 为基准、纯债/混债用中证基金指数；打分由 '+C.by+' 依据本周数据给出，属观点而非结论。</span></span></div>';
+
+    /* 5、短中长期展望 */
+    var O = C.outlook || {}, F = C.factors || {};
+    var hz = function(t, tag, text, factors){
+      return '<div class="hz"><div class="h">'+t+'<span class="tag">'+tag+'</span></div>'+
+        '<div class="b">'+(text||'待生成')+'</div>'+
+        ((factors&&factors.length)?'<div class="f">'+factors.map(function(x){return '<span>'+x+'</span>';}).join('')+'</div>':'')+'</div>';
+    };
+    $('horizon').innerHTML = hz('短期','未来 1–4 周', O.short, F.short)+
+      hz('中期','未来 1–2 个季度', O.mid, F.mid)+
+      hz('长期','一年以上', O.long, F.long)+
+      '<span class="note"><span class="src">由 '+C.by+' 依据本周行情、估值分位、利率与资金面数据生成，属模型观点，不构成投资建议；与当日事件一并人工核对后使用。</span></span>';
+  })();
 
   /* 页脚 */
   var bad = (D.checks||[]).filter(function(c){return !c.ok;});

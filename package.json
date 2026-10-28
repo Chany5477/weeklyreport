@@ -5,12 +5,14 @@
   "type": "module",
   "description": "A股周度市场回顾：周五收盘后自动抓取行情与快讯、校验、生成静态报告页",
   "scripts": {
-    "weekly": "node scripts/fetch.mjs && node scripts/news.mjs && node scripts/build.mjs && node scripts/check-render.mjs",
+    "weekly": "node scripts/fetch.mjs && node scripts/news.mjs && node scripts/assets.mjs && node scripts/build.mjs && node scripts/check-render.mjs",
     "fetch": "node scripts/fetch.mjs",
     "news": "node scripts/news.mjs",
     "build": "node scripts/build.mjs",
     "check": "node scripts/check-render.mjs",
-    "serve": "python3 -m http.server 8899 --directory dist"
+    "serve": "python3 -m http.server 8899 --directory dist",
+    "assets": "node scripts/assets.mjs",
+    "probe": "node scripts/ifind-probe.mjs"
   },
   "engines": {
     "node": ">=18"
