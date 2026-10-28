@@ -362,6 +362,7 @@ if (!bond && manualBond) {
   bond = {};
   if (manualBond.y10 != null) bond.y10 = { ...one(manualBond.y10), manual: true };
   if (manualBond.y1 != null) bond.y1 = one(manualBond.y1);
+  if (manualBond.y5 != null) bond.y5 = one(manualBond.y5);
   if (manualBond.dr001 != null) bond.dr001 = one(manualBond.dr001);
   if (manualBond.dr007 != null) bond.dr007 = one(manualBond.dr007);
   if (manualBond.credit != null) bond.credit = one(manualBond.credit);
@@ -381,13 +382,18 @@ if (bond) {
     const c = last(s)[1], p = prev(s)?.[1];
     return { v: c, chgW: p != null ? Math.round((c - p) * 100) / 100 : null, pct: pctRank(s.map(x => x[1]), c), hist: s.slice(-260) };
   };
-  const y10 = pick('y10'), y1 = pick('y1'), dr = pick('dr007') || pick('dr001'), cr = pick('credit');
+  const y10 = pick('y10'), y1 = pick('y1'), dr = pick('dr007') || pick('dr001'), cr = pick('credit'), y5 = pick('y5');
+  const cMeta = manualBond?.credit && typeof manualBond.credit === 'object' ? manualBond.credit : {};
+  const sTerm = cMeta.term || '5Y';
   bondOut = {
-    y10, y1, dr007: dr, credit: cr,
+    y10, y1, y5, dr007: dr, credit: cr,
     drLabel: manualBond?.dr007 != null ? 'DR007' : (manualBond?.dr001 != null ? 'DR001' : 'DR007'),
     drChg: (manualBond?.dr007 && typeof manualBond.dr007 === 'object' && manualBond.dr007.chgW != null) ? '较前一日' : '周变化',
     term: (y10 && y1) ? Math.round((y10.v - y1.v) * 100) / 100 : null,
-    spread: (cr && y10) ? Math.round((cr.v - y10.v) * 100) / 100 : null,
+    // 信用利差用同期限国债对照（5Y 中票 − 5Y 国债），缺失时退回 10Y 并在标签里注明
+    spread: cr ? Math.round((cr.v - (y5?.v ?? y10?.v)) * 100) / 100 : null,
+    spreadLabel: cr ? `${cMeta.rating || 'AA+'} ${sTerm} 中票 − ${y5 ? sTerm + ' 国债' : '10Y 国债'}` : null,
+    creditMeta: cr ? { rating: cMeta.rating || 'AA+', term: sTerm, v: cr.v, chgW: cr.chgW ?? null } : null,
   };
 }
 
