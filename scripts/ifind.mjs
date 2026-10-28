@@ -83,7 +83,8 @@ export function toRows(data) {
 }
 
 const num = (v) => {
-  const n = Number(String(v ?? '').replace(/[%,]/g, ''));
+  if (v == null || v === '') return null;
+  const n = Number(String(v).replace(/[%,]/g, ''));
   return Number.isFinite(n) ? n : null;
 };
 

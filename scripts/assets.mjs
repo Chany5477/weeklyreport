@@ -16,27 +16,27 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 /* ---------------- 指数清单 ---------------- */
-// tx: 腾讯行情代码（免费源兜底）；ifd: iFinD 代码
+// tx: 腾讯行情代码（免费源兜底）；ifd: iFinD 代码；dj: 蛋卷估值代码
 export const INDICES = [
-  { key: 'sh',   name: '上证综指', tx: 'sh000001', ifd: '000001.SH' },
-  { key: 'hs300', name: '沪深300', tx: 'sh000300', ifd: '000300.SH' },
-  { key: 'zz500', name: '中证500', tx: 'sh000905', ifd: '000905.SH' },
-  { key: 'zz800', name: '中证800', tx: 'sh000906', ifd: '000906.SH' },
-  { key: 'zz1000', name: '中证1000', tx: 'sh000852', ifd: '000852.SH' },
-  { key: 'kc50',  name: '科创50',  tx: 'sh000688', ifd: '000688.SH' },
-  { key: 'kcz',   name: '科创综指', tx: 'sh000680', ifd: '000680.SH' },
-  { key: 'cyb',   name: '创业板指', tx: 'sz399006', ifd: '399006.SZ' },
-  { key: 'sz50',  name: '上证50',  tx: 'sh000016', ifd: '000016.SH' },
-  { key: 'hl',   name: '中证红利', tx: 'sh000922', ifd: '000922.SH' },
+  { key: 'sh',   name: '上证综指', tx: 'sh000001', ifd: '000001.SH', dj: 'SH000001' },
+  { key: 'hs300', name: '沪深300', tx: 'sh000300', ifd: '000300.SH', dj: 'SH000300' },
+  { key: 'zz500', name: '中证500', tx: 'sh000905', ifd: '000905.SH', dj: 'SH000905' },
+  { key: 'zz800', name: '中证800', tx: 'sh000906', ifd: '000906.SH', dj: 'SH000906' },
+  { key: 'zz1000', name: '中证1000', tx: 'sh000852', ifd: '000852.SH', dj: 'SH000852' },
+  { key: 'kc50',  name: '科创50',  tx: 'sh000688', ifd: '000688.SH', dj: 'SH000688' },
+  { key: 'kcz',   name: '科创综指', tx: 'sh000680', ifd: '000680.SH', dj: 'SH000680' },
+  { key: 'cyb',   name: '创业板指', tx: 'sz399006', ifd: '399006.SZ', dj: 'SZ399006' },
+  { key: 'sz50',  name: '上证50',  tx: 'sh000016', ifd: '000016.SH', dj: 'SH000016' },
+  { key: 'hl',   name: '中证红利', tx: 'sh000922', ifd: '000922.CSI', dj: 'SH000922' },
 ];
 
 // 基金风格代表指数（用户指定走中证指数系列）
 export const STYLES = [
   { key: 'bond_pure', name: '纯债',   desc: '债券型基金指数', ifd: 'H11023.CSI', tx: '' },
   { key: 'bond_mix',  name: '混债',   desc: '混合型基金指数', ifd: 'H11022.CSI', tx: '' },
-  { key: 'dividend',  name: '红利',   desc: '中证红利',       ifd: '000922.SH',  tx: 'sh000922' },
-  { key: 'growth',    name: '成长',   desc: '沪深300成长',    ifd: '000918.SH',  tx: 'sh000918' },
-  { key: 'value',     name: '价值',   desc: '沪深300价值',    ifd: '000919.SH',  tx: 'sh000919' },
+  { key: 'dividend',  name: '红利',   desc: '中证红利',       ifd: '000922.CSI', tx: 'sh000922' },
+  { key: 'growth',    name: '成长',   desc: '沪深300成长',    ifd: '000918.CSI', tx: 'sh000918' },
+  { key: 'value',     name: '价值',   desc: '沪深300价值',    ifd: '000919.CSI', tx: 'sh000919' },
   { key: 'balanced',  name: '均衡',   desc: '中证800',        ifd: '000906.SH',  tx: 'sh000906' },
   { key: 'quant',     name: '量化',   desc: '中证1000（指增主流基准）', ifd: '000852.SH', tx: 'sh000852' },
   { key: 'active',    name: '主动',   desc: '中证主动偏股基金', ifd: '932055.CSI', tx: '' },
@@ -139,13 +139,34 @@ async function ifindValuation(code, at, years = 10) {
     if (!ind) continue;
     try {
       const rows = await ifind.dateSerial(code, [{ indicator: ind, indiparams: [''] }], start, TODAY, at);
-      const w = toWeekly(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r[ind]) || ifind.num(Object.values(r).find(v => Number.isFinite(Number(v))))])
+      const w = toWeekly(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r[ind])])
         .filter(r => r[0] && Number.isFinite(r[1])).sort((a, b) => a[0].localeCompare(b[0])));
       if (w.length) out[k] = w;
     } catch { /* 指标 ID 不对就跳过，页面标注无数据 */ }
     await sleep(150);
   }
   return Object.keys(out).length ? out : null;
+}
+
+/** 蛋卷估值兜底：iFinD 指数估值无权限时用它，给当前 PE / PB 与分位 */
+async function djValuation(djCode) {
+  if (!djCode) return null;
+  try {
+    const { stdout } = await pexec('curl', ['-sS', '-m', '20', '-H', 'User-Agent: Mozilla/5.0',
+      `https://danjuanfunds.com/djapi/index_eva/detail/${djCode}`], { maxBuffer: 4 * 1024 * 1024 });
+    const d = JSON.parse(stdout)?.data;
+    if (!d || !d.pe) return null;
+    return {
+      pe: Math.round(d.pe * 100) / 100,
+      pb: d.pb ? Math.round(d.pb * 1000) / 1000 : null,
+      pePct: d.pe_percentile != null ? Math.round(d.pe_percentile * 1000) / 10 : null,
+      pbPct: d.pb_percentile != null ? Math.round(d.pb_percentile * 1000) / 10 : null,
+      div: d.yeild != null ? Math.round(d.yeild * 10000) / 100 : null,
+      roe: d.roe != null ? Math.round(d.roe * 10000) / 100 : null,
+    };
+  } catch {
+    return null;
+  }
 }
 
 async function ifindBond(at, years = 10) {
@@ -156,7 +177,7 @@ async function ifindBond(at, years = 10) {
     if (!id) continue;
     try {
       const rows = await ifind.edb(id, start, TODAY, at);
-      const w = toWeekly(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r[id] ?? Object.values(r).find(v => Number.isFinite(Number(v))))])
+      const w = toWeekly(rows.map(r => [String(r.time).slice(0, 10), ifind.num(r[id] != null ? r[id] : r.value)])
         .filter(r => r[0] && Number.isFinite(r[1])).sort((a, b) => a[0].localeCompare(b[0])));
       if (w.length) out[k] = w;
     } catch { /* 跳过 */ }
@@ -196,18 +217,24 @@ const indices = [];
 for (const it of INDICES) {
   const w = cut(await weeklySeries(it.tx, it.ifd, 10));
   const cur = last(w), pw = prev(w), pm = prev(w, 4), py = prev(w, 52);
-  const val = await ifindValuation(it.ifd, at, 10);
-  const pe = val?.pe ? last(val.pe)[1] : null;
-  const pb = val?.pb ? last(val.pb)[1] : null;
+  let val = await ifindValuation(it.ifd, at, 10);
+  let pe = val?.pe ? last(val.pe)[1] : null;
+  let pb = val?.pb ? last(val.pb)[1] : null;
+  let pePct = val?.pe ? pctRank(val.pe.map(x => x[1]), pe) : null;
+  let pbPct = val?.pb ? pctRank(val.pb.map(x => x[1]), pb) : null;
+  let valSrc = pePct != null ? 'iFinD' : null;
+  if (pePct == null) {
+    const dj = await djValuation(it.dj);
+    if (dj) { pe = dj.pe; pb = dj.pb; pePct = dj.pePct; pbPct = dj.pbPct; valSrc = '蛋卷估值'; }
+  }
   indices.push({
     ...it,
     close: cur ? cur[1] : null,
     chgW: chg(cur?.[1], pw?.[1]),
     chgM: chg(cur?.[1], pm?.[1]),
     chgY: chg(cur?.[1], py?.[1]),
-    pe, pb,
-    pePct: val?.pe ? pctRank(val.pe.map(x => x[1]), pe) : null,
-    pbPct: val?.pb ? pctRank(val.pb.map(x => x[1]), pb) : null,
+    pe, pb, pePct, pbPct, valSrc,
+    div: null, roe: null,
     // 没有估值数据时用价格分位兜底（口径不同，页面会标注）
     pricePct: pctRank(w.map(x => x[1]), cur ? cur[1] : null),
     peHist: val?.pe ? val.pe.slice(-260) : null,
@@ -235,6 +262,11 @@ if (bond?.y10 && hs?.pe) {
       hist: pairs.slice(-260),
     };
   }
+}
+
+/* 2.5、没有国债收益率时，至少把盈利收益率摆出来 */
+if (!erp && hs && hs.pe) {
+  erp = { partial: true, pe: hs.pe, ey: Math.round((100 / hs.pe) * 100) / 100, pePct: hs.pePct, peSrc: hs.valSrc };
 }
 
 /* 3、债市 */
@@ -309,7 +341,11 @@ if (comment.by !== 'DeepSeek') {
 const out = {
   updated: TODAY,
   asOf: AS_OF,
-  src: { price: '腾讯行情', valuation: at ? (indices.some(i => i.pePct != null) ? 'iFinD' : 'iFinD（指标未取到）') : '未接入', bond: bondOut ? 'iFinD' : '未接入' },
+  src: {
+    price: 'iFinD 行情' + (at ? '' : '（未接入，用腾讯兜底）'),
+    valuation: (indices.find(i => i.valSrc) || {}).valSrc || '未接入',
+    bond: bondOut ? 'iFinD' : '未接入（iFinD 无 EDB/债券权限或本月额度用尽）',
+  },
   erp, bond: bondOut, indices, styles, comment,
 };
 writeFileSync(resolve(ROOT, 'data/assets.json'), JSON.stringify(out, null, 1));
