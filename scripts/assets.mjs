@@ -354,7 +354,11 @@ if (!erp && hs && hs.pe) {
 const manualBond = existsSync(resolve(ROOT, 'data/bond-manual.json'))
   ? JSON.parse(readFileSync(resolve(ROOT, 'data/bond-manual.json'), 'utf8')) : null;
 if (!bond && manualBond) {
-  const one = (v) => (v == null ? null : { v, chgW: null, pct: null, hist: null });
+  // 支持两种写法：数字（只给水平值）或 {v, chgW}（顺带给当日变动，单位 bp）
+  const one = (v) => (v == null ? null
+    : (typeof v === 'object'
+      ? { v: v.v, chgW: v.chgW ?? null, pct: v.pct ?? null, hist: v.hist ?? null }
+      : { v, chgW: null, pct: null, hist: null }));
   bond = {};
   if (manualBond.y10 != null) bond.y10 = { ...one(manualBond.y10), manual: true };
   if (manualBond.y1 != null) bond.y1 = one(manualBond.y1);
@@ -381,6 +385,7 @@ if (bond) {
   bondOut = {
     y10, y1, dr007: dr, credit: cr,
     drLabel: manualBond?.dr007 != null ? 'DR007' : (manualBond?.dr001 != null ? 'DR001' : 'DR007'),
+    drChg: (manualBond?.dr007 && typeof manualBond.dr007 === 'object' && manualBond.dr007.chgW != null) ? '较前一日' : '周变化',
     term: (y10 && y1) ? Math.round((y10.v - y1.v) * 100) / 100 : null,
     spread: (cr && y10) ? Math.round((cr.v - y10.v) * 100) / 100 : null,
   };

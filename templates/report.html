@@ -556,16 +556,16 @@ footer b{color:var(--ink2);font-weight:600}
       '<span class="src">口径：Δy ≈ −Δ价格% ÷ 久期，属近似推算，非官方收益率数据。</span></div>' : '';
     var psrc = '<span class="note"><span class="src">利率水平（10 年国债收益率 %）因 iFinD 无 EDB 权限取不到，上表用债券 ETF / 国债指数价格代替：价格分位越高＝债券越贵＝收益率越低。要显示具体收益率，在 data/bond-manual.json 填一个基准值即可（只需一次）。</span></span>';
     if(B && B.y10){
-      var card = function(k, v, unit, chgV, p){
+      var card = function(k, v, unit, chgV, p, lab){
         return '<div class="c"><div class="k">'+k+'</div><div class="v">'+v+unit+'</div>'+
-          '<div class="d '+(chgV==null?'':cls(chgV))+'">'+(chgV==null?'':(chgV>0?'+':'')+chgV+(unit==='%'?'bp':'')+' 周变化')+
+          '<div class="d '+(chgV==null?'':cls(chgV))+'">'+(chgV==null?'':(chgV>0?'+':'')+chgV+(unit==='%'?'bp':'')+' '+(lab||'周变化'))+
           (p==null?'':' · 分位 '+p+'%')+'</div></div>';
       };
       var g = '<div class="grid4">'+
         card('10年国债', B.y10.v, '%', B.y10.chgW, B.y10.pct)+
         (B.y1?card('1年国债', B.y1.v, '%', B.y1.chgW, B.y1.pct):'')+
         (B.term!=null?'<div class="c"><div class="k">期限利差</div><div class="v">'+B.term+'%</div><div class="d">10Y − 1Y</div></div>':'')+
-        (B.dr007?card(B.drLabel||'DR007', B.dr007.v, '%', B.dr007.chgW, B.dr007.pct):'')+
+        (B.dr007?card(B.drLabel||'DR007', B.dr007.v, '%', B.dr007.chgW, B.dr007.pct, B.drChg):'')+
         (B.spread!=null?'<div class="c"><div class="k">信用利差</div><div class="v">'+B.spread+'%</div><div class="d">信用债 − 国债</div></div>':'')+
         '</div>';
       $('bond').innerHTML = '<div class="box">'+g+
