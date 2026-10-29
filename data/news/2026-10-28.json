@@ -1,0 +1,169 @@
+[
+ {
+  "time": "00:14",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "公募三季报重仓股大换血！光模块依旧坚挺 存储、CXO杀入前十",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273910560665.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "07:42",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "SK海力士预计存储供不应求持续至2030年",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283910763887.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "06:28",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI用电需求催生设备订单 燃气轮机产业链投资机会受关注",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283910675422.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:21",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "马斯克称机器人所需内存将超过其他任何领域 存储产业趋势明确",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283910906888.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:21",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "紫光国微：智能安全芯片出货正在恢复 前期被延后订单有望逐步回补",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283910910275.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-27 17:35",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "上海：研制推广物理AI装备 研制具备自主感知和决策能力的机器人、工业母机、检测装备等智能制造装备",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273910014674.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-27 18:50",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "思瑞浦：Q3净利润同比增长402%环比增长49% 光模块等领域订单与交货规模稳步提升",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273910172943.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:35",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "宁德时代新设储能科技公司 含AI相关业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283911485327.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:04",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "英杰电气：2026年光伏业务订单实现大幅增长 相关收入将在后续周期逐步确认",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610283911034175.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "10-27 18:36",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "神雾节能：控股子公司联合体中标7.17亿元储能电站EPC项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273910141897.html",
+  "raw": 6,
+  "score": 6
+ }
+]

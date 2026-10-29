@@ -197,6 +197,8 @@ footer b{color:var(--ink2);font-weight:600}
 
   <div class="days" id="days"></div>
 
+  <div id="staleNote"></div>
+
   <section>
     <h2>本周结论</h2>
     <p class="sub">指数 • 量能 • 结构 • 主因</p>
@@ -215,6 +217,12 @@ footer b{color:var(--ink2);font-weight:600}
     <p class="sub">周涨跌幅，红色上涨 / 绿色下跌</p>
     <div class="chart-wrap" id="idxChart"></div>
     <table id="idxTable" style="margin-top:18px"></table>
+  </section>
+
+  <section>
+    <h2>上一周对照</h2>
+    <p class="sub" id="prevSub">上周完整一周的表现，与本周截至最新交易日对照</p>
+    <div id="prevWeek"></div>
   </section>
 
   <section>
@@ -475,6 +483,43 @@ footer b{color:var(--ink2);font-weight:600}
     el.innerHTML = '<div class="box"><table><thead><tr><th>周</th><th>领涨前三</th><th>领跌前三</th><th>首尾差</th></tr></thead>'+
       '<tbody>'+rows+'</tbody></table>'+stats+
       '<span class="note"><span class="src">数据来源：申万宏源研究所行业指数周线（申万一级 31 个行业），按周收盘价环比自算；只保留最近 '+S.weeks+' 周，更早的每周自动丢弃。</span></span></div>';
+  })();
+
+  /* 日更提示：哪些是今天的数据、哪些是上一次周五生成的 */
+  (function(){
+    var el = $('staleNote');
+    if(!el) return;
+    if(!D.assetsStale){ el.innerHTML = ''; return; }
+    el.innerHTML = '<div class="box" style="margin:14px 24px 0;padding:9px 12px;font-size:12px;border-left:3px solid var(--warn);line-height:1.6">'+
+      '行情、行业、事件、技术面为<b>日更</b>（截至 '+D.week.end+'）；估值分位、债市、股债性价比、板块轮动与解读为 <b>'+D.assetsAsOf+
+      '</b> 生成的数据，周五收盘后统一刷新。</div>';
+  })();
+
+  /* 上一周对照：上周（归档的完整周）vs 本周（日更至今） */
+  (function(){
+    var P = D.prev, el = $('prevWeek');
+    if(!el) return;
+    if(!P){ el.innerHTML = '<div class="empty">还没有上一周的归档，周五跑完一次后就会出现。</div>'; return; }
+    var cur = {};
+    (D.indices || []).forEach(function(i){ cur[i.name] = i; });
+    var rows = P.indices.map(function(p){
+      var c = cur[p.name] || {};
+      var diff = (c.chg == null) ? null : Math.round((c.chg - p.chg) * 100) / 100;
+      return '<tr><td>'+p.name+'</td>'+
+        '<td class="num '+cls(p.chg)+'">'+pct(p.chg)+'</td>'+
+        '<td class="num '+cls(c.chg)+'">'+(c.chg==null?'--':pct(c.chg))+'</td>'+
+        '<td class="num '+cls(diff)+'">'+(diff==null?'--':(diff>0?'+':'')+diff.toFixed(2)+'pct')+'</td></tr>';
+    }).join('');
+    var tp = P.top.map(function(x){ return '<span class="rt up">'+x.name+' '+(x.chg>0?'+':'')+x.chg+'%</span>'; }).join('');
+    var bt = P.bottom.map(function(x){ return '<span class="rt dn">'+x.name+' '+x.chg+'%</span>'; }).join('');
+    var wd = (D.week && D.week.days) || 0;
+    el.innerHTML = '<div class="box"><table><thead><tr><th>指数</th><th>上周 '+P.label+'</th>'+
+      '<th>本周 '+(D.weekLabel||'')+'</th><th>本周−上周</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+      '<div class="note">上周行业领涨：'+tp+'<br>上周行业领跌：'+bt+'</div>'+
+      '<span class="note"><span class="src">上周数据来自归档（每周五收盘后自动保存的完整周）；本周为截至最新交易日的日更数据'+
+      (wd && wd < 5 ? '（本周才 '+wd+' 个交易日，尚未走完）' : '')+'。</span></span></div>';
+    var sub = $('prevSub');
+    if(sub) sub.textContent = '上周（'+P.label+'，'+(P.days||5)+'个交易日）对比本周（'+(D.weekLabel||'')+'，'+wd+'个交易日'+(wd<5?'，进行中':'')+'）';
   })();
 
   /* 技术面 */

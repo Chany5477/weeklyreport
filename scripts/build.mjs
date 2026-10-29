@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,11 +8,43 @@ const ROOT = resolve(__dir, '..');
 const data = JSON.parse(readFileSync(resolve(ROOT, 'data/latest.json'), 'utf8'));
 const tpl = readFileSync(resolve(ROOT, 'templates/report.html'), 'utf8');
 
+/* ---------- 上一周对照：直接读归档，不重新取数 ---------- */
+const histDir = resolve(ROOT, 'data/history');
+let prev = null;
+try {
+  if (existsSync(histDir)) {
+    const files = readdirSync(histDir).filter(f => /^weekly-\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
+    const curStart = data.week?.start;
+    // 只认周五收盘的归档（日更也会落盘，但那是未走完的周，不能当"上一周"）
+    const isFri = (d) => new Date(d + 'T00:00:00Z').getUTCDay() === 5;
+    const cand = files.filter(f => { const d = f.slice(7, 17); return d < curStart && isFri(d); }).pop();
+    if (cand) {
+      const p = JSON.parse(readFileSync(resolve(histDir, cand), 'utf8'));
+      const inds = (p.industries || []).slice().sort((a, b) => b.chg - a.chg);
+      prev = {
+        label: p.weekLabel,
+        start: p.week?.start, end: p.week?.end, days: p.week?.days,
+        indices: (p.indices || []).map(i => ({ name: i.name, chg: i.chg, close: i.close })),
+        top: inds.slice(0, 3).map(i => ({ name: i.name, chg: i.chg })),
+        bottom: inds.slice(-3).reverse().map(i => ({ name: i.name, chg: i.chg })),
+      };
+    }
+  }
+} catch (e) {
+  console.log('上一周归档读取失败：', String(e.message).slice(0, 60));
+}
+data.prev = prev;
+
 /* ---------- 把新闻事件并进每一天 ---------- */
 const newsPath = resolve(ROOT, 'data/news.json');
 const news = existsSync(newsPath) ? JSON.parse(readFileSync(newsPath, 'utf8')) : {};
 const assetsPath = resolve(ROOT, 'data/assets.json');
 data.assets = existsSync(assetsPath) ? JSON.parse(readFileSync(assetsPath, 'utf8')) : null;
+
+/* 日更时，估值/债市/解读仍是上一次（周五）生成的，标注出来避免误读 */
+const assetsAsOf = (data.assets?.asOf) || String(data.assets?.updated || '').slice(0, 10) || null;
+data.assetsAsOf = assetsAsOf;
+data.assetsStale = !!(assetsAsOf && data.week?.end && assetsAsOf < data.week.end);
 
 data.days = data.days.map(d => {
   const n = news[d.date] || { events: [], attribution: '' };

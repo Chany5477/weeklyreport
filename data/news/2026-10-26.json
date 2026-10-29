@@ -1,0 +1,145 @@
+[
+ {
+  "time": "06:09",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "从算力芯片到创新药 多家科创板龙头集中发声",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610253907350018.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "10-25 14:00",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "周末要闻汇总：国常会研究统筹人口与经济社会发展有关工作",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610253907169967.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "10-24 19:33",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "乌克兰对俄导弹及军工供应链实施新一轮制裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610243907113370.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-25 23:11",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "津巴布韦总统呼吁西方国家无条件解除制裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610253907356127.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:47",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "印度对华无缝钢管和空心型材作出第二次反倾销日落复审终裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907809152.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:57",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "商务部：2026年以来家电以旧换新累计超10099万台",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907810532.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "12:55",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "物理AI催化这回“轮”到家庭机器人",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907819046.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "14:22",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "澳大利亚对涉华玻璃棉启动双反倾销调查",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907907555.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-24 16:59",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "美晨科技：旗下美晨工业集团中标国内头部客户储能液冷管路总成项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610243907100096.html",
+  "raw": 6,
+  "score": 6
+ }
+]

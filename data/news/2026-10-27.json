@@ -1,0 +1,248 @@
+[
+ {
+  "time": "10-26 16:14",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "机构：料欧美央行10月维持利率不变 美联储或12月加息25基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.95,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907980165.html",
+  "raw": 13,
+  "score": 17
+ },
+ {
+  "time": "10-26 16:38",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部：发放对硝基甲苯反倾销案调查问卷",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908017946.html",
+  "raw": 13,
+  "score": 13
+ },
+ {
+  "time": "11:23",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "远景乌兰察布星河基地：百公里外风电直送园区 算力订单已排到后年",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273909462262.html",
+  "raw": 11,
+  "score": 13
+ },
+ {
+  "time": "07:56",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "华泰证券：基准情形下美联储年内12月再加息1次 明年加息2次",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.95,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273908914086.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "10-26 17:40",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "高盛预计美联储本周维持利率不变 12月加息25个基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.95,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908127964.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "07:05",
+  "phase": "盘前",
+  "tag": "周期",
+  "text": "Anthropic IPO成强心剂！芯片股光通信爆发 特斯拉创三个月新高 黄金激战4000美元",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输",
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273908738048.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "10-26 18:08",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "宇树科技：人形机器人行业尚处商业化早期 物理AI技术从实验室演示走向真实场景规模化落地仍面临多重挑战",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908163626.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "03:28",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国、加拿大据悉正致力于达成一项放宽美国对加拿大钢铁和汽车进口关税的协议",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273908708975.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-26 15:35",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国ITC作出金刚石锯片第三次反倾销日落复审产业损害终裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263907940225.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-26 17:09",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "上海：重点攻关卫星手机直连、天基算力及空天地一体和通感算智融合等技术",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908085490.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-26 21:00",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "三友联众：光储及算力相关继电器按订单节奏有序排产",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908479375.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:04",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "FFR完成FFAI机器人业务合并 正式挂牌上市",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273909448771.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-26 17:15",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "武汉天源：中标36.4亿元储能项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610263908095384.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "13:35",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "恒星科技：人形机器人腱绳产品已取得小批量订单",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610273909544676.html",
+  "raw": 6,
+  "score": 6
+ }
+]
