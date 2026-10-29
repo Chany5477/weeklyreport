@@ -41,6 +41,10 @@ jobs:
           node scripts/news.mjs
 
       # 股债性价比 / 债市 / 估值分位 / 基金风格；配置 IFIND_REFRESH_TOKEN 时用 iFinD，否则降级免费源
+      - name: 板块轮动数据（申万行业周线）
+        run: |
+          node scripts/rotation.mjs || true
+
       - name: 生成扩展板块数据
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}

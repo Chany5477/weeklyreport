@@ -9,6 +9,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 
 import { resolve } from 'node:path';
 
 import * as ifind from './ifind.mjs';
+import { swWeeks } from './sw.mjs';
 
 const pexec = promisify(execFile);
 const ROOT = ifind.ROOT;
@@ -488,6 +489,46 @@ for (const s of STYLES) {
   await sleep(120);
 }
 
+/* 4.5、板块轮动：最近 8 周的领涨 / 领跌前三（申万一级行业周线自算）
+ * 优先用 scripts/rotation.mjs 生成的缓存（快），缓存没有或过期就现抓一次 */
+let rotation = null;
+try {
+  let weeks = null;
+  const rotFile = resolve(ROOT, 'data/rotation.json');
+  if (existsSync(rotFile)) {
+    try {
+      const c = JSON.parse(readFileSync(rotFile, 'utf8'));
+      if (c?.weeks?.length && c.weeks[c.weeks.length - 1].end >= AS_OF) weeks = c.weeks;
+    } catch { /* 缓存坏了就重抓 */ }
+  }
+  if (!weeks) weeks = await swWeeks(8);
+  if (weeks.length) {
+    const tops = weeks.flatMap(w => w.top.map(x => x.name));
+    const uniq = new Set(tops);
+    let streak = 0;
+    for (let i = 1; i < weeks.length; i++) {
+      const prev = new Set(weeks[i - 1].top.map(x => x.name));
+      weeks[i].top.forEach(x => { if (prev.has(x.name)) streak++; });
+    }
+    const spreads = weeks.map(w => w.spread);
+    rotation = {
+      weeks,
+      stats: {
+        weeks: weeks.length,
+        uniqTop: uniq.size,
+        slots: tops.length,
+        repeat: tops.length - uniq.size,
+        streak,
+        spreadMin: Math.min(...spreads),
+        spreadMax: Math.max(...spreads),
+      },
+    };
+    console.log(`板块轮动：${weeks.length} 周，领涨前三共 ${uniq.size} 个不同行业`);
+  }
+} catch (e) {
+  console.log('板块轮动失败：', String(e.message).slice(0, 70));
+}
+
 /* 5、解读（DeepSeek，缺 key 时给规则版） */
 const facts = JSON.stringify({
   week: latest.week, index: latest.index, tech: latest.tech,
@@ -542,7 +583,7 @@ const out = {
     valuation: (indices.find(i => i.valSrc) || {}).valSrc || '未接入',
     bond: (bondOut && bondOut.y10) ? ((bondOut.y10.est ? '基准值+ETF推算' : (manualBond ? '人工补充（data/bond-manual.json）' : 'iFinD'))) : '未接入（iFinD 无 EDB 权限，用债券 ETF 价格代理）',
   },
-  erp, bond: bondOut, bondProxy, bondDelta, indices, styles, comment,
+  erp, bond: bondOut, bondProxy, bondDelta, rotation, indices, styles, comment,
 };
 writeFileSync(resolve(ROOT, 'data/assets.json'), JSON.stringify(out, null, 1));
 console.log('assets 完成：指数', indices.length, '｜风格', styles.length,
