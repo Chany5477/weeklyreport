@@ -46,54 +46,6 @@
   "score": 13
  },
  {
-  "time": "10-17 08:46",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "特朗普称将免除部分对俄制裁",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610173899002243.html",
-  "raw": 8,
-  "score": 10
- },
- {
-  "time": "10-17 09:31",
-  "phase": "盘前",
-  "tag": "政策",
-  "text": "赛力斯参股 赛豆AIVA首款车亮相工信部",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610173899007269.html",
-  "raw": 10,
-  "score": 10
- },
- {
-  "time": "10-17 13:57",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "特朗普签署行政令豁免对俄多项制裁",
-  "secs": [
-   "电子",
-   "机械设备",
-   "电力设备"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610173899038868.html",
-  "raw": 8,
-  "score": 10
- },
- {
   "time": "10-18 03:45",
   "phase": "盘前",
   "tag": "科技",
@@ -191,34 +143,6 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610193899268291.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "10-17 09:55",
-  "phase": "盘前",
-  "tag": "科技",
-  "text": "直击2026湾芯展｜订单超全年营收两倍 国产半导体测试机厂商密集扩产",
-  "secs": [
-   "电子",
-   "计算机",
-   "通信"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610173899010965.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "10-17 14:01",
-  "phase": "盘前",
-  "tag": "政策",
-  "text": "欧洲央行管委雷恩：警惕能源涨价引发二轮通胀效应",
-  "secs": [],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610173899038351.html",
   "raw": 8,
   "score": 8
  },
