@@ -1,18 +1,12 @@
 name: weekly-review
 
 # 北京时间 周五 15:35 / 16:10 / 17:30 各跑一次全套（UTC = 北京时间 - 8h）
-# 周一至周四 15:40 跑日更：只更新行情 / 行业 / 事件（免费源，不额外消耗 iFinD 额度）
 on:
   schedule:
     - cron: '35 7 * * 5'
     - cron: '10 8 * * 5'
     - cron: '30 9 * * 5'
-  workflow_dispatch:
-    inputs:
-      full:
-        description: '跑全套（含 iFinD 估值/债市/解读），默认是'
-        required: false
-        default: 'true'
+  workflow_dispatch: {}          # GitHub 页面上手动重跑的按钮
 
 permissions:
   contents: write                # 归档 JSON + 发布 index.html
