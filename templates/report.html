@@ -221,7 +221,7 @@ footer b{color:var(--ink2);font-weight:600}
     <table id="idxTable" style="margin-top:18px"></table>
   </section>
 
-  <section>
+  <section id="prevSec">
     <h2>上一周对照</h2>
     <p class="sub" id="prevSub">上周完整一周的表现，与本周截至最新交易日对照</p>
     <div id="prevWeek"></div>
@@ -540,7 +540,10 @@ footer b{color:var(--ink2);font-weight:600}
   (function(){
     var P = D.prev, el = $('prevWeek');
     if(!el) return;
-    if(!P){ el.innerHTML = '<div class="empty">还没有上一周的归档，周五跑完一次后就会出现。</div>'; return; }
+    if(!P){                                  // 还没有更早的归档（首期）就整块隐藏，不留空提示
+      var sec = $('prevSec'); if(sec) sec.style.display = 'none';
+      return;
+    }
     var cur = {};
     (D.indices || []).forEach(function(i){ cur[i.name] = i; });
     var rows = P.indices.map(function(p){

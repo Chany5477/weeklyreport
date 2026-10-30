@@ -142,6 +142,26 @@ const pct = (a, b) => (b ? (a / b - 1) * 100 : 0);
 const ma = (arr, n) => (arr.length < n ? null : arr.slice(-n).reduce((a, b) => a + b, 0) / n);
 const r2 = (v, n = 2) => (v == null || !isFinite(v) ? null : +v.toFixed(n));
 
+/**
+ * 周报只认"已经收完的周"：
+ * - 周五 15:00（北京）之后 → 本周已收完，用最新交易日
+ * - 其余任何时刻（周一至周四、周五盘中、周末）→ 回退到最近一个已收完的周五
+ * 这样周五定时任务跑之前，页面始终显示上一周的完整周报，不会冒出半周数据。
+ */
+function closedWeekAnchor(rows) {
+  const bj = new Date(Date.now() + 8 * 3600e3);      // 北京时间（注意：它的 getUTC* 读出来就是北京时间）
+  const todayBJ = bj.toISOString().slice(0, 10);
+  const dow = (bj.getUTCDay() + 6) % 7;              // 0=周一 … 4=周五
+  const mins = bj.getUTCHours() * 60 + bj.getUTCMinutes();
+  if (dow === 4 && mins >= 15 * 60 + 35) return rows.length - 1;   // 周五 15:35（定时任务时点）之后才算本周收完
+  for (let i = rows.length - 1; i >= 0; i--) {
+    if (rows[i].date === todayBJ) continue;          // 今天还没收完，跳过
+    const d = new Date(rows[i].date + 'T00:00:00Z');
+    if ((d.getUTCDay() + 6) % 7 === 4) return i;     // 最近一个已收完的周五
+  }
+  return rows.length - 1;
+}
+
 function weekOf(rows, anchorIdx) {
   // 从 anchor 往前找到本周第一个交易日（同一 ISO 周）
   const anchor = rows[anchorIdx];
@@ -335,15 +355,20 @@ async function main() {
   const checks = [];
   const srcUsed = new Set();
 
-  // 指数
+  // 指数：先把日线抓回来，确定"已收完的周"之后再统一分析，保证各指数口径一致
   const idxList = [];
   let shRows = null;
+  const rawIdx = [];
   for (const it of INDICES) {
     const secid = it.sym.startsWith('sh') ? '1.' + it.sym.slice(2) : '0.' + it.sym.slice(2);
     const { rows, src } = await getDaily(it.sym, secid);
     srcUsed.add('指数日线/' + src);
     if (it.sym === 'sh000001') shRows = rows;
-    const a = analyzeIndex(rows);
+    rawIdx.push({ it, rows });
+  }
+  const anchorIdx = closedWeekAnchor(shRows);   // 周五收盘前回退到上一个周五
+  for (const { it, rows } of rawIdx) {
+    const a = analyzeIndex(rows.slice(0, anchorIdx + 1));
     a.name = it.name; a.sym = it.sym;
     idxList.push(a);
   }
@@ -354,7 +379,10 @@ async function main() {
   srcUsed.add('申万行业/申万宏源官网');
 
   // 宽度
-  const anchorDate = sh.lastDate.replace(/-/g, '');
+  // 涨停/跌停等当日数据也按周报最后那一天取，口径才一致
+  const weekRows = weekOf(shRows, anchorIdx);
+  const weekStart = weekRows[0].date, weekEnd = weekRows[weekRows.length - 1].date;
+  const anchorDate = weekEnd.replace(/-/g, '');
   let breadth = null, zt = 0, dt = 0;
   try { breadth = await getBreadth(); srcUsed.add('涨跌家数/东方财富'); }
   catch { checks.push({ key: '涨跌家数', ok: false, msg: '东财涨跌家数接口无响应' }); }
@@ -364,14 +392,13 @@ async function main() {
   catch { checks.push({ key: '跌停家数', ok: false, msg: '跌停池接口无响应' }); }
 
   /* -------- 数据闸门 -------- */
-  const weekRows = weekOf(shRows, shRows.length - 1);
-  const weekStart = weekRows[0].date, weekEnd = weekRows[weekRows.length - 1].date;
 
   /* -------- 行业：周涨跌 + 每日异动（统一由日线推导） -------- */
   for (const ind of industries) {
     const rows = ind.rows || [];
     const prev = [...rows].reverse().find(r => r.date < weekStart);
-    const last = rows[rows.length - 1];
+    // 行业接口只给最新数据，回退到历史周时要按 weekEnd 取，不能直接用最新一行
+    const last = [...rows].reverse().find(r => r.date <= weekEnd);
     ind.chg = (prev && last) ? r2(pct(last.close, prev.close)) : null;
     ind.date = last ? last.date : null;
   }
