@@ -7,7 +7,6 @@ on:
     - cron: '35 7 * * 5'
     - cron: '10 8 * * 5'
     - cron: '30 9 * * 5'
-    - cron: '40 7 * * 1-4'
   workflow_dispatch:
     inputs:
       full:
@@ -29,18 +28,6 @@ jobs:
         with:
           node-version: 20
 
-      # 周五（或手动选"是"）跑全套；周一至周四只跑行情日更，不额外消耗 iFinD 额度
-      - name: 判断运行模式
-        id: mode
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "full=${{ github.event.inputs.full || 'true' }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "40 7 * * 1-4" ]; then
-            echo "full=false" >> $GITHUB_OUTPUT
-          else
-            echo "full=true" >> $GITHUB_OUTPUT
-          fi
-
       # 抓数最多重试 3 次，直到数据校验通过为止
       - name: 抓数（不完整则自动重试）
         run: |
@@ -60,13 +47,15 @@ jobs:
           node scripts/news.mjs
 
       # 股债性价比 / 债市 / 估值分位 / 基金风格；配置 IFIND_REFRESH_TOKEN 时用 iFinD，否则降级免费源
+      - name: 海外与外部环境数据（美股/汇率/商品）
+        run: |
+          node scripts/global.mjs || true
+
       - name: 板块轮动数据（申万行业周线）
-        if: steps.mode.outputs.full == 'true'
         run: |
           node scripts/rotation.mjs || true
 
       - name: 生成扩展板块数据
-        if: steps.mode.outputs.full == 'true'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           IFIND_REFRESH_TOKEN: ${{ secrets.IFIND_REFRESH_TOKEN }}

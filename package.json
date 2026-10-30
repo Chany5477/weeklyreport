@@ -13,7 +13,8 @@
   "serve": "python3 -m http.server 8899 --directory dist",
   "assets": "node scripts/assets.mjs",
   "probe": "node scripts/ifind-probe.mjs",
-  "rotation": "node scripts/rotation.mjs"
+  "rotation": "node scripts/rotation.mjs",
+  "global": "node scripts/global.mjs"
  },
  "engines": {
   "node": ">=18"

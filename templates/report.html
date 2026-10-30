@@ -45,6 +45,8 @@ h1 em{font-style:normal;color:var(--red)}
 .rt.dn{background:rgba(14,159,110,.10);color:var(--green)}
 .rtc{white-space:nowrap} .wk{white-space:nowrap;font-variant-numeric:tabular-nums}
 .rotstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:8px;margin-top:10px}
+.pbar{display:inline-block;width:54px;height:6px;background:var(--line);border-radius:3px;overflow:hidden;vertical-align:middle;margin-right:4px}
+.pbar i{display:block;height:100%;background:var(--red);opacity:.75}
 .rotstat>div{background:var(--bg2);border-radius:6px;padding:8px 10px;font-size:11px;color:var(--muted);line-height:1.5}
 .rotstat b{font-size:18px;color:var(--ink);margin-right:2px;font-variant-numeric:tabular-nums}
 
@@ -242,6 +244,12 @@ footer b{color:var(--ink2);font-weight:600}
     <h2>板块轮动</h2>
     <p class="sub">最近八周每周领涨、领跌前三行业（申万一级31个行业）</p>
     <div id="rot"></div>
+  </section>
+
+  <section>
+    <h2>海外与外部环境</h2>
+    <p class="sub" id="glSub">海外主要股指、汇率、商品与避险情绪的周变化</p>
+    <div id="glob"></div>
   </section>
 
   <section>
@@ -483,6 +491,39 @@ footer b{color:var(--ink2);font-weight:600}
     el.innerHTML = '<div class="box"><table><thead><tr><th>周</th><th>领涨前三</th><th>领跌前三</th><th>首尾差</th></tr></thead>'+
       '<tbody>'+rows+'</tbody></table>'+stats+
       '<span class="note"><span class="src">数据来源：申万宏源研究所行业指数周线（申万一级 31 个行业），按周收盘价环比自算；只保留最近 '+S.weeks+' 周，更早的每周自动丢弃。</span></span></div>';
+  })();
+
+  /* 海外与外部环境 */
+  (function(){
+    var G = (D.assets||{}).global, el = $('glob');
+    if(!el) return;
+    if(!G || !G.items || !G.items.length){ el.innerHTML = '<div class="empty">本期未取到海外数据。</div>'; return; }
+    // 分位条（bar 是估值板块的局部函数，这里自己画一个；分位只表示"在近十年区间的位置"，不做好坏判断）
+    var pbar = function(p){
+      if(p == null) return '--';
+      var w = Math.max(2, Math.min(100, p));
+      return '<span class="pbar"><i style="width:'+w+'%"></i></span> '+p+'%';
+    };
+    var order = ['股指','情绪','汇率','商品'];
+    var byGroup = {};
+    G.items.forEach(function(i){ (byGroup[i.group] = byGroup[i.group] || []).push(i); });
+    var html = '';
+    order.forEach(function(g){
+      var list = byGroup[g];
+      if(!list || !list.length) return;
+      html += '<div class="heat-cap">'+g+'</div><table><thead><tr><th>标的</th><th>最新</th><th>本周</th><th>十年分位</th></tr></thead><tbody>'+
+        list.map(function(i){
+          return '<tr><td><b>'+i.name+'</b></td>'+
+            '<td class="num">'+(i.close==null?'--':i.close)+'</td>'+
+            '<td class="num '+cls(i.chgW)+'">'+(i.chgW==null?'--':pct(i.chgW))+'</td>'+
+            '<td class="num">'+pbar(i.pct)+'</td></tr>';
+        }).join('')+'</tbody></table>';
+    });
+    var sub = $('glSub');
+    if(sub) sub.textContent = '海外主要股指、汇率、商品与避险情绪的周变化（截至 '+(G.asOf||'')+'）';
+    el.innerHTML = '<div class="box">'+html+
+      '<span class="note"><span class="src">美股与商品取新浪历史日K，港股/日经/DAX/费半/VIX/离岸人民币取 iFinD；按周收盘环比自算周涨跌，分位为近十年日频样本。'+
+      '海外市场交易日与 A 股不完全重合，取各自最近一个收盘值。</span></span></div>';
   })();
 
   /* 日更提示：哪些是今天的数据、哪些是上一次周五生成的 */

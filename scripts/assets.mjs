@@ -529,6 +529,20 @@ try {
   console.log('板块轮动失败：', String(e.message).slice(0, 70));
 }
 
+/* 4.6、海外与外部环境（scripts/global.mjs 生成的缓存，独立跑避免整套流程等太久） */
+let glob = null;
+try {
+  const gf = resolve(ROOT, 'data/global.json');
+  if (existsSync(gf)) {
+    const g = JSON.parse(readFileSync(gf, 'utf8'));
+    if (g?.items?.length) {
+      // 页面只展示最新值 / 周涨跌 / 分位，历史序列不入页面（省 60KB）
+      glob = { asOf: g.asOf, items: g.items.map(({ hist, ...r }) => r) };
+      console.log(`海外：${g.items.filter(i => i.chgW != null).length}/${g.items.length} 个标的（截至 ${g.asOf}）`);
+    }
+  }
+} catch { /* 没有就整块不显示 */ }
+
 /* 5、解读（DeepSeek，缺 key 时给规则版） */
 const facts = JSON.stringify({
   week: latest.week, index: latest.index, tech: latest.tech,
@@ -547,6 +561,10 @@ if (DS_KEY) {
     facts,
     '',
     '债市没有利率水平数据（iFinD 无 EDB 权限），但有债券 ETF / 国债指数的价格涨跌与十年价格分位（分位越高=债券越贵=收益率越低），请据此解读债市，不要编造具体收益率数字。',
+    (glob ? '海外与外部环境（周涨跌，截至 ' + glob.asOf + '）：' + glob.items
+      .map(i => `${i.name} ${i.chgW == null ? '无数据' : (i.chgW > 0 ? '+' : '') + i.chgW + '%'}`).join('、')
+      + '。请把海外因素写进展望：重点看美股与费城半导体对 A 股科技链的映射、人民币汇率对资金流向的影响、'
+      + 'VIX 与黄金原油反映的风险偏好和通胀预期。只讲结论，不要罗列这些数字。' : ''),
     '输出 JSON，字段如下：',
     '{',
     '  "erp": "股债性价比一句话结论（40~70字，必须提到当前值所处的历史分位含义）",',
@@ -583,7 +601,7 @@ const out = {
     valuation: (indices.find(i => i.valSrc) || {}).valSrc || '未接入',
     bond: (bondOut && bondOut.y10) ? ((bondOut.y10.est ? '基准值+ETF推算' : (manualBond ? '人工补充（data/bond-manual.json）' : 'iFinD'))) : '未接入（iFinD 无 EDB 权限，用债券 ETF 价格代理）',
   },
-  erp, bond: bondOut, bondProxy, bondDelta, rotation, indices, styles, comment,
+  erp, bond: bondOut, bondProxy, bondDelta, rotation, global: glob, indices, styles, comment,
 };
 writeFileSync(resolve(ROOT, 'data/assets.json'), JSON.stringify(out, null, 1));
 console.log('assets 完成：指数', indices.length, '｜风格', styles.length,

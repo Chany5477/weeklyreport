@@ -1,0 +1,283 @@
+[
+ {
+  "time": "10-29 15:15",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "工信部公开征求《监控化学品出口管制内部合规指南（征求意见稿）》意见",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293913973246.html",
+  "raw": 13,
+  "score": 13
+ },
+ {
+  "time": "08:31",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "华为数能、科华数能同时宣布提价 最高涨幅达15%",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914954327.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "10-29 20:37",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国9月核心PCE同比上涨3.1% 美联储12月或加息25个基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914735690.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "10-29 21:51",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "欧洲央行行长拉加德表示，数据显示第三季度经济继续扩张，人工智能投资与公共支出将支撑增长",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914901434.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11:10",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "日本央行上调明年核心CPI预期",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303916056138.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "01:23",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "特朗普表示：美联储不愿降息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915075831.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:41",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "奥特佳：获新定点 进入算力储能热管理部件新市场",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915378572.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:05",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "彭博全球首席经济学家：12月美联储也可能维持利率不变",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914895273.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:28",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "Ibiden拟加投资约1510亿日元 扩产AI服务器用IC载板",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915597993.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 15:12",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "商务部：今年以来以旧换新带动数码产品销量同比增长44.8%",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293913967748.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 15:28",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "铭普光磁：800G LPO光模块已实现小批量出货 订单规模尚不稳定",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293913986820.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 16:31",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国知名投资人质疑美联储利率决议",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914174395.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 16:38",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "东方金诚：美联储2027年仍有继续加息的可能性",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914196395.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 18:32",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美银全球研究预计美联储将在2026年12月和2027年3月各加息25个基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914467543.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 19:18",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "IBM用四根超导线缆实现芯片级协同 打破量子比特拥挤魔咒",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914584224.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10-29 21:39",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "报道：奥迪已获得关税减免计划的保证",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914887198.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "06:49",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "一线调研： 储能角色重塑 锂电产业开启理性扩产周期",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915138397.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "08:08",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "迦南智能：预中标1.51亿元国家电网采购项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915358763.html",
+  "raw": 6,
+  "score": 6
+ }
+]
