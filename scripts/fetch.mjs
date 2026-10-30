@@ -71,15 +71,32 @@ async function eastDay(secid, len = 260) {
   });
 }
 
+/** 新浪日K：GitHub Actions 的机器访问腾讯/东财会失败，新浪是通的最后兜底 */
+async function sinaDay(sym, len = 260) {
+  const url = `https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData?symbol=${sym}&scale=240&ma=no&datalen=${len}`;
+  const txt = await get(url, 'https://finance.sina.com.cn');
+  const arr = JSON.parse(String(txt).trim());
+  return (arr || []).map(r => ({
+    date: String(r.day).slice(0, 10),
+    open: +r.open, close: +r.close, high: +r.high, low: +r.low, vol: +r.volume,
+  })).filter(r => r.date && Number.isFinite(r.close));
+}
+
 async function getDaily(sym, secid) {
   try {
     const a = await tencentDay(sym);
     if (a.length > 30) return { rows: a, src: '腾讯行情' };
     throw new Error('short');
   } catch (e) {
-    const a = await eastDay(secid);
-    if (a.length > 30) return { rows: a, src: '东方财富' };
-    throw e;
+    try {
+      const a = await eastDay(secid);
+      if (a.length > 30) return { rows: a, src: '东方财富' };
+      throw e;
+    } catch {
+      const a = await sinaDay(sym);
+      if (a.length > 30) return { rows: a, src: '新浪财经' };
+      throw e;
+    }
   }
 }
 

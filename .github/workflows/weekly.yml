@@ -71,10 +71,15 @@ jobs:
         id: gate
         run: |
           OK=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).status")
-          echo "status=$OK" >> $GITHUB_OUTPUT
-          if [ "$OK" != "ok" ]; then
-            echo "::warning::数据未完整，本次不发布，保留上一期页面"
+          # 抓数失败时 latest.json 会是仓库里的旧文件，这里用"文件年龄"识破，避免拿上期数据覆盖页面
+          AGE=$(( $(date +%s) - $(stat -c %Y data/latest.json 2>/dev/null || echo 0) ))
+          echo "status=$OK  数据年龄=${AGE}s"
+          if [ "$OK" != "ok" ] || [ "$AGE" -gt 1800 ]; then
+            echo "::warning::抓数未成功（status=$OK，数据年龄 ${AGE}s），本次不发布，保留上一期页面"
+            echo "status=stale" >> $GITHUB_OUTPUT
             node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
+          else
+            echo "status=ok" >> $GITHUB_OUTPUT
           fi
 
       # 仓库根目录的 index.html 就是网站首页（GitHub Pages 走分支发布）

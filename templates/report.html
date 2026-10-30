@@ -174,17 +174,55 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 footer{padding:22px 24px 0;font-size:11.5px;color:var(--muted);line-height:1.85}
 footer b{color:var(--ink2);font-weight:600}
 .empty{padding:14px;border:1px dashed var(--line);border-radius:10px;font-size:12.5px;color:var(--muted);background:var(--bg2)}
-@media (max-width:480px){
-  .heat{grid-template-columns:repeat(6,1fr)}
-  .heat .c .n{font-size:9.5px}
-}
-@media (max-width:420px){
-  h1{font-size:25px}
-  header,section{padding-left:18px;padding-right:18px}
-  .tech-grid{grid-template-columns:repeat(2,1fr)}
+/* ---------- 手机 / 窄屏适配 ---------- */
+@media (max-width:760px){
+  body{font-size:14.5px}
+  header{padding:22px 16px 16px}
+  section{padding:20px 16px}
+  h1{font-size:23px;letter-spacing:-.3px}
+  h2{font-size:15px}
+  .lead{font-size:14px}
+  footer{padding:18px 16px 0}
+
+  /* 每日汇总 5 列在小屏挤成一团，改成可横向滑动 */
+  .days{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .day{flex:1 0 19%;padding:12px 3px 10px}
   .day .c{font-size:16px}
   .day .m{font-size:9.5px}
   .day .sx{font-size:9px}
+
+  /* 表格：整体缩一档 */
+  table{font-size:12.5px}
+  th{padding:0 0 6px}
+  td{padding:7px 0}
+
+  /* 板块轮动：三列内容太长，手机上整行改成卡片 */
+  .rot-t,.rot-t tbody,.rot-t tr,.rot-t td{display:block;width:100%}
+  .rot-t thead{display:none}
+  .rot-t tr{padding:10px 0;border-top:1px solid var(--line)}
+  .rot-t tr:first-child{border-top:0}
+  .rot-t td{border:0;padding:3px 0;text-align:left}
+  .rot-t td.wk{font-weight:700;font-size:12.5px}
+  .rot-t td.rtc{white-space:normal;line-height:2}
+  .rot-t td.rtc:before{content:attr(data-l);display:inline-block;width:46px;color:var(--muted);font-size:11px}
+  .rot-t td.num:before{content:"首尾差 ";color:var(--muted);font-size:11px}
+
+  /* 行业横条与热力图 */
+  .hrow{grid-template-columns:58px 1fr 48px;gap:6px;height:22px}
+  .hrow .n,.hrow .v{font-size:11.5px}
+  .heat{grid-template-columns:repeat(5,1fr)}
+
+  .box{padding:12px}
+  .big .v{font-size:26px}
+  .rotstat{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:400px){
+  h1{font-size:21px}
+  .day{flex:1 0 23%}
+  .heat{grid-template-columns:repeat(4,1fr)}
+  .rotstat{grid-template-columns:1fr}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -478,8 +516,8 @@ footer b{color:var(--ink2);font-weight:600}
       var tp = w.top.map(function(x){ return '<span class="rt '+(x.chg>=0?'up':'dn')+'">'+x.name+' '+(x.chg>0?'+':'')+x.chg+'%</span>'; }).join('');
       var bt = w.bottom.map(function(x){ return '<span class="rt '+(x.chg>=0?'up':'dn')+'">'+x.name+' '+x.chg+'%</span>'; }).join('');
       return '<tr><td class="wk">'+w.label+'</td>'+
-        '<td class="rtc">'+tp+'</td>'+
-        '<td class="rtc">'+bt+'</td>'+
+        '<td class="rtc" data-l="领涨">'+tp+'</td>'+
+        '<td class="rtc" data-l="领跌">'+bt+'</td>'+
         '<td class="num">'+w.spread+'pct</td></tr>';
     }).join('');
     var stats = '<div class="rotstat">'+
@@ -488,7 +526,7 @@ footer b{color:var(--ink2);font-weight:600}
       '<div><b>'+S.streak+'</b> 次<br><span>连续两周都留在领涨前三（热点延续）</span></div>'+
       '<div><b>'+S.spreadMin+'–'+S.spreadMax+'</b> pct<br><span>单周首尾行业收益差的分布区间</span></div>'+
       '</div>';
-    el.innerHTML = '<div class="box"><table><thead><tr><th>周</th><th>领涨前三</th><th>领跌前三</th><th>首尾差</th></tr></thead>'+
+    el.innerHTML = '<div class="box"><table class="rot-t"><thead><tr><th>周</th><th>领涨前三</th><th>领跌前三</th><th>首尾差</th></tr></thead>'+
       '<tbody>'+rows+'</tbody></table>'+stats+
       '<span class="note"><span class="src">数据来源：申万宏源研究所行业指数周线（申万一级 31 个行业），按周收盘价环比自算；只保留最近 '+S.weeks+' 周，更早的每周自动丢弃。</span></span></div>';
   })();

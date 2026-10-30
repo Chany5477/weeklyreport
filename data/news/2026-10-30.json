@@ -1,5 +1,24 @@
 [
  {
+  "time": "10-29 20:37",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国9月核心PCE同比上涨3.1% 美联储12月或加息25个基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914735690.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
   "time": "10-29 15:15",
   "phase": "盘前",
   "tag": "海外",
@@ -16,6 +35,120 @@
   "score": 13
  },
  {
+  "time": "01:23",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "特朗普表示：美联储不愿降息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303915075831.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "09:05",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "彭博全球首席经济学家：12月美联储也可能维持利率不变",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914895273.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "10-29 16:31",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国知名投资人质疑美联储利率决议",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914174395.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "10-29 16:38",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "东方金诚：美联储2027年仍有继续加息的可能性",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914196395.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "10-29 18:32",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美银全球研究预计美联储将在2026年12月和2027年3月各加息25个基点",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610293914467543.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11:00",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "国泰海通：预计美联储短期暂停加息后 12月大概率仍将继续加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -5.11,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303916043349.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
   "time": "08:31",
   "phase": "盘前",
   "tag": "科技",
@@ -28,21 +161,6 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610293914954327.html",
-  "raw": 8,
-  "score": 10
- },
- {
-  "time": "10-29 20:37",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "美国9月核心PCE同比上涨3.1% 美联储12月或加息25个基点",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914735690.html",
   "raw": 8,
   "score": 10
  },
@@ -75,19 +193,35 @@
   "score": 10
  },
  {
-  "time": "01:23",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "特朗普表示：美联储不愿降息",
+  "time": "14:18",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "瑞士央行黄金持仓录得12亿瑞士法郎的估值收益",
   "secs": [
    "有色金属",
-   "电子"
+   "石油石化",
+   "交通运输"
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610303915075831.html",
-  "raw": 8,
-  "score": 8
+  "url": "https://finance.eastmoney.com/a/202610303916260660.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "14:40",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "日本央行行长植田和男：出售日本房地产投资信托基金的节奏保持不变",
+  "secs": [
+   "房地产",
+   "建筑材料"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202610303916356378.html",
+  "raw": 10,
+  "score": 10
  },
  {
   "time": "08:41",
@@ -104,21 +238,6 @@
   "align": null,
   "src": "东方财富",
   "url": "https://finance.eastmoney.com/a/202610303915378572.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "09:05",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "彭博全球首席经济学家：12月美联储也可能维持利率不变",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914895273.html",
   "raw": 8,
   "score": 8
  },
@@ -171,51 +290,6 @@
   "score": 8
  },
  {
-  "time": "10-29 16:31",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "美国知名投资人质疑美联储利率决议",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914174395.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "10-29 16:38",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "东方金诚：美联储2027年仍有继续加息的可能性",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914196395.html",
-  "raw": 8,
-  "score": 8
- },
- {
-  "time": "10-29 18:32",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "美银全球研究预计美联储将在2026年12月和2027年3月各加息25个基点",
-  "secs": [
-   "有色金属",
-   "电子"
-  ],
-  "align": null,
-  "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914467543.html",
-  "raw": 8,
-  "score": 8
- },
- {
   "time": "10-29 19:18",
   "phase": "盘前",
   "tag": "科技",
@@ -235,18 +309,21 @@
   "score": 8
  },
  {
-  "time": "10-29 21:39",
-  "phase": "盘前",
-  "tag": "海外",
-  "text": "报道：奥迪已获得关税减免计划的保证",
+  "time": "13:25",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "大疆入股一科技公司 后者新增AI及机器人业务",
   "secs": [
    "电子",
+   "计算机",
+   "通信",
    "机械设备",
+   "国防军工",
    "电力设备"
   ],
   "align": null,
   "src": "东方财富",
-  "url": "https://finance.eastmoney.com/a/202610293914887198.html",
+  "url": "https://finance.eastmoney.com/a/202610303916197648.html",
   "raw": 8,
   "score": 8
  },
