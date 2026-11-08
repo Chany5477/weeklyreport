@@ -8431,7 +8431,7 @@
    "peLen": 2409,
    "div": null,
    "roe": null,
-   "pricePct": 86.7,
+   "pricePct": 84.7,
    "peHist": [
     [
      "2021-10-08",
@@ -27223,14 +27223,14 @@
    },
    {
     "style": "成长",
-    "short": 2,
+    "short": 1,
     "mid": 3,
     "long": 4,
     "reason": "短期受海外科技链压制，长期盈利空间大"
    },
    {
     "style": "价值",
-    "short": 4,
+    "short": 5,
     "mid": 4,
     "long": 3,
     "reason": "低估值蓝筹防御性强，适配风险偏好回落"
