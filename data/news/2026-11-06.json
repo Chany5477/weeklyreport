@@ -1,0 +1,407 @@
+[
+ {
+  "time": "11-05 15:14",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部回应欧盟对低价值进口商品叠加征收有关税费",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923473048.html",
+  "raw": 13,
+  "score": 15
+ },
+ {
+  "time": "11-05 17:09",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部：对原产于美国的进口正丙醇继续征收反倾销税、反补贴税",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923568190.html",
+  "raw": 13,
+  "score": 15
+ },
+ {
+  "time": "04:26",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "通胀高烧不退！美联储两名官员力挺渐进式加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.9,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063923935216.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "06:04",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息的概率降至68.7%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.9,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063923954119.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-05 21:52",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储哈马克：渐进式加息是推动通胀回归2%的最佳路径",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.9,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923813033.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-05 22:22",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储巴尔金：逐步加息仍然是合理的",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.9,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923847361.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "01:22",
+  "phase": "盘前",
+  "tag": "制度",
+  "text": "国务院关于金融工作情况的报告提出 支持中央汇金发挥类平准基金作用 巩固完善稳市机制",
+  "secs": [
+   "非银金融"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063923925160.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "01:52",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "订单累计约206.41亿元！算力“单王”行云科技 部分客户二次上调合同金额，股价较年内高点回撤逾四成",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923870750.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "08:53",
+  "phase": "盘前",
+  "tag": "制度",
+  "text": "维护股债汇平稳运行 中央汇金类“平准基金”功能再明确",
+  "secs": [
+   "非银金融"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923764654.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-05 18:41",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "金刚光伏：子公司拟签署不超15.36亿元算力云服务合同",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923641748.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-05 20:03",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "英国央行上调GDP增长预测 预计2026年为1.6%",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923696757.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11-05 22:07",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "波兰央行行长：波兰持有的黄金已实现1400亿兹罗提的账面收益",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923834465.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "02:12",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国对古巴实施新一轮制裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063923929978.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:16",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "中国最大规模商业航天出海合作协议落地 全球太空算力探索升温",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923716758.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:52",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "中荷出口管制对话机制会议在深圳举行",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063924639930.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 17:15",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "唯万密封：半导体领域密封产品订单比上年同期略有增长",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923575740.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 17:16",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "财政部清算收回2024年汽车以旧换新补贴中央财政预拨资金",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923576048.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 17:20",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "景旺电子：AI算力领域订单没有减少或延期的情况",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923578529.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 17:36",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "凌云光：OCS已经在国内光模块、光器件厂商的自动化测试场景实现小批量订单",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923593972.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 17:53",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "国家发改委价格成本和认证中心赴广东省开展储能、电力市场调研",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923601773.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 18:10",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "行云科技：今年算力及存储订单规模累计约206.41亿元 多客户完成二次调价",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923607172.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 19:25",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI数据中心需求蓬勃推动瑞典建筑商订单积压总额达2242亿元",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923666581.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-05 19:25",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部公开征求《机器人产品标识码管理暂行办法（征求意见稿）》意见",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923666659.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:12",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "多家公司在手订单充裕 CXO行业景气度有望延续",
+  "secs": [
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611063923930594.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-05 18:01",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "宏盛华源：中标国家电网项目金额约7.25亿元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923604833.html",
+  "raw": 6,
+  "score": 6
+ }
+]

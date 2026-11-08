@@ -1,11 +1,14 @@
 name: weekly-review
 
-# 北京时间 周五 15:35 / 16:10 / 17:30 各跑一次全套（UTC = 北京时间 - 8h）
+# 北京时间 周五 15:35 / 16:10 / 17:30 / 20:00 / 22:00 各跑一次（UTC = 北京时间 - 8h）
+# 多设几个点是为了对抗 GitHub 定时任务的延迟：任意一次跑成功就会发布，晚到也不算漏
 on:
   schedule:
     - cron: '35 7 * * 5'
     - cron: '10 8 * * 5'
     - cron: '30 9 * * 5'
+    - cron: '0 12 * * 5'
+    - cron: '0 14 * * 5'
   workflow_dispatch: {}          # GitHub 页面上手动重跑的按钮
 
 permissions:
@@ -22,15 +25,15 @@ jobs:
         with:
           node-version: 20
 
-      # 抓数最多重试 3 次，直到数据校验通过为止
+      # 抓数最多重试 2 次；ok / partial 都算可用（partial = 只缺涨跌家数、涨停跌停这类辅助数据）
       - name: 抓数（不完整则自动重试）
         run: |
-          for i in 1 2 3; do
+          for i in 1 2; do
             npm run fetch || true
             S=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).status")
             echo "第 $i 次结果: $S"
-            if [ "$S" = "ok" ]; then break; fi
-            sleep 300
+            if [ "$S" = "ok" ] || [ "$S" = "partial" ]; then break; fi
+            sleep 90
           done
 
       # 抓当日快讯并筛出每天的 3 条事件；配置 DEEPSEEK_API_KEY 时用大模型归纳，否则走关键词规则
@@ -68,12 +71,17 @@ jobs:
           # 抓数失败时 latest.json 会是仓库里的旧文件，这里用"文件年龄"识破，避免拿上期数据覆盖页面
           AGE=$(( $(date +%s) - $(stat -c %Y data/latest.json 2>/dev/null || echo 0) ))
           echo "status=$OK  数据年龄=${AGE}s"
-          if [ "$OK" != "ok" ] || [ "$AGE" -gt 1800 ]; then
+          # ok / partial 都发布：partial 只是缺涨跌家数、涨停跌停这类辅助指标，不该拖住整期周报
+          if { [ "$OK" = "ok" ] || [ "$OK" = "partial" ]; } && [ "$AGE" -le 1800 ]; then
+            echo "status=ok" >> $GITHUB_OUTPUT
+            if [ "$OK" = "partial" ]; then
+              echo "::warning::部分辅助数据缺失（涨跌家数/涨停跌停），页面照常发布"
+              node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
+            fi
+          else
             echo "::warning::抓数未成功（status=$OK，数据年龄 ${AGE}s），本次不发布，保留上一期页面"
             echo "status=stale" >> $GITHUB_OUTPUT
             node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
-          else
-            echo "status=ok" >> $GITHUB_OUTPUT
           fi
 
       # 仓库根目录的 index.html 就是网站首页（GitHub Pages 走分支发布）

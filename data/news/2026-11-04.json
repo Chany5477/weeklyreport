@@ -1,0 +1,364 @@
+[
+ {
+  "time": "11-03 16:38",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部发布关于《两用物项出口管制调查执法办法》公开征求意见的通知",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920287140.html",
+  "raw": 13,
+  "score": 13
+ },
+ {
+  "time": "06:05",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息的概率约为79%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 9.74,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043920694521.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-03 17:40",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "高盛：美债远期利率难长期维持5%以上 美联储加息终点成关键",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 9.74,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920335541.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-03 21:29",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国总统特朗普：如果美联储降息 美国就可以实现预算平衡",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 9.74,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920511298.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "09:53",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "商务部：1-9月，我国服务进出口总额57687.7亿元，同比增长8.5%",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921298971.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11-03 19:52",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "协创数据：存储方面DDR非常短缺至少3年涨价趋势不变 最近报价已提高30%且被接受",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920419323.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "08:36",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "深南电路：现有AI算力PCB产品订单饱满",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043920937165.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:27",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "浙商证券中标央行第三批互换便利操作40亿元",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921140920.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 15:03",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国将暂停对南非和卢旺达的关税优待",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920197381.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 15:21",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "广东：加快发展“人工智能+消费” 推动人工智能手机和电脑、智能穿戴、智能机器人等高端化发展",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920209744.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 16:10",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "国泰海通中标央行第三批互换便利操作100亿元",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920251754.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 16:40",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "东吴证券中标央行第三批互换便利操作50亿元",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920287756.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 16:48",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "东方证券中标央行第三次互换便利操作",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920293437.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 17:20",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "平安证券中标央行第三批互换便利操作",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920325697.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 17:26",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "立昂微：半导体硅片在手订单充足 12英寸轻掺硅片产线预计明年上半年满产",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920327351.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 17:44",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "中信证券中标央行第三批互换便利操作 中标金额100亿元",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920338757.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-03 18:05",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "招商证券中标央行第三批互换便利操作",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920351195.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "12:33",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "百奥赛图新设智能科技公司 含AI及机器人业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921492510.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:36",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "天亿马：人形机器人真机场景数据采集业务已取得相关具身智能领域客户订单",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043920936567.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-03 15:33",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "平高电气：中标国家电网项目合计约9.98亿元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920222947.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-03 16:35",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "中国西电：中标国家电网11.15亿元采购项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920286195.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-03 17:07",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "西力科技：中标国家电网项目总金额1.75亿元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920314527.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-03 17:24",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "威胜信息：中标多个电网项目合计金额约2.31亿元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920327198.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-03 18:03",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "浙江建投：子公司联合体中标15.03亿元储能电站项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920351029.html",
+  "raw": 6,
+  "score": 6
+ }
+]

@@ -1,1364 +1,288 @@
 {
-  "2026-10-26": {
+  "2026-11-02": {
     "events": [
       {
-        "time": "10-25 14:00",
+        "time": "07:33",
         "phase": "盘前",
-        "tag": "政策",
-        "text": "国常会研究统筹人口与经济社会发展，政策预期偏暖，支撑大盘小幅收涨。",
+        "tag": "科技",
+        "text": "商业卫星向天向海向AI重构空天信息版图，提振传媒与计算机板块情绪。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023917836381.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      },
+      {
+        "time": "10-31 16:06",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "全球首个天地一体化太空算力云平台发布，覆盖40余颗卫星，强化算力主题。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202610313917607227.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      },
+      {
+        "time": "10-31 12:15",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "禄达技术收购亚洲算力算网与量子计算公司55%股权，算力题材再获催化。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202610313917576535.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      }
+    ],
+    "pool": [
+      {
+        "time": "06:13",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储12月加息的概率为72%",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023917835238.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "07:33",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "一线调研：向天向海向AI 商业卫星重构空天信息应用版图",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023917836381.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10-31 09:37",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "额度已经用完！剑桥科技拟再投入17.69亿港元扩产光模块 Q3单季净利同比大涨213%",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202610303916950024.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10-31 12:15",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "禄达技术集团收购亚洲算力算网与量子计算科技有限公司55%股权",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202610313917576535.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10-31 16:06",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "全球首个天地一体化太空算力云平台在京发布 覆盖40余颗卫星算力资源",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202610313917607227.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "12:45",
+        "phase": "盘中",
+        "tag": "产业",
+        "text": "艾芬达：浙江云芯机器人技术有限公司相关业务订单稳步推进",
+        "secs": [
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918492032.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "14:08",
+        "phase": "盘中",
+        "tag": "产业",
+        "text": "威胜控股旗下公司合计中标国家电网约2.41亿元项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918627992.html",
+        "raw": 6,
+        "score": 6
+      }
+    ],
+    "attribution": "商业卫星与太空算力等科技主题消息集中发酵，带动传媒、计算机领涨，指数放量上行；煤炭、银行等权重板块走弱。",
+    "by": "DeepSeek"
+  },
+  "2026-11-03": {
+    "events": [
+      {
+        "time": "06:13",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储12月加息概率约75%，海外紧缩预期升温，压制A股风险偏好。",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -4.92,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919208936.html",
+        "raw": 8,
+        "score": 12,
+        "llm": true
+      },
+      {
+        "time": "12:34",
+        "phase": "盘中",
+        "tag": "资金",
+        "text": "央行开展互换便利操作、中标费率10bp，流动性工具落地，支撑非银金融走强。",
         "secs": [],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610253907169967.html",
+        "url": "https://finance.eastmoney.com/a/202611033919988816.html",
         "raw": 8,
         "score": 10,
         "llm": true
-      },
-      {
-        "time": "10-24 14:37",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "黄金4000美元保卫战打响、全球央行加速囤金，避险情绪升温，压制电子等成长板块。",
-        "secs": [
-          "有色金属",
-          "石油石化",
-          "交通运输"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610243907086844.html",
-        "raw": 10,
-        "score": 10,
-        "llm": true
-      },
-      {
-        "time": "11:47",
-        "phase": "盘中",
-        "tag": "海外",
-        "text": "印度对华无缝钢管等作出反倾销终裁，外贸摩擦扰动，拖累有色与出口链情绪。",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907809152.html",
-        "raw": 8,
-        "score": 8,
-        "llm": true
-      }
-    ],
-    "pool": [
-      {
-        "time": "06:09",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "从算力芯片到创新药 多家科创板龙头集中发声",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "医药生物"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610253907350018.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "10-24 14:37",
-        "phase": "盘前",
-        "tag": "政策",
-        "text": "黄金4000美元“保卫战”再度打响 全球央行仍加速“囤金”",
-        "secs": [
-          "有色金属",
-          "石油石化",
-          "交通运输"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610243907086844.html",
-        "raw": 10,
-        "score": 10
-      },
-      {
-        "time": "10-25 14:00",
-        "phase": "盘前",
-        "tag": "政策",
-        "text": "周末要闻汇总：国常会研究统筹人口与经济社会发展有关工作",
-        "secs": [],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610253907169967.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "10-24 15:03",
-        "phase": "盘前",
-        "tag": "周期",
-        "text": "美国一核聚变技术初创公司宣称实现“汞变稳定黄金” 产出水平是欧洲十倍",
-        "secs": [
-          "有色金属",
-          "石油石化",
-          "交通运输",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610243907064165.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-24 19:33",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "乌克兰对俄导弹及军工供应链实施新一轮制裁",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610243907113370.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-25 23:11",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "津巴布韦总统呼吁西方国家无条件解除制裁",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610253907356127.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "11:47",
-        "phase": "盘中",
-        "tag": "海外",
-        "text": "印度对华无缝钢管和空心型材作出第二次反倾销日落复审终裁",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907809152.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "11:57",
-        "phase": "盘中",
-        "tag": "政策",
-        "text": "商务部：2026年以来家电以旧换新累计超10099万台",
-        "secs": [
-          "食品饮料",
-          "社会服务",
-          "商贸零售"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907810532.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "12:55",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "物理AI催化这回“轮”到家庭机器人",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907819046.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "14:22",
-        "phase": "盘中",
-        "tag": "海外",
-        "text": "澳大利亚对涉华玻璃棉启动双反倾销调查",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907907555.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-24 16:59",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "美晨科技：旗下美晨工业集团中标国内头部客户储能液冷管路总成项目",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610243907100096.html",
-        "raw": 6,
-        "score": 6
-      }
-    ],
-    "attribution": "当天国常会政策预期偏暖支撑银行、石油石化等权重护盘，海外黄金避险升温与印度反倾销终裁压制电子、有色等成长与出口板块，指数窄幅收涨。",
-    "by": "DeepSeek"
-  },
-  "2026-10-27": {
-    "events": [
-      {
-        "time": "10-26 17:40",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "高盛预计美联储本周维持利率不变、12月加息25基点，海外紧缩预期压制A股风险偏好。",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -3.95,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908127964.html",
-        "raw": 8,
-        "score": 12,
-        "llm": true
-      },
-      {
-        "time": "07:56",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "华泰预计美联储12月再加息1次、明年加息2次，流动性收紧预期拖累成长板块。",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -3.95,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273908914086.html",
-        "raw": 8,
-        "score": 12,
-        "llm": true
-      },
-      {
-        "time": "07:05",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "Anthropic IPO提振芯片股光通信，但海外映射未能对冲A股电子计算机回调。",
-        "secs": [
-          "有色金属",
-          "石油石化",
-          "交通运输",
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273908738048.html",
-        "raw": 10,
-        "score": 10,
-        "llm": true
-      }
-    ],
-    "pool": [
-      {
-        "time": "10-26 16:14",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "机构：料欧美央行10月维持利率不变 美联储或12月加息25基点",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -3.95,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907980165.html",
-        "raw": 13,
-        "score": 17
-      },
-      {
-        "time": "10-26 16:38",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "商务部：发放对硝基甲苯反倾销案调查问卷",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908017946.html",
-        "raw": 13,
-        "score": 13
-      },
-      {
-        "time": "11:23",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "远景乌兰察布星河基地：百公里外风电直送园区 算力订单已排到后年",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273909462262.html",
-        "raw": 11,
-        "score": 13
-      },
-      {
-        "time": "07:56",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "华泰证券：基准情形下美联储年内12月再加息1次 明年加息2次",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -3.95,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273908914086.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "10-26 17:40",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "高盛预计美联储本周维持利率不变 12月加息25个基点",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -3.95,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908127964.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "07:05",
-        "phase": "盘前",
-        "tag": "周期",
-        "text": "Anthropic IPO成强心剂！芯片股光通信爆发 特斯拉创三个月新高 黄金激战4000美元",
-        "secs": [
-          "有色金属",
-          "石油石化",
-          "交通运输",
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273908738048.html",
-        "raw": 10,
-        "score": 10
-      },
-      {
-        "time": "10-26 18:08",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "宇树科技：人形机器人行业尚处商业化早期 物理AI技术从实验室演示走向真实场景规模化落地仍面临多重挑战",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908163626.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "03:28",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美国、加拿大据悉正致力于达成一项放宽美国对加拿大钢铁和汽车进口关税的协议",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273908708975.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-26 15:35",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美国ITC作出金刚石锯片第三次反倾销日落复审产业损害终裁",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263907940225.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-26 17:09",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "上海：重点攻关卫星手机直连、天基算力及空天地一体和通感算智融合等技术",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908085490.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-26 21:00",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "三友联众：光储及算力相关继电器按订单节奏有序排产",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908479375.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "11:04",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "FFR完成FFAI机器人业务合并 正式挂牌上市",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273909448771.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-26 17:15",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "武汉天源：中标36.4亿元储能项目",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610263908095384.html",
-        "raw": 6,
-        "score": 6
-      },
-      {
-        "time": "13:35",
-        "phase": "盘中",
-        "tag": "产业",
-        "text": "恒星科技：人形机器人腱绳产品已取得小批量订单",
-        "secs": [
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273909544676.html",
-        "raw": 6,
-        "score": 6
-      }
-    ],
-    "attribution": "于海外紧缩预期升温：多家机构预计美联储12月加息，压制风险偏好，成长板块领跌，资金转向银行等防御品种。",
-    "by": "DeepSeek"
-  },
-  "2026-10-28": {
-    "events": [
-      {
-        "time": "07:42",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "SK海力士预计存储供不应求持续至2030年，强化存储景气预期，带动电子板块大涨。",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910763887.html",
-        "raw": 8,
-        "score": 10,
-        "llm": true
-      },
-      {
-        "time": "08:21",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "马斯克称机器人所需内存将超其他领域，存储产业趋势明确，助推电子与机械设备走强。",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910906888.html",
-        "raw": 8,
-        "score": 8,
-        "llm": true
-      },
-      {
-        "time": "10-27 18:50",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "思瑞浦Q3净利同比增402%，光模块等领域订单交货提升，提振通信电子情绪。",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273910172943.html",
-        "raw": 8,
-        "score": 8,
-        "llm": true
-      }
-    ],
-    "pool": [
-      {
-        "time": "00:14",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "公募三季报重仓股大换血！光模块依旧坚挺 存储、CXO杀入前十",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "医药生物"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273910560665.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "07:42",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "SK海力士预计存储供不应求持续至2030年",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910763887.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "06:28",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "AI用电需求催生设备订单 燃气轮机产业链投资机会受关注",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910675422.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "08:21",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "马斯克称机器人所需内存将超过其他任何领域 存储产业趋势明确",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910906888.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "08:21",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "紫光国微：智能安全芯片出货正在恢复 前期被延后订单有望逐步回补",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283910910275.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-27 17:35",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "上海：研制推广物理AI装备 研制具备自主感知和决策能力的机器人、工业母机、检测装备等智能制造装备",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273910014674.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-27 18:50",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "思瑞浦：Q3净利润同比增长402%环比增长49% 光模块等领域订单与交货规模稳步提升",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273910172943.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10:35",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "宁德时代新设储能科技公司 含AI相关业务",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283911485327.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "09:04",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "英杰电气：2026年光伏业务订单实现大幅增长 相关收入将在后续周期逐步确认",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283911034175.html",
-        "raw": 6,
-        "score": 6
-      },
-      {
-        "time": "10-27 18:36",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "神雾节能：控股子公司联合体中标7.17亿元储能电站EPC项目",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610273910141897.html",
-        "raw": 6,
-        "score": 6
-      }
-    ],
-    "attribution": "存储供不应求预期与光模块订单向好共振，叠加机器人内存需求表态，科技成长领涨，通信电子机械设备走强，食品饮料等消费金融回调。",
-    "by": "DeepSeek"
-  },
-  "2026-10-29": {
-    "events": [
-      {
-        "time": "02:00",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储维持利率不变，但交易员仍押注12月加息，海外流动性预期偏紧压制A股风险偏好。",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912759831.html",
-        "raw": 8,
-        "score": 14,
-        "llm": true
-      },
-      {
-        "time": "13:06",
-        "phase": "盘中",
-        "tag": "海外",
-        "text": "美国将中国企业列入涉疆法案实体清单，商务部回应，外部扰动加剧科技板块抛压。",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913690777.html",
-        "raw": 13,
-        "score": 15,
-        "llm": true
-      },
-      {
-        "time": "10-28 17:05",
-        "phase": "盘前",
-        "tag": "数据",
-        "text": "央行数据显示三季度末房地产贷款余额同比下降5.2%，地产链与内需预期承压。",
-        "secs": [
-          "房地产",
-          "建筑材料"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283912040034.html",
-        "raw": 10,
-        "score": 12,
-        "llm": true
-      }
-    ],
-    "pool": [
-      {
-        "time": "13:06",
-        "phase": "盘中",
-        "tag": "海外",
-        "text": "美国将中国企业列入所谓涉疆法案实体清单 商务部回应",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913690777.html",
-        "raw": 13,
-        "score": 15
-      },
-      {
-        "time": "02:00",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储维持利率不变",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912759831.html",
-        "raw": 8,
-        "score": 14
-      },
-      {
-        "time": "02:06",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储利率决议公布后 现货黄金价格基本持平",
-        "secs": [
-          "有色金属",
-          "电子",
-          "石油石化",
-          "交通运输"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912764644.html",
-        "raw": 13,
-        "score": 13
-      },
-      {
-        "time": "07:34",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "贝森特称AI融资仍在推进 强劲增长下美联储加息未必有错",
-        "secs": [
-          "有色金属",
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912840955.html",
-        "raw": 13,
-        "score": 13
-      },
-      {
-        "time": "02:07",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "交易员维持对美联储12月加息可能性为90%的预期",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912763754.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "03:02",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储主席沃什表示：美联储加息对市场的影响基本符合预期",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912770881.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "05:52",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储利率决议及发布会要点速览",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912792048.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "07:07",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美联储主席回避是否需要进一步加息的问题",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.47,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912811690.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "10-28 17:05",
-        "phase": "盘前",
-        "tag": "政策",
-        "text": "央行：2026年三季度末人民币房地产贷款余额同比下降5.2%",
-        "secs": [
-          "房地产",
-          "建筑材料"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283912040034.html",
-        "raw": 10,
-        "score": 12
-      },
-      {
-        "time": "10-28 18:40",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "物理AI引爆！机器人再掀涨停潮",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283912232678.html",
-        "raw": 8,
-        "score": 10
-      },
-      {
-        "time": "07:59",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "人工智能、新能源等下游需求改善 国产工业母机订单排到明年",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912985364.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "09:01",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "首批风云卫星极端天气AI模型发布，台风“体检报告”27秒生成",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913121041.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-28 16:03",
-        "phase": "盘前",
-        "tag": "政策",
-        "text": "商务部：消费品以旧换新带动销售额超2万亿元 惠及超2.5亿人次",
-        "secs": [
-          "食品饮料",
-          "社会服务",
-          "商贸零售"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283911864561.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "10-28 18:48",
-        "phase": "盘前",
-        "tag": "科技",
-        "text": "人工智能激发磁带存储需求 富士胶片拟启动近20年来最大规模扩产",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283912270454.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "13:12",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "鹏鼎控股：算力领域持续放量 四季度在手订单充足",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913695642.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "08:00",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "燃料涨价+资本扩张+需求增长 核电产业链有望迎来三重共振",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293912984619.html",
-        "raw": 6,
-        "score": 6
-      },
-      {
-        "time": "10-28 17:16",
-        "phase": "盘前",
-        "tag": "产业",
-        "text": "兆丰股份：控股子公司中标3亿元机器人创新服务平台项目",
-        "secs": [
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610283912064552.html",
-        "raw": 6,
-        "score": 6
-      },
-      {
-        "time": "12:15",
-        "phase": "盘中",
-        "tag": "产业",
-        "text": "迦南智能：中标约3253.42万元南方电网项目",
-        "secs": [
-          "电力设备",
-          "汽车"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913662734.html",
-        "raw": 6,
-        "score": 6
-      }
-    ],
-    "attribution": "美联储按兵不动但12月加息预期仍高，叠加美方实体清单扰动，科技成长股大幅杀跌；资金避险转向煤炭、银行、食品饮料等低估值防御板块。",
-    "by": "DeepSeek"
-  },
-  "2026-10-30": {
-    "events": [
-      {
-        "time": "10-29 20:37",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美国9月核心PCE同比涨3.1%，美联储12月或加息25个基点，压制全球风险偏好。",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914735690.html",
-        "raw": 8,
-        "score": 14,
-        "llm": true
-      },
-      {
-        "time": "10-29 18:32",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美银预计美联储2026年12月和2027年3月各加息25个基点，强化紧缩预期。",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914467543.html",
-        "raw": 8,
-        "score": 12,
-        "llm": true
-      },
-      {
-        "time": "08:31",
-        "phase": "盘前",
-        "tag": "周期",
-        "text": "华为数能、科华数能同时宣布提价最高15%，储能涨价利好相关产业链。",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914954327.html",
-        "raw": 8,
-        "score": 10,
-        "llm": true
-      }
-    ],
-    "pool": [
-      {
-        "time": "10-29 20:37",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美国9月核心PCE同比上涨3.1% 美联储12月或加息25个基点",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914735690.html",
-        "raw": 8,
-        "score": 14
-      },
-      {
-        "time": "10-29 15:15",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "工信部公开征求《监控化学品出口管制内部合规指南（征求意见稿）》意见",
-        "secs": [
-          "电子",
-          "机械设备",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913973246.html",
-        "raw": 13,
-        "score": 13
-      },
-      {
-        "time": "01:23",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "特朗普表示：美联储不愿降息",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303915075831.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "09:05",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "彭博全球首席经济学家：12月美联储也可能维持利率不变",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914895273.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "10-29 16:31",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美国知名投资人质疑美联储利率决议",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914174395.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "10-29 16:38",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "东方金诚：美联储2027年仍有继续加息的可能性",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914196395.html",
-        "raw": 8,
-        "score": 12
-      },
-      {
-        "time": "10-29 18:32",
-        "phase": "盘前",
-        "tag": "海外",
-        "text": "美银全球研究预计美联储将在2026年12月和2027年3月各加息25个基点",
-        "secs": [
-          "有色金属",
-          "电子"
-        ],
-        "align": {
-          "name": "电子",
-          "chg": -5.11,
-          "side": "bot"
-        },
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914467543.html",
-        "raw": 8,
-        "score": 12
       },
       {
         "time": "11:00",
         "phase": "盘中",
+        "tag": "政策",
+        "text": "发改委强化AI就业替代风险监测预警，引发通信、电子科技板块承压回落。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919960675.html",
+        "raw": 10,
+        "score": 10,
+        "llm": true
+      }
+    ],
+    "pool": [
+      {
+        "time": "06:13",
+        "phase": "盘前",
         "tag": "海外",
-        "text": "国泰海通：预计美联储短期暂停加息后 12月大概率仍将继续加息",
+        "text": "美联储12月加息的概率约为75%",
         "secs": [
           "有色金属",
           "电子"
         ],
         "align": {
           "name": "电子",
-          "chg": -5.11,
+          "chg": -4.92,
           "side": "bot"
         },
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303916043349.html",
+        "url": "https://finance.eastmoney.com/a/202611033919208936.html",
         "raw": 8,
         "score": 12
       },
       {
-        "time": "08:31",
+        "time": "08:44",
         "phase": "盘前",
         "tag": "科技",
-        "text": "华为数能、科华数能同时宣布提价 最高涨幅达15%",
+        "text": "自动化+AI需求推动日本机器人订单、产额、出货额创纪录",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919448745.html",
+        "raw": 11,
+        "score": 11
+      },
+      {
+        "time": "08:26",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "苹果Q4业绩强劲仍难掩隐忧：存储涨价拖累盈利前景 iPhone Duo仍供给受限",
         "secs": [
           "电子",
           "计算机",
@@ -1366,15 +290,15 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914954327.html",
+        "url": "https://finance.eastmoney.com/a/202611033919442323.html",
         "raw": 8,
         "score": 10
       },
       {
-        "time": "10-29 21:51",
+        "time": "11-02 15:48",
         "phase": "盘前",
         "tag": "政策",
-        "text": "欧洲央行行长拉加德表示，数据显示第三季度经济继续扩张，人工智能投资与公共支出将支撑增长",
+        "text": "香港证监会：30%受访机构已采用代理型AI",
         "secs": [
           "电子",
           "计算机",
@@ -1382,27 +306,75 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914901434.html",
+        "url": "https://finance.eastmoney.com/a/202611023918709919.html",
         "raw": 10,
         "score": 10
       },
       {
-        "time": "11:10",
+        "time": "11:00",
         "phase": "盘中",
         "tag": "政策",
-        "text": "日本央行上调明年核心CPI预期",
+        "text": "国家发改委：强化对AI就业替代风险监测预警 做好兜底性、普惠性社会保障",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919960675.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "11:09",
+        "phase": "盘中",
+        "tag": "政策",
+        "text": "国家发改委：我国正推动世界人工智能合作组织实体化运行，已有38国作为创始成员国加入",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919965932.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "11:09",
+        "phase": "盘中",
+        "tag": "政策",
+        "text": "国家发改委：人工智能安全挑战需要各国共同面对 共研安全治理标准",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033919965621.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "12:34",
+        "phase": "盘中",
+        "tag": "政策",
+        "text": "央行开展证券、基金、保险公司互换便利操作 中标费率为10bp",
         "secs": [],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303916056138.html",
-        "raw": 10,
+        "url": "https://finance.eastmoney.com/a/202611033919988816.html",
+        "raw": 8,
         "score": 10
       },
       {
-        "time": "14:18",
+        "time": "14:12",
         "phase": "盘中",
         "tag": "政策",
-        "text": "瑞士央行黄金持仓录得12亿瑞士法郎的估值收益",
+        "text": "三季度全球央行等官方机构黄金储备同比增长42%",
         "secs": [
           "有色金属",
           "石油石化",
@@ -1410,40 +382,785 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303916260660.html",
+        "url": "https://finance.eastmoney.com/a/202611033920141477.html",
         "raw": 10,
         "score": 10
       },
       {
-        "time": "14:40",
+        "time": "14:41",
         "phase": "盘中",
         "tag": "政策",
-        "text": "日本央行行长植田和男：出售日本房地产投资信托基金的节奏保持不变",
+        "text": "世界黄金协会：三季度全球各国央行购金创近两年来单季新高",
         "secs": [
-          "房地产",
-          "建筑材料"
+          "有色金属",
+          "石油石化",
+          "交通运输"
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303916356378.html",
+        "url": "https://finance.eastmoney.com/a/202611033920176027.html",
         "raw": 10,
         "score": 10
       },
       {
-        "time": "08:41",
+        "time": "11-02 15:20",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "日本对华冷轧不锈钢板卷作出反倾销终裁",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918689966.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-02 18:45",
         "phase": "盘前",
         "tag": "科技",
-        "text": "奥特佳：获新定点 进入算力储能热管理部件新市场",
+        "text": "澜起科技：预计第四季度交付的互连类芯片在手订单金额为25亿元~27.9亿元",
         "secs": [
           "电子",
           "计算机",
-          "通信",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918870919.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-02 18:53",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "大华股份：子公司中标约26.3亿元中国移动AI超节点设备采购项目",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918876076.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10:38",
+        "phase": "盘中",
+        "tag": "产业",
+        "text": "隆基绿能：公司储能业务订单已超3GWh",
+        "secs": [
           "电力设备",
           "汽车"
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303915378572.html",
+        "url": "https://finance.eastmoney.com/a/202611033919942065.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-02 17:19",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "金冠电气：公司及子公司合计中标2451.13万元国家电网项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918802882.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-02 18:31",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "交控科技：中标1.56亿元黄山旅游T1线信号系统采购项目",
+        "secs": [
+          "食品饮料",
+          "社会服务",
+          "商贸零售"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611023918851097.html",
+        "raw": 6,
+        "score": 6
+      }
+    ],
+    "attribution": "美联储加息预期升温叠加发改委提示AI就业替代风险，通信、电子科技股大幅回调拖累指数；央行互换便利操作落地，资金面支撑下农林牧渔、食品饮料、非银金融逆势走强。",
+    "by": "DeepSeek"
+  },
+  "2026-11-04": {
+    "events": [
+      {
+        "time": "11-03 19:52",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "协创数据称DDR存储短缺至少三年、报价已涨30%并被接受，强化电子涨价预期。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920419323.html",
+        "raw": 8,
+        "score": 10,
+        "llm": true
+      },
+      {
+        "time": "08:36",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "深南电路称AI算力PCB订单饱满，印证电子算力产业链高景气。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043920937165.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      },
+      {
+        "time": "11-03 15:21",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "广东发文加快发展“人工智能+消费”，推动智能终端高端化，利好电子通信。",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920209744.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      }
+    ],
+    "pool": [
+      {
+        "time": "11-03 16:38",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "商务部发布关于《两用物项出口管制调查执法办法》公开征求意见的通知",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920287140.html",
+        "raw": 13,
+        "score": 13
+      },
+      {
+        "time": "06:05",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储12月加息的概率约为79%",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": 9.74,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043920694521.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "11-03 17:40",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "高盛：美债远期利率难长期维持5%以上 美联储加息终点成关键",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": 9.74,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920335541.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "11-03 21:29",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美国总统特朗普：如果美联储降息 美国就可以实现预算平衡",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": 9.74,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920511298.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "09:53",
+        "phase": "盘中",
+        "tag": "政策",
+        "text": "商务部：1-9月，我国服务进出口总额57687.7亿元，同比增长8.5%",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921298971.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "11-03 19:52",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "协创数据：存储方面DDR非常短缺至少3年涨价趋势不变 最近报价已提高30%且被接受",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920419323.html",
+        "raw": 8,
+        "score": 10
+      },
+      {
+        "time": "08:36",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "深南电路：现有AI算力PCB产品订单饱满",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043920937165.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "09:27",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "浙商证券中标央行第三批互换便利操作40亿元",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921140920.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 15:03",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美国将暂停对南非和卢旺达的关税优待",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920197381.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 15:21",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "广东：加快发展“人工智能+消费” 推动人工智能手机和电脑、智能穿戴、智能机器人等高端化发展",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920209744.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 16:10",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "国泰海通中标央行第三批互换便利操作100亿元",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920251754.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 16:40",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "东吴证券中标央行第三批互换便利操作50亿元",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920287756.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 16:48",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "东方证券中标央行第三次互换便利操作",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920293437.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 17:20",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "平安证券中标央行第三批互换便利操作",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920325697.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 17:26",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "立昂微：半导体硅片在手订单充足 12英寸轻掺硅片产线预计明年上半年满产",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920327351.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 17:44",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "中信证券中标央行第三批互换便利操作 中标金额100亿元",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920338757.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-03 18:05",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "招商证券中标央行第三批互换便利操作",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920351195.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "12:33",
+        "phase": "盘中",
+        "tag": "科技",
+        "text": "百奥赛图新设智能科技公司 含AI及机器人业务",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921492510.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "08:36",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "天亿马：人形机器人真机场景数据采集业务已取得相关具身智能领域客户订单",
+        "secs": [
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043920936567.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-03 15:33",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "平高电气：中标国家电网项目合计约9.98亿元",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920222947.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-03 16:35",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "中国西电：中标国家电网11.15亿元采购项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920286195.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-03 17:07",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "西力科技：中标国家电网项目总金额1.75亿元",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920314527.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-03 17:24",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "威胜信息：中标多个电网项目合计金额约2.31亿元",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920327198.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "11-03 18:03",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "浙江建投：子公司联合体中标15.03亿元储能电站项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611033920351029.html",
+        "raw": 6,
+        "score": 6
+      }
+    ],
+    "attribution": "存储涨价与AI算力订单饱满点燃电子通信产业链，叠加广东“人工智能+消费”政策催化，科技成长领涨，资金从食品饮料等防御板块切换。",
+    "by": "DeepSeek"
+  },
+  "2026-11-05": {
+    "events": [
+      {
+        "time": "06:18",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "隔夜油价重挫超8%，美股AI概念下挫，压制A股煤炭石油及通信情绪。",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922399071.html",
+        "raw": 6,
+        "score": 6,
+        "llm": true
+      },
+      {
+        "time": "07:51",
+        "phase": "盘前",
+        "tag": "周期",
+        "text": "高端磷酸铁锂供应偏紧、企业扩产，提振电力设备板块领涨。",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922365531.html",
+        "raw": 6,
+        "score": 10,
+        "llm": true
+      },
+      {
+        "time": "07:36",
+        "phase": "盘前",
+        "tag": "周期",
+        "text": "锂电企业释放储能增量明确、固态电池成必然方向信号，助推电力设备走强。",
+        "secs": [
+          "机械设备",
+          "国防军工",
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922404768.html",
+        "raw": 6,
+        "score": 6,
+        "llm": true
+      }
+    ],
+    "pool": [
+      {
+        "time": "07:51",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "高端磷酸铁锂供应偏紧 上市公司积极扩产",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922365531.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "11-04 15:48",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "林洋能源：中标国家电网约1.99亿元项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921940393.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "11-04 15:49",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "迦南智能：中标国家电网约1.51亿元采购项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921940119.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "11-04 15:52",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "炬华科技：中标国家电网约2.36亿元采购项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921945431.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "11-04 16:15",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "友讯达：中标合计1.96亿元国家电网项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921963622.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "11-04 16:34",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "万胜智能：中标合计2.09亿元国家电网项目",
+        "secs": [
+          "电力设备",
+          "汽车"
+        ],
+        "align": {
+          "name": "电力设备",
+          "chg": 3.89,
+          "side": "top"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921982332.html",
+        "raw": 6,
+        "score": 10
+      },
+      {
+        "time": "07:10",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "部分公司又有新增订单 国产半导体设备产业景气持续",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922364290.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "08:22",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "培育钻石毛坯涨价+AI散热推动 行业景气度有望企稳回升",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922571733.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "08:46",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "中信证券：存储供不应求延续 继续关注长协及股东回报",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922637073.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "08:56",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "AI主导设计的创新药何时上市",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "医药生物"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922670370.html",
         "raw": 8,
         "score": 8
       },
@@ -1451,7 +1168,26 @@
         "time": "09:28",
         "phase": "盘前",
         "tag": "科技",
-        "text": "Ibiden拟加投资约1510亿日元 扩产AI服务器用IC载板",
+        "text": "润建股份等成立星晖科技公司，含AI及机器人业务",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922854911.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10:20",
+        "phase": "盘中",
+        "tag": "科技",
+        "text": "科德数控：燃气轮机、半导体等领域订单均按期履约交付",
         "secs": [
           "电子",
           "计算机",
@@ -1459,15 +1195,489 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303915597993.html",
+        "url": "https://finance.eastmoney.com/a/202611053923185178.html",
         "raw": 8,
         "score": 8
       },
       {
-        "time": "10-29 15:12",
+        "time": "10:39",
+        "phase": "盘中",
+        "tag": "海外",
+        "text": "速卖通美国双11创下关税后单日成交峰值",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923289836.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-04 15:15",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "海合会对涉华未涂布纸启动反倾销调查",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921912663.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-04 15:21",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "欧亚经济联盟延长对华载重轮胎反倾销措施有效期",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921914847.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-04 15:49",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "银河通用机器人等成立寰宇机器人公司 含AI相关业务",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043921940434.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-04 17:29",
         "phase": "盘前",
         "tag": "政策",
-        "text": "商务部：今年以来以旧换新带动数码产品销量同比增长44.8%",
+        "text": "中信证券中标央行第三批互换便利操作100亿元",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611043922027748.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11:21",
+        "phase": "盘中",
+        "tag": "科技",
+        "text": "ST新元成立智慧科技公司 含AI及机器人业务",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923322748.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11:35",
+        "phase": "盘中",
+        "tag": "海外",
+        "text": "美国对华木制栅栏组件发起反倾销反补贴调查",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923330844.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "06:18",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "周四你需要知道的隔夜全球要闻：美众议院民主党领袖誓言将撤销特朗普关税、结束伊朗战争 油价重挫超8%；美股走势分化 大型科技股飙升 存储、光通信等AI概念下挫",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922399071.html",
+        "raw": 6,
+        "score": 6
+      },
+      {
+        "time": "07:36",
+        "phase": "盘前",
+        "tag": "主题",
+        "text": "锂电企业业绩会释放趋势信号：储能市场增量明确 固态电池成必然方向",
+        "secs": [
+          "机械设备",
+          "国防军工",
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053922404768.html",
+        "raw": 6,
+        "score": 6
+      }
+    ],
+    "attribution": "当天电力设备、传媒、房地产领涨，煤炭、石油石化、通信领跌；主因隔夜油价重挫超8%及美股AI概念下挫，叠加锂电储能景气信号提振电力设备。",
+    "by": "DeepSeek"
+  },
+  "2026-11-06": {
+    "events": [
+      {
+        "time": "01:22",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "国务院报告提出支持中央汇金发挥类平准基金作用，稳市机制预期升温，但未能扭转当日跌势。",
+        "secs": [
+          "非银金融"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923925160.html",
+        "raw": 8,
+        "score": 10,
+        "llm": true
+      },
+      {
+        "time": "04:26",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储官员力挺渐进式加息、通胀高烧不退，海外紧缩预期压制A股风险偏好。",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -3.9,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923935216.html",
+        "raw": 8,
+        "score": 14,
+        "llm": true
+      },
+      {
+        "time": "10:52",
+        "phase": "盘中",
+        "tag": "科技",
+        "text": "中荷出口管制对话机制会议在深圳举行，半导体链不确定性升温，电子板块领跌。",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063924639930.html",
+        "raw": 8,
+        "score": 8,
+        "llm": true
+      }
+    ],
+    "pool": [
+      {
+        "time": "11-05 15:14",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "商务部回应欧盟对低价值进口商品叠加征收有关税费",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923473048.html",
+        "raw": 13,
+        "score": 15
+      },
+      {
+        "time": "11-05 17:09",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "商务部：对原产于美国的进口正丙醇继续征收反倾销税、反补贴税",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923568190.html",
+        "raw": 13,
+        "score": 15
+      },
+      {
+        "time": "04:26",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "通胀高烧不退！美联储两名官员力挺渐进式加息",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -3.9,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923935216.html",
+        "raw": 8,
+        "score": 14
+      },
+      {
+        "time": "06:04",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储12月加息的概率降至68.7%",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -3.9,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923954119.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "11-05 21:52",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储哈马克：渐进式加息是推动通胀回归2%的最佳路径",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -3.9,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923813033.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "11-05 22:22",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美联储巴尔金：逐步加息仍然是合理的",
+        "secs": [
+          "有色金属",
+          "电子"
+        ],
+        "align": {
+          "name": "电子",
+          "chg": -3.9,
+          "side": "bot"
+        },
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923847361.html",
+        "raw": 8,
+        "score": 12
+      },
+      {
+        "time": "01:22",
+        "phase": "盘前",
+        "tag": "制度",
+        "text": "国务院关于金融工作情况的报告提出 支持中央汇金发挥类平准基金作用 巩固完善稳市机制",
+        "secs": [
+          "非银金融"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923925160.html",
+        "raw": 8,
+        "score": 10
+      },
+      {
+        "time": "01:52",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "订单累计约206.41亿元！算力“单王”行云科技 部分客户二次上调合同金额，股价较年内高点回撤逾四成",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923870750.html",
+        "raw": 8,
+        "score": 10
+      },
+      {
+        "time": "08:53",
+        "phase": "盘前",
+        "tag": "制度",
+        "text": "维护股债汇平稳运行 中央汇金类“平准基金”功能再明确",
+        "secs": [
+          "非银金融"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923764654.html",
+        "raw": 8,
+        "score": 10
+      },
+      {
+        "time": "11-05 18:41",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "金刚光伏：子公司拟签署不超15.36亿元算力云服务合同",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "电力设备",
+          "汽车"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923641748.html",
+        "raw": 8,
+        "score": 10
+      },
+      {
+        "time": "11-05 20:03",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "英国央行上调GDP增长预测 预计2026年为1.6%",
+        "secs": [],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923696757.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "11-05 22:07",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "波兰央行行长：波兰持有的黄金已实现1400亿兹罗提的账面收益",
+        "secs": [
+          "有色金属",
+          "石油石化",
+          "交通运输"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923834465.html",
+        "raw": 10,
+        "score": 10
+      },
+      {
+        "time": "02:12",
+        "phase": "盘前",
+        "tag": "海外",
+        "text": "美国对古巴实施新一轮制裁",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923929978.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "08:16",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "中国最大规模商业航天出海合作协议落地 全球太空算力探索升温",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信",
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923716758.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "10:52",
+        "phase": "盘中",
+        "tag": "海外",
+        "text": "中荷出口管制对话机制会议在深圳举行",
+        "secs": [
+          "电子",
+          "机械设备",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063924639930.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-05 17:15",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "唯万密封：半导体领域密封产品订单比上年同期略有增长",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923575740.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-05 17:16",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "财政部清算收回2024年汽车以旧换新补贴中央财政预拨资金",
         "secs": [
           "食品饮料",
           "社会服务",
@@ -1475,15 +1685,15 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913967748.html",
+        "url": "https://finance.eastmoney.com/a/202611053923576048.html",
         "raw": 8,
         "score": 8
       },
       {
-        "time": "10-29 15:28",
+        "time": "11-05 17:20",
         "phase": "盘前",
         "tag": "科技",
-        "text": "铭普光磁：800G LPO光模块已实现小批量出货 订单规模尚不稳定",
+        "text": "景旺电子：AI算力领域订单没有减少或延期的情况",
         "secs": [
           "电子",
           "计算机",
@@ -1491,80 +1701,120 @@
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293913986820.html",
+        "url": "https://finance.eastmoney.com/a/202611053923578529.html",
         "raw": 8,
         "score": 8
       },
       {
-        "time": "10-29 19:18",
+        "time": "11-05 17:36",
         "phase": "盘前",
         "tag": "科技",
-        "text": "IBM用四根超导线缆实现芯片级协同 打破量子比特拥挤魔咒",
+        "text": "凌云光：OCS已经在国内光模块、光器件厂商的自动化测试场景实现小批量订单",
         "secs": [
           "电子",
           "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
+          "通信"
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610293914584224.html",
+        "url": "https://finance.eastmoney.com/a/202611053923593972.html",
         "raw": 8,
         "score": 8
       },
       {
-        "time": "13:25",
-        "phase": "盘中",
-        "tag": "科技",
-        "text": "大疆入股一科技公司 后者新增AI及机器人业务",
-        "secs": [
-          "电子",
-          "计算机",
-          "通信",
-          "机械设备",
-          "国防军工",
-          "电力设备"
-        ],
-        "align": null,
-        "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303916197648.html",
-        "raw": 8,
-        "score": 8
-      },
-      {
-        "time": "06:49",
+        "time": "11-05 17:53",
         "phase": "盘前",
-        "tag": "产业",
-        "text": "一线调研： 储能角色重塑 锂电产业开启理性扩产周期",
+        "tag": "政策",
+        "text": "国家发改委价格成本和认证中心赴广东省开展储能、电力市场调研",
         "secs": [
           "电力设备",
           "汽车"
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303915138397.html",
+        "url": "https://finance.eastmoney.com/a/202611053923601773.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-05 18:10",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "行云科技：今年算力及存储订单规模累计约206.41亿元 多客户完成二次调价",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923607172.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-05 19:25",
+        "phase": "盘前",
+        "tag": "科技",
+        "text": "AI数据中心需求蓬勃推动瑞典建筑商订单积压总额达2242亿元",
+        "secs": [
+          "电子",
+          "计算机",
+          "通信"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923666581.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "11-05 19:25",
+        "phase": "盘前",
+        "tag": "政策",
+        "text": "工信部公开征求《机器人产品标识码管理暂行办法（征求意见稿）》意见",
+        "secs": [
+          "机械设备",
+          "国防军工",
+          "电力设备"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611053923666659.html",
+        "raw": 8,
+        "score": 8
+      },
+      {
+        "time": "07:12",
+        "phase": "盘前",
+        "tag": "产业",
+        "text": "多家公司在手订单充裕 CXO行业景气度有望延续",
+        "secs": [
+          "医药生物"
+        ],
+        "align": null,
+        "src": "东方财富",
+        "url": "https://finance.eastmoney.com/a/202611063923930594.html",
         "raw": 6,
         "score": 6
       },
       {
-        "time": "08:08",
+        "time": "11-05 18:01",
         "phase": "盘前",
         "tag": "产业",
-        "text": "迦南智能：预中标1.51亿元国家电网采购项目",
+        "text": "宏盛华源：中标国家电网项目金额约7.25亿元",
         "secs": [
           "电力设备",
           "汽车"
         ],
         "align": null,
         "src": "东方财富",
-        "url": "https://finance.eastmoney.com/a/202610303915358763.html",
+        "url": "https://finance.eastmoney.com/a/202611053923604833.html",
         "raw": 6,
         "score": 6
       }
     ],
-    "attribution": "美联储加息预期升温叠加核心PCE偏强，海外紧缩担忧压制风险偏好，科技成长股领跌；储能提价等局部利好支撑食品饮料、石油石化等防御板块。",
+    "attribution": "于海外加息预期升温叠加中荷出口管制对话带来的科技链担忧，通信、电子重挫拖累指数，公用事业、银行等防御板块逆势走强。",
     "by": "DeepSeek"
   }
 }

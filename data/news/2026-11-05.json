@@ -1,0 +1,365 @@
+[
+ {
+  "time": "07:51",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "高端磷酸铁锂供应偏紧 上市公司积极扩产",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922365531.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "11-04 15:48",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "林洋能源：中标国家电网约1.99亿元项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921940393.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "11-04 15:49",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "迦南智能：中标国家电网约1.51亿元采购项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921940119.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "11-04 15:52",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "炬华科技：中标国家电网约2.36亿元采购项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921945431.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "11-04 16:15",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "友讯达：中标合计1.96亿元国家电网项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921963622.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "11-04 16:34",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "万胜智能：中标合计2.09亿元国家电网项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": {
+   "name": "电力设备",
+   "chg": 3.89,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921982332.html",
+  "raw": 6,
+  "score": 10
+ },
+ {
+  "time": "07:10",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "部分公司又有新增订单 国产半导体设备产业景气持续",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922364290.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:22",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "培育钻石毛坯涨价+AI散热推动 行业景气度有望企稳回升",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922571733.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:46",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "中信证券：存储供不应求延续 继续关注长协及股东回报",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922637073.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:56",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI主导设计的创新药何时上市",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922670370.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:28",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "润建股份等成立星晖科技公司，含AI及机器人业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922854911.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:20",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "科德数控：燃气轮机、半导体等领域订单均按期履约交付",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923185178.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:39",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "速卖通美国双11创下关税后单日成交峰值",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923289836.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-04 15:15",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "海合会对涉华未涂布纸启动反倾销调查",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921912663.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-04 15:21",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "欧亚经济联盟延长对华载重轮胎反倾销措施有效期",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921914847.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-04 15:49",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "银河通用机器人等成立寰宇机器人公司 含AI相关业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043921940434.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-04 17:29",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "中信证券中标央行第三批互换便利操作100亿元",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611043922027748.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:21",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "ST新元成立智慧科技公司 含AI及机器人业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923322748.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:35",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "美国对华木制栅栏组件发起反倾销反补贴调查",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053923330844.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "06:18",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "周四你需要知道的隔夜全球要闻：美众议院民主党领袖誓言将撤销特朗普关税、结束伊朗战争 油价重挫超8%；美股走势分化 大型科技股飙升 存储、光通信等AI概念下挫",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922399071.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "07:36",
+  "phase": "盘前",
+  "tag": "主题",
+  "text": "锂电企业业绩会释放趋势信号：储能市场增量明确 固态电池成必然方向",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611053922404768.html",
+  "raw": 6,
+  "score": 6
+ }
+]

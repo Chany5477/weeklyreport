@@ -20,19 +20,20 @@ const ROOT = resolve(__dir, '..');
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 /* ---------------- 网络层：curl 优先，失败回落 fetch ---------------- */
-async function get(url, referer = 'https://finance.sina.com.cn', retry = 2) {
+async function get(url, referer = 'https://finance.sina.com.cn', retry = 1) {
   for (let i = 0; i <= retry; i++) {
     try {
-      const { stdout } = await pexec('curl', ['-sS', '--compressed', '-m', '25',
+      const { stdout } = await pexec('curl', ['-sS', '--compressed', '-m', '12',
         '-H', `User-Agent: ${UA}`, '-H', `Referer: ${referer}`, url], { maxBuffer: 80 * 1024 * 1024 });
       if (stdout && stdout.trim()) return stdout;
     } catch { /* fallthrough */ }
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': UA, Referer: referer } });
+      // 加硬超时：云端访问东财/腾讯经常是"不返回"而不是拒绝，没有超时会把整个流程拖到几十分钟
+      const r = await fetch(url, { headers: { 'User-Agent': UA, Referer: referer }, signal: AbortSignal.timeout(12000) });
       const t = await r.text();
       if (t && t.trim()) return t;
     } catch { /* fallthrough */ }
-    await sleep(600 * (i + 1));
+    await sleep(400 * (i + 1));
   }
   throw new Error('fetch failed: ' + url.slice(0, 120));
 }
@@ -459,12 +460,22 @@ async function main() {
 
   const ok = checks.filter(c => !c.ok).length === 0;
 
+  /* 哪些校验项算"必须"，哪些只是锦上添花：
+     - 必须（缺了页面就是错的）：收盘状态 / 行业覆盖 / 行业日期 / 指数完整性 / 行业日线
+     - 可选（东财接口在 GitHub 机器上经常连不上，缺了页面对应位置留空即可）：
+       涨跌家数 / 涨停家数 / 跌停家数
+     只有"必须项"全过才允许发布，可选项缺失不阻塞，避免因为几项辅助数据整页不更新。 */
+  const FATAL = new Set(['收盘状态', '行业覆盖', '行业日期', '指数完整性', '行业日线']);
+  const fatalMiss = checks.filter(c => !c.ok && FATAL.has(c.key));
+  const softMiss = checks.filter(c => !c.ok && !FATAL.has(c.key));
+  const status = fatalMiss.length ? 'incomplete' : (softMiss.length ? 'partial' : 'ok');
+
   const ctx = { sh, idxList, industries: okInd, breadth, zt, dt, weekStart, weekEnd };
   const narr = buildNarrative(ctx);
 
   const out = {
     generatedAt: new Date().toISOString(),
-    status: ok ? 'ok' : 'incomplete',
+    status,
     checks,
     week: { start: weekStart, end: weekEnd, days: sh.daily.length },
     title: narr.title,

@@ -1,0 +1,258 @@
+[
+ {
+  "time": "06:13",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息的概率约为75%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -4.92,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919208936.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "08:44",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "自动化+AI需求推动日本机器人订单、产额、出货额创纪录",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919448745.html",
+  "raw": 11,
+  "score": 11
+ },
+ {
+  "time": "08:26",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "苹果Q4业绩强劲仍难掩隐忧：存储涨价拖累盈利前景 iPhone Duo仍供给受限",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919442323.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-02 15:48",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "香港证监会：30%受访机构已采用代理型AI",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918709919.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11:00",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "国家发改委：强化对AI就业替代风险监测预警 做好兜底性、普惠性社会保障",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919960675.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11:09",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "国家发改委：我国正推动世界人工智能合作组织实体化运行，已有38国作为创始成员国加入",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919965932.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11:09",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "国家发改委：人工智能安全挑战需要各国共同面对 共研安全治理标准",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919965621.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "12:34",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "央行开展证券、基金、保险公司互换便利操作 中标费率为10bp",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919988816.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "14:12",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "三季度全球央行等官方机构黄金储备同比增长42%",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920141477.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "14:41",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "世界黄金协会：三季度全球各国央行购金创近两年来单季新高",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033920176027.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11-02 15:20",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "日本对华冷轧不锈钢板卷作出反倾销终裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918689966.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-02 18:45",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "澜起科技：预计第四季度交付的互连类芯片在手订单金额为25亿元~27.9亿元",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918870919.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-02 18:53",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "大华股份：子公司中标约26.3亿元中国移动AI超节点设备采购项目",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918876076.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:38",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "隆基绿能：公司储能业务订单已超3GWh",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611033919942065.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-02 17:19",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "金冠电气：公司及子公司合计中标2451.13万元国家电网项目",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918802882.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-02 18:31",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "交控科技：中标1.56亿元黄山旅游T1线信号系统采购项目",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611023918851097.html",
+  "raw": 6,
+  "score": 6
+ }
+]
