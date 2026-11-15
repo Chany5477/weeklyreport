@@ -1,0 +1,328 @@
+[
+ {
+  "time": "00:09",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国10月CPI通胀再度超预期 市场押注美联储12月加息已成定局",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927655694.html",
+  "raw": 13,
+  "score": 19
+ },
+ {
+  "time": "09:11",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "CPI砸崩美债！华尔街将美联储“暴力加息”纳入定价",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928139835.html",
+  "raw": 13,
+  "score": 19
+ },
+ {
+  "time": "08:16",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储鲍曼研判：通胀正扩大年内或再加息 美股恐因AI大幅回调！",
+  "secs": [
+   "有色金属",
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113927969589.html",
+  "raw": 13,
+  "score": 15
+ },
+ {
+  "time": "10:04",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "“鹰风”席卷美联储！美国通胀阴霾挥之不去 又一官员呼吁渐进加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928220326.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "11-10 17:00",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储理事Waller支持12月加息",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927360842.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "11-10 21:34",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "交易员加大对美联储到2027年中期至少加息两次的押注",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927574468.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "11-10 21:35",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "交易员提高对美联储下月加息0.5个百分点的押注",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927583180.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "12:53",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "高盛更新美联储利率预测：明年3月第三度加息 降息推迟至明年底",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": 3.56,
+   "side": "top"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928272875.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "00:03",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "亚马逊旗下Ring正式进军AI机器人赛道 推迟六年的安防无人机终于亮相",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113927700478.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-10 17:31",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "英国央行监管官员称一些银行正削减人工智能相关风险敞口",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927385916.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11:30",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "创业板指上涨0.99% 游戏、CPO概念走强 白酒股领跌",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928255732.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "13:38",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "存储厂商酝酿新一轮涨价 先涨的是企业级",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928298848.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "02:54",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "OpenAI据悉收购AI旅游规划助手Odessia",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113927721938.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:22",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "减少对海量训练数据和人工编程的依赖 AI智能体让机器人快速掌握新技能",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113927991016.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:41",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "湖北国光华中研发总部落户光谷 布局量子芯片中试线",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113927996895.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:49",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "马斯克光伏布局加速：特斯拉百亿美元新厂正式动工 SpaceX新签设备订单",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928238595.html",
+  "raw": 6,
+  "score": 8
+ },
+ {
+  "time": "11-10 16:25",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "光库科技：铌酸锂高速调制器芯片项目结项 节余募资1.92亿元补流",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927333145.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:54",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "德明利：企业级存储业务规模及在手订单量快速增长",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928266251.html",
+  "raw": 8,
+  "score": 8
+ }
+]

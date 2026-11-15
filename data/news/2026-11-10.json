@@ -1,0 +1,322 @@
+[
+ {
+  "time": "00:53",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "欧盟拟向“成瘾设计”开刀：社交媒体、AI聊天机器人面临新规",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926615613.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "14:53",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "新加坡推出央行黄金托管服务",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927269930.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "14:55",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "欧洲央行管委穆兰预计法国2026年GDP增长约0.3%",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927271826.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "05:27",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "加拿大方面称 将针对美国进口商品的广泛关税宽减措施延长一年",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926640324.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "06:28",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息的概率为84.2%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926661078.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:33",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI算力拉动订单高增 PCB产业链迎来量价齐升",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926662986.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:41",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "欧盟计划打击AI聊天机器人 Meta、谷歌等大型科技公司或受影响",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926764747.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "07:44",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "储能企业加速入局AIDC赛道",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926619292.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:56",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "688138宣布，扩产“芯片底片”！",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926902966.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:05",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "加拿大延长对部分美国进口商品的关税减免至2028年",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927137293.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:48",
+  "phase": "盘中",
+  "tag": "政策",
+  "text": "国家发改委：丰富银发消费业态 增加银发旅游列车和邮轮游产品供给",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927165240.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:58",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "英伟达据悉有意放缓芯片订单",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927167320.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-09 16:01",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "商务部新闻发言人就调整不可靠实体清单措施答记者问",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926256748.html",
+  "raw": 6,
+  "score": 8
+ },
+ {
+  "time": "11-09 19:42",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "聚灿光电：拟定增募资不超15亿元 用于红黄光外延片及芯片扩产升级项目等",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926427753.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-09 21:17",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "剑桥科技回应：砍单传闻不实 高速光模块订单需求旺盛已做好批量交付准备",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926512313.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:09",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "印度对华未处理气相二氧化硅作出第一次反倾销日落复审终裁，建议继续征收为期5年的反倾销税",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103927172985.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:15",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国10月CPI前瞻：增速或明显放缓 美联储加息路径生变数？",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611103926894280.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-09 16:59",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "风范股份：中标国家电网项目金额约8669万元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926304344.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-09 17:10",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "GE Vernova获德国风电项目新订单 将供应3台风力涡轮机",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926315632.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-09 19:51",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "上纬新材：消费级具身智能机器人相关订单能否实现快速增长、增长能否持续 均存在不确定性",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926434343.html",
+  "raw": 6,
+  "score": 6
+ }
+]

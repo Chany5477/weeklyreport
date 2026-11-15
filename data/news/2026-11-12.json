@@ -1,0 +1,276 @@
+[
+ {
+  "time": "11-11 15:57",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "SMBC日兴证券策略师：美国通胀强劲推升美联储加息预期 日本央行或被迫跟进收紧政策",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "有色金属",
+   "chg": -3.01,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928395335.html",
+  "raw": 13,
+  "score": 17
+ },
+ {
+  "time": "01:10",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "瞄准全球央行黄金储备！新加坡推出托管服务 欲打造国际贵金属交易枢纽",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928663533.html",
+  "raw": 10,
+  "score": 12
+ },
+ {
+  "time": "06:10",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息50个基点的概率为10.4%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "有色金属",
+   "chg": -3.01,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123928833856.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-11 23:16",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美元升至2025年5月以来最高 美联储加息押注升温",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "有色金属",
+   "chg": -3.01,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928772219.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-11 23:36",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "野村现预计美联储今年12月和明年3月各加息一次 因通胀高于预期",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "有色金属",
+   "chg": -3.01,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928782755.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "11-11 15:39",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "海外巨头集体押注！机器人产业渐成AI新战场 港股多只概念股逆势上涨",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928381919.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-11 18:34",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "工信部公开征求《半导体集成电路 融合视觉传感器测试方法》等46项推荐性国家标准计划项目意见",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928525925.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "02:09",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "美联航据悉正在禁止AI机器人代客预订航班 Expedia涨幅扩大至3.5%",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123928810493.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "09:58",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "锐翔智能：光模块设备获索尔思订单",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929297040.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-11 16:47",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "英杰电气：目前公司半导体业务订单和营收均实现快速增长",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928449674.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-11 18:14",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "国家能源局：增强能源安全韧性和抗风险能力 大力推动新型电网建设",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928514074.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-11 23:42",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "锐翔智能：在光模块产线的自动化物流以及光模块组装自动化产线方面均已收获相应订单",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928784642.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "13:03",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "欧盟和英国将推迟对电动汽车征收10%关税",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929359389.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "14:47",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "李飞飞对话苏姿丰：机器人将成为“算力新引擎”",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929431741.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:36",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "冰雪旅游拉开序幕 南方游客撑起了六成订单",
+  "secs": [
+   "食品饮料",
+   "社会服务",
+   "商贸零售"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929317089.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "11-11 15:50",
+  "phase": "盘前",
+  "tag": "产业",
+  "text": "金杯电工：中标华润置地低压电缆集采项目",
+  "secs": [
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611113928391011.html",
+  "raw": 6,
+  "score": 6
+ }
+]

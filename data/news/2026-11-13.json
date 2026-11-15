@@ -1,0 +1,314 @@
+[
+ {
+  "time": "00:53",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美元触及19个月新高 美联储加息预期持续升温",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.75,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929900475.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "07:27",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储公布2027年议息会议日程 10月会议不作利率决议、专门讨论货币政策战略",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.75,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930099737.html",
+  "raw": 8,
+  "score": 14
+ },
+ {
+  "time": "06:17",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息50个基点的概率为15.3%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": {
+   "name": "电子",
+   "chg": -3.75,
+   "side": "bot"
+  },
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930078772.html",
+  "raw": 8,
+  "score": 12
+ },
+ {
+  "time": "07:15",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "算力扩容倒逼电力迭代 储能增量空间打开 业内预计全固态电池2035年规模化可期",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930047031.html",
+  "raw": 11,
+  "score": 11
+ },
+ {
+  "time": "04:20",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "墨西哥总统回应特朗普关税威胁：没有移民队伍抵达美墨边境",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930054524.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:33",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "巨头算力订单拉动数据中心扩张 AI基建融资路径迎检验",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929975764.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:51",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "金固股份、上纬新材等成立机器人公司，含多项AI业务",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930330945.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:18",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "中芯国际赵海军：AI算力供不应求，2027年半导体代工产能将非常紧缺",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930562966.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 15:07",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美国对涉华聚四亚甲基醚乙二醇作出反倾销初裁",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929443446.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 15:46",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "美联航将禁止AI机器人预订机票",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929469032.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 15:58",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "机器人制造商Agile Robots融资5亿美元 投资方包括软银和英伟达",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929570247.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 16:57",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "美银：预计台积电2027年资本开支或达900亿美元 先进制程扩产加速",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929671890.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 18:27",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "德国机器人公司Agile Robots获软银、英伟达投资 估值达85亿美元",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929734485.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 19:06",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "国家能源局负责人出席“全球电网加速器”倡议高级别活动",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929762228.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 20:18",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "特朗普威胁墨西哥：阻止移民车队 否则关税翻倍",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929806885.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-12 20:48",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "冯德莱恩说欧盟将提出新一轮对俄制裁及援乌方案",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611123929869937.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "12:02",
+  "phase": "盘中",
+  "tag": "产业",
+  "text": "理奇智能：非锂电物料智能处理系统及设备在手订单金额近3亿元",
+  "secs": [
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930591979.html",
+  "raw": 6,
+  "score": 6
+ },
+ {
+  "time": "12:50",
+  "phase": "盘中",
+  "tag": "主题",
+  "text": "肇民科技：积极布局人形机器人、储能、航空、动力电池等行业",
+  "secs": [
+   "机械设备",
+   "国防军工",
+   "电力设备",
+   "汽车"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611133930602872.html",
+  "raw": 6,
+  "score": 6
+ }
+]

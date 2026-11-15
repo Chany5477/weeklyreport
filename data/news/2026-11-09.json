@@ -1,0 +1,226 @@
+[
+ {
+  "time": "11-07 18:07",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "超3亿元算力订单 格力中标中国移动、中国铁塔集采",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611073925521441.html",
+  "raw": 11,
+  "score": 11
+ },
+ {
+  "time": "00:17",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "国常会部署重点工作 首提完善资本市场稳市机制",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611083925687598.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "07:15",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "外储规模连续7个月站上3.4万亿美元 央行黄金储备“24连增”",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093925710080.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "10:31",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "国务院关税税则委员会：11月10日起2个月内继续暂停实施24%的对美加征关税税率 保留10%的对美加征关税税率",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926051572.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-07 16:27",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "IMF总裁：各国央行需考量AI驱动增长或放缓",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611073925507282.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "11-08 14:00",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "周末要闻汇总：国常会要求完善资本市场稳市机制 增强股市内在稳定性",
+  "secs": [],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611083925610461.html",
+  "raw": 8,
+  "score": 10
+ },
+ {
+  "time": "11-08 14:42",
+  "phase": "盘前",
+  "tag": "政策",
+  "text": "央行连续24个月增持黄金 创近两年最大加仓手笔",
+  "secs": [
+   "有色金属",
+   "石油石化",
+   "交通运输"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611083925612079.html",
+  "raw": 10,
+  "score": 10
+ },
+ {
+  "time": "00:04",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "非农超预期 美联储鹰声未止",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611083925687135.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "06:02",
+  "phase": "盘前",
+  "tag": "海外",
+  "text": "美联储12月加息的概率为78%",
+  "secs": [
+   "有色金属",
+   "电子"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093925728446.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "08:24",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "苹果披露人形机器人自主控制系统HALO 物理AI有望加速落地",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093925746737.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "10:09",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "江苏雷利、雷赛智能领涨！物理AI再迎催化：苹果机器人自主控制系统HALO验证泛化能力",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "机械设备",
+   "国防军工",
+   "电力设备"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926032550.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11-08 18:05",
+  "phase": "盘前",
+  "tag": "科技",
+  "text": "AI辅助设计禽流感疫苗动物实验获进展",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信",
+   "医药生物"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611083925637017.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "11:56",
+  "phase": "盘中",
+  "tag": "科技",
+  "text": "“AI缺电”具象化了：Anthropic砸钱“截胡”发电设备订单 金额或创纪录",
+  "secs": [
+   "电子",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926107864.html",
+  "raw": 8,
+  "score": 8
+ },
+ {
+  "time": "13:49",
+  "phase": "盘中",
+  "tag": "海外",
+  "text": "算力涨价与关税缓和共振 科创芯片设计ETF易方达涨2.11%",
+  "secs": [
+   "电子",
+   "机械设备",
+   "电力设备",
+   "计算机",
+   "通信"
+  ],
+  "align": null,
+  "src": "东方财富",
+  "url": "https://finance.eastmoney.com/a/202611093926172023.html",
+  "raw": 7,
+  "score": 7
+ }
+]

@@ -68,18 +68,20 @@ jobs:
         id: gate
         run: |
           OK=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).status")
-          # 抓数失败时 latest.json 会是仓库里的旧文件，这里用"文件年龄"识破，避免拿上期数据覆盖页面
-          AGE=$(( $(date +%s) - $(stat -c %Y data/latest.json 2>/dev/null || echo 0) ))
-          echo "status=$OK  数据年龄=${AGE}s"
+          # 抓数失败时 latest.json 还是仓库里的旧文件，而 checkout 会把文件时间戳刷新，
+          # 所以不能靠"文件年龄"判断——直接比对周报截止日是否等于预期（规则与 fetch.mjs 完全一致）
+          EXPECT=$(node -p "const d=new Date(Date.now()+288e5);const dow=(d.getUTCDay()+6)%7;const m=d.getUTCHours()*60+d.getUTCMinutes();const back=(dow===4&&m>=935)?0:(dow>4?dow-4:dow+3);new Date(d.getTime()-back*864e5).toISOString().slice(0,10)")
+          WEEK=$(node -p "JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).week.end")
+          echo "status=$OK  week.end=$WEEK  预期周报截止日=$EXPECT"
           # ok / partial 都发布：partial 只是缺涨跌家数、涨停跌停这类辅助指标，不该拖住整期周报
-          if { [ "$OK" = "ok" ] || [ "$OK" = "partial" ]; } && [ "$AGE" -le 1800 ]; then
+          if { [ "$OK" = "ok" ] || [ "$OK" = "partial" ]; } && [ "$WEEK" = "$EXPECT" ]; then
             echo "status=ok" >> $GITHUB_OUTPUT
             if [ "$OK" = "partial" ]; then
               echo "::warning::部分辅助数据缺失（涨跌家数/涨停跌停），页面照常发布"
               node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
             fi
           else
-            echo "::warning::抓数未成功（status=$OK，数据年龄 ${AGE}s），本次不发布，保留上一期页面"
+            echo "::warning::抓数未成功（status=$OK，week=$WEEK 不等于预期 $EXPECT），本次不发布，保留上一期页面"
             echo "status=stale" >> $GITHUB_OUTPUT
             node -p "JSON.stringify(JSON.parse(require('fs').readFileSync('data/latest.json','utf8')).checks,null,1)"
           fi
